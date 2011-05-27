@@ -41,6 +41,8 @@ end
 
 compile '*' do
   filter :kramdown
+  filter :colorize_syntax
+  filter :rubypants
   layout 'default'
 end
 
