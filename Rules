@@ -47,6 +47,7 @@ end
 compile '*' do
   filter :kramdown
   filter :colorize_syntax, {
+    # To use the default_colorizer option you need the nanoc3.2 version Colorize_Syntax filter.
     :default_colorizer => :pygmentize,
   }
   filter :rubypants
@@ -58,4 +59,5 @@ route '*' do
   item.identifier + 'index.html'
 end
 
-layout '*', :haml, :format => :html5
+# Set :ugly=true for correct indentation for <pre>.
+layout '*', :haml, :format => :html5, :ugly => true
