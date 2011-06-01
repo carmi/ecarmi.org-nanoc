@@ -12,6 +12,7 @@ DIR_BASE = "content/writing"
 FILE_ENDING = ".md"
 
 KIND = "article"
+MARKUP = "markdown"
 
 puts "Please enter the title of the new post:"
 raw_title = gets.strip
@@ -26,13 +27,16 @@ file_path = "#{DIR_BASE}/#{slug}#{FILE_ENDING}"
 now = Time.now
 
 NEW_POST = <<EOF
+---
 title: #{raw_title}
 slug: #{slug}
+markup: #{MARKUP}
 kind: #{KIND}
 author: #{AUTHOR}
 created_at: #{now.strftime("%Y-%m-%d")}
 updated_at: #{now.strftime("%Y-%m-%d")}
 published: false
+summary:
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lacus ligula,
 accumsan id imperdiet rhoncus, dapibus vitae arcu. Nulla non quam erat, luctus
