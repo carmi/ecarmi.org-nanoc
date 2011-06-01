@@ -250,8 +250,11 @@ img
 
 // Custom Styling
 
+// Colors
+$green:  #326858
+
 div#main
-  width: 660px
+  width: 620px
   margin-left: auto
   margin-right: auto
 
@@ -260,7 +263,6 @@ body
 
 p
   font-size: 18px
-  width: 560px
 
 pre, code, tt, kdb, samp
   font-family: 'Droid Sans Mono', monospace, courier
@@ -268,16 +270,21 @@ pre, code, tt, kdb, samp
   font-size: 14px
   background: #eeeeee
   overflow: auto
-  @include border-radius(15px 0 0 0)
-  border-bottom: 1px solid #326858
+  @include border-radius(5px 0 0 0)
+  border: 1px solid $green
+
+pre
   padding-right: 5px
   padding-left: 5px
-
+  @include border-radius(0 15px 0 0)
+  border: 1px solid $green
+  border-left: 4px solid $green
 
 // Unstyle code inside <pre> tag
 pre
   code, tt, kdb, samp, pre
-    border-bottom: none
+    padding: 0
+    border: none
     @include border-radius(0)
 
 nav
@@ -311,4 +318,24 @@ blockquote
   p
     display: inline
 
+div.writing_list
+  background: #eeeeee
+  padding: 20px
+  @include border-radius(30px)
 
+  div.title
+    border: 2px solid black
+
+    p.summary
+      visibility: hidden
+
+    &:hover
+      border: 2px solid red
+      p.summary
+        visibility: visible
+
+
+
+
+  
+  p.summary:hover
