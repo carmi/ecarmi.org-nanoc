@@ -17,7 +17,7 @@ Compass.add_project_configuration 'compass_config.rb'
 #   because “*” matches zero or more characters.
 
 compile '/static/css/*/' do
-  if @item.attributes[:extension] == 'sass'
+  if @item[:extension] == 'sass'
     filter :sass, Compass.sass_engine_options
   end
 
@@ -44,14 +44,26 @@ compile '/files/*/' do
   #don't compile files
 end
 
-compile '*' do
-  filter :kramdown
-  filter :colorize_syntax, {
-    # To use the default_colorizer option you need the nanoc3.2 version Colorize_Syntax filter.
-    :default_colorizer => :pygmentize,
-  }
+compile '/writing/*/' do
+  if @item[:markup] == "markdown"
+    filter :kramdown
+    filter :colorize_syntax, {
+      # To use the default_colorizer option you need the nanoc3.2 version Colorize_Syntax filter.
+      :default_colorizer => :pygmentize,
+    }
+  end
+
   filter :rubypants
   #layout 'post'
+  layout 'default'
+end
+
+compile '/writing/' do
+  layout 'writing_root'
+  layout 'default'
+end
+
+compile '*' do
   layout 'default'
 end
 
