@@ -1,0 +1,8 @@
+%h1 hellow
+%div.writing_list
+  - articles.each do |item|
+    %div.title
+      %h2= item[:title]
+      %p.summary= item[:summary]
+
+
