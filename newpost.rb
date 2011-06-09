@@ -14,6 +14,8 @@ FILE_ENDING = ".md"
 KIND = "article"
 MARKUP = "markdown"
 
+require 'time'
+
 puts "Please enter the title of the new post:"
 raw_title = gets.strip
 
@@ -33,8 +35,8 @@ slug: #{slug}
 markup: #{MARKUP}
 kind: #{KIND}
 author: #{AUTHOR}
-created_at: #{now.strftime("%Y-%m-%d")}
-updated_at: #{now.strftime("%Y-%m-%d")}
+created_at: "#{Time.now.utc.iso8601.to_s}"
+updated_at: "#{Time.now.utc.iso8601.to_s}"
 published: false
 summary:
 ---

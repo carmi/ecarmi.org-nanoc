@@ -3,6 +3,7 @@
 # Load settings
 require './settings'
 require 'compass'
+require 'time'
 
 Compass.add_project_configuration 'compass_config.rb'
 
@@ -36,6 +37,11 @@ compile '/static/js/*/' do
   #TODO, minify js
 end
 
+route '/static/js/*/' do
+  path = @item.identifier.chop
+  path + '.' + @item[:extension]
+end
+
 compile '/static/*/' do
   #don't compile static resources
 end
@@ -52,6 +58,10 @@ compile '/writing/*/' do
       :default_colorizer => :pygmentize,
     }
   end
+  if item[:created_at]
+    item[:print_time] = item[:created_at].strftime("%B %e, %Y")
+    item[:timeago] = item[:created_at].utc.iso8601.to_s
+  end
 
   filter :rubypants
   #layout 'post'
@@ -59,6 +69,14 @@ compile '/writing/*/' do
 end
 
 compile '/writing/' do
+  rep.item.children.each do |article|
+    attrs = article.attributes
+    time = attrs[:created_at]
+    if time.is_a? Time
+      attrs[:print_time] = time.strftime("%B %e, %Y")
+      attrs[:timeago] = time.utc.iso8601.to_s
+    end
+  end
   layout 'writing_root'
   layout 'default'
 end
