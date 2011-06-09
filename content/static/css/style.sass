@@ -254,7 +254,9 @@ img
 $green:  #326858
 
 div#main
-  width: 620px
+  width: 520px
+  padding-left: 200px
+  padding-right: 200px
   margin-left: auto
   margin-right: auto
 
@@ -289,6 +291,7 @@ pre
 
 nav
   position: fixed
+  width: 200px
 
 //Style Blockquotes
 blockquote
@@ -323,19 +326,19 @@ div.writing_list
   padding: 20px
   @include border-radius(30px)
 
-  div.title
-    border: 2px solid black
+  h6.date
+    color: #437
 
-    p.summary
+  article.post
+    div.meta
+      background: #eeeeee
       visibility: hidden
+      position: fixed
+      width: 200px
+      top: 100px
+      margin-left: 500px
+      @include border-radius(30px 10px 10px 30px)
 
-    &:hover
-      border: 2px solid red
-      p.summary
+    &:active, &:hover
+      div.meta
         visibility: visible
-
-
-
-
-  
-  p.summary:hover

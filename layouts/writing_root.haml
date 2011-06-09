@@ -1,8 +1,22 @@
-%h1 hellow
 %div.writing_list
   - articles.each do |item|
-    %div.title
-      %h2= item[:title]
-      %p.summary= item[:summary]
+    %ul
+      %li
+        %article.post
+          %h2.title= item[:title]
 
+          %h6.date
+            Posted
+            %time.timeago{:datetime => item[:timeago]}
+              = item[:print_time]
 
+          %p.summary= item[:summary]
+
+          %div.meta
+            %ul
+              - [{"Title: " => item[:title]}, {"Slug (URL): " => item[:slug]}, {"Markup Type: " => item[:markup]}, {"Author: " => item[:author]}, {"Created: " => item[:print_time]}].each do |key, value|
+                %li
+                  %span.field
+                    =key
+                  %span.value
+                    =value
