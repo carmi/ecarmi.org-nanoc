@@ -1,20 +1,20 @@
-%div.writing_list
-  - articles.each do |item|
-    %ul
+%section#articles
+  %ul
+    - articles.each do |item|
       %li
-        %article.post
-          %h2.title= item[:title]
+        %article
+          %h2.title= link_to item[:title], item
 
           %h6.date
             Posted
-            %time.timeago{:datetime => item[:timeago]}
+            %time.timeago{:datetime => item[:timeago], :pubdate => "pubdate"}
               = item[:print_time]
 
           %p.summary= item[:summary]
 
-          %div.meta
+          %div.meta-flybar
             %ul
-              - [{"Title: " => item[:title]}, {"Slug (URL): " => item[:slug]}, {"Markup Type: " => item[:markup]}, {"Author: " => item[:author]}, {"Created: " => item[:print_time]}].each do |key, value|
+              - [{"Title: " => item[:title]}, {"Slug (URL): " => item[:slug]}, {"Markup Type: " => item[:markup]}, {"Created: " => item[:print_time]}].each do |key, value|
                 %li
                   %span.field
                     =key

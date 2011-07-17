@@ -7,36 +7,101 @@
     %link{:href => "/static/css/style.css", :media => "screen", :rel => "stylesheet", :type => "text/css"}
     %script{:src => "/static/js/jquery.js", :type => "text/javascript"}
     %script{:src => "/static/js/jquery-timeago.js", :type => "text/javascript"}
+    %script{:src => "/static/js/ecarmi.js", :type => "text/javascript"}
+    //<script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
     %meta{:content => "nanoc 3.1.7", :name => "generator"}
     %meta{:content => "Evan H. Carmi", :name => "author"}
     %script{:type => "text/javascript"}
       jQuery(document).ready(function() {
       jQuery("time.timeago").timeago();
       });
+    <script src="http://twitterjs.googlecode.com/svn/trunk/src/twitter.min.js" type="text/javascript"></script>
+
+    <script type="text/javascript" charset="utf-8">
+    \ getTwitters('tweets', { 
+    \     id: 'ehc', 
+    \     count: 1, 
+    \     enableLinks: true, 
+    \     ignoreReplies: false, 
+    \     clearContents: true,
+    \     template: '<span class="tweet">&#8220;%text%&#8221;</span><a class="date" href="http://twitter.com/%user_screen_name%/statuses/%id_str%/"> \
+    \      &rarr; %time%</a>'
+    \ });
+    </script>
+
   %body
     %header
       %hgroup
-        %h1= "#{@item[:title]}"
-        %h3
-          Posted
-          %time.timeago{:datetime => item[:timeago]}
-            = item[:print_time]
-    %nav
-      #sidebar
-        %h2 Documentation
-        %ul
-          %li
-            %a{:href => "http://nanoc.stoneship.org/docs/"} Documentation
-          %li
-            %a{:href => "http://nanoc.stoneship.org/docs/3-getting-started/"} Getting Started
-        %h2 Community
-        %ul
-          %li
-            %a{:href => "http://groups.google.com/group/nanoc/"} Discussion Group
-          %li
-            %a{:href => "irc://chat.freenode.net/#nanoc"} IRC Channel
-          %li
-            %a{:href => "http://projects.stoneship.org/trac/nanoc/"} Wiki
+        %div.flybar
+          %h1.title= "#{@item[:title]}"
+          %h3.byline
+            by 
+            %a{:href => "http://ecarmi.org/"}
+              Evan Carmi
+          %span.post_date
+            Posted
+            %time.timeago{:datetime => item[:timeago]}
+              = item[:print_time]
 
-    #main
+        %h2.logo
+          <span class="ecarmi">ecarmi</span><span class="dot">.</span><span class="tld">org</span>
+
+        %nav
+          %h2 nav
+          - breadcrumbs_trail.each do |crumb|
+            %p
+              =link_to(crumb.attributes[:title] || crumb.path ,crumb)
+          %ul
+            %li
+              %a{:href => "http://nanoc.stoneship.org/docs/"} Home
+            %li
+              %a{:href => "http://nanoc.stoneship.org/docs/3-getting-started/"} Writing
+            %li
+              %a{:href => "http://nanoc.stoneship.org/docs/3-getting-started/"} Getting Started
+            %li
+              %a{:href => "http://nanoc.stoneship.org/docs/3-getting-started/"} Projects
+
+    %div#content
       = yield
+
+    %footer
+      %div.columns
+
+        %div.ecarmi-org
+          %h2
+            ecarmi.org
+          %p is a web site that serves as a collection of thoughts and experiences.
+
+        %div.powered
+          %h2
+            powered by
+          %p 
+            Powered by <a class="nanoc" href="http://nanoc.stoneship.org/">nanoc</a> and the internets.
+        %div.evancarmi
+          %h2
+            Evan Carmi
+          %p is a programmer and developer living in New York City
+
+        %div.twitter
+          %h2
+            on twitter
+          %p.handle
+            %a.twitter-follow-button{:href => "https://twitter.com/ehc"}
+              Follow
+              %span.twitter-handle
+                @ehc
+          %p#tweets
+            Most recent tweets are loading:
+            <img src="/static/img/ajax-loader.gif">
+        
+      %div.notes
+        %p.best-viewed
+          This site is best viewed in
+          %a{:href => "http://curl.haxx.se/"}
+            cURL.
+
+        %p.html5
+          <a href="http://www.w3.org/html/logo/"> <img src="http://www.w3.org/html/logo/badge/html5-badge-h-css3-performance-semantics.png" width="197" height="64" alt="HTML5 Powered with CSS3 / Styling, Performance &amp; Integration, and Semantics" title="HTML5 Powered with CSS3 / Styling, Performance &amp; Integration, and Semantics"> </a>
+
+        %p.copyright
+          <a rel="license" href="http://creativecommons.org/licenses/by/3.0/us/">Copyright Evan Carmi</a>
