@@ -42,8 +42,12 @@ route '/static/js/*/' do
   path + '.' + @item[:extension]
 end
 
-compile '/static/*/' do
+compile '/static/img/*/' do
   #don't compile static resources
+end
+
+route '/static/img/*/' do
+  item.identifier.chop + '.' + item[:extension]
 end
 
 compile '/files/*/' do
