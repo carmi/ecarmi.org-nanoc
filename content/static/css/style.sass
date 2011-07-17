@@ -1,44 +1,45 @@
 @import url(http://fonts.googleapis.com/css?family=Ultra|Droid+Sans+Mono|Crimson+Text)
 
 @import "compass/css3/border-radius"
+@import "compass/css3/transition"
+@import "compass/css3/transform"
 @import "compass/layout/grid-background"
+@import "compass/typography/vertical_rhythm"
 
-// Aardvark Legs
-// Reset first - Modified version of Eric Meyer and Paul Chaplin reset from
-// http://meyerweb.com/eric/tools/css/reset/ 
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, header, nav, section, article, aside, footer
-  border: 0
-  margin: 0
-  outline: 0
-  padding: 0
-  background: transparent
-  vertical-align: baseline
+@import "compass/reset/utilities"
+@include global-reset
 
-blockquote, q
-  quotes: none
+@include establish-baseline
 
-blockquote
-  &:before, &:after
-    content: ''
-    content: none
+$section_width: 960px
+$content_left_margin: 65px
 
-q
-  &:before, &:after
-    content: ''
-    content: none
+// Colors
+//http://colorschemedesigner.com/#0u31Mw0w0w0w0
+//Orange
 
-header, nav, section, article, aside, footer
-  display: block
+$bg_dark: #1f1f1f
+$box_bg:  #303030
+$box_border: #A64B00
+$bg_text: #686868
 
+$header_dark:     #A64B00
+$header_light:    #BF7130
+//Blue
+$primary_dark:    #05316D
+$primary_light:   #284C7E
+//Green
+$secondary_dark:  #007929
+$secondary_light: #238C47
+
+$link_color:         #A64B00
+$link_color_hover:   #BF7130
+
+$green:   #00BB3F
+$blue:    #0F4FA8
+$orange:  #FF7400
+$grey:    #B5B9BA
 // Basic styles
-
-body
-  background: #fff
-  color: #000
-  font: 0.75em / 1.5em Helvetica, Arial, "Liberation Sans", "Bitstream Vera Sans", sans-serif
-
-html>body
-  font-size: 16px
 
 img
   display: inline-block
@@ -100,6 +101,7 @@ a
   text-decoration: underline
   &:hover
     text-decoration: none
+    color: $link_color_hover
 
 abbr, acronym
   border-bottom: 1px dotted
@@ -250,18 +252,44 @@ img
 
 // Custom Styling
 
-// Colors
-$green:  #326858
+@mixin header-shadow
+  font-variant: small-caps
+  text-shadow: -1px -1px 0px #999
 
-div#main
-  width: 520px
-  padding-left: 200px
-  padding-right: 200px
-  margin-left: auto
+@mixin flybar
+  position: fixed
+  z-index: 100
+  width: 100%
+  min-width: $section_width
+  background: $header_light
+  border-bottom: 1px solid #ccc
+  top: 0
+  left: 0
+  line-height: 24px
+  overflow: visible
+  opacity: 0.90
+  @include transition(opacity, .2s, ease-in)
+
+  &:hover
+    opacity: 1
+
+div#content
+  width: $section_width
+  min-height: 400px
+  margin-top: 100px
+  margin-left: $content_left_margin
   margin-right: auto
 
 body
   font-family: 'Crimson Text', arial, serif
+  color: #fff
+  background-color: $bg_dark
+
+  h1, h2, h3, h4, h5, h6
+    color: $bg_text
+  h1
+    @include header-shadow
+
 
 p
   font-size: 18px
@@ -270,17 +298,17 @@ pre, code, tt, kdb, samp
   font-family: 'Droid Sans Mono', monospace, courier
   overflow: auto
   font-size: 14px
-  background: #eeeeee
+  background: $box_bg
   overflow: auto
   @include border-radius(5px 0 0 0)
-  border: 1px solid $green
+  border: 1px solid $box_border
 
 pre
   padding-right: 5px
   padding-left: 5px
   @include border-radius(0 15px 0 0)
-  border: 1px solid $green
-  border-left: 4px solid $green
+  border: 1px solid $box_border
+  border-left: 4px solid $box_border
 
 // Unstyle code inside <pre> tag
 pre
@@ -291,7 +319,21 @@ pre
 
 nav
   position: fixed
-  width: 200px
+  top: 250px
+  width: 50px
+  opacity: 0.9
+  border-right: 4px solid red
+  border-top: 1px solid red
+  border-bottom: 1px solid red
+
+  ul
+    visibility: visible
+
+  &:hover
+    width: 100px
+    opacity: 0.9
+    ul
+      visibility: visible
 
 //Style Blockquotes
 blockquote
@@ -299,7 +341,7 @@ blockquote
   quotes: "\201C""\201D""\2018""\2019"
   font-style: oblique
   padding-top: 30px
-  background: #eeeeee
+  background: $box_bg
   @include border-radius(15px)
   
   &:before
@@ -321,24 +363,140 @@ blockquote
   p
     display: inline
 
-div.writing_list
-  background: #eeeeee
-  padding: 20px
-  @include border-radius(30px)
+a:visited
+  color: $link_color
 
-  h6.date
-    color: #437
+a
+  color: $link_color
 
-  article.post
-    div.meta
-      background: #eeeeee
-      visibility: hidden
-      position: fixed
-      width: 200px
-      top: 100px
-      margin-left: 500px
-      @include border-radius(30px 10px 10px 30px)
+header
+  height: 35px
 
-    &:active, &:hover
-      div.meta
-        visibility: visible
+  hgroup
+    padding-bottom: 0px
+    
+    div.flybar
+      @include flybar
+      padding: 25px 0px 0px $content_left_margin
+      
+      h1.title
+        max-width: 700px
+
+    h2.logo
+      overflow: visible
+      @include header-shadow
+      @include skewY(26.6deg)
+      text-shadow: 1px -1px 0px #999, 2px -2px 0px #888, 3px -3px 0px #777, 4px -4px 0px #666, 5px -5px 0px #555, 5px -5px 0px #444, 5px -5px 0px #333, 5px -5px 5px #222 
+      color: #fff
+      margin-right: 0px
+      font-size: 50px
+      opacity: 0.8
+      position: absolute
+      right: 20px
+      top: 80px
+      z-index: 110
+      
+      
+
+
+    h1.title
+      float: left
+      padding-right: 10px
+      margin-bottom: 0px
+    h3.byline
+      padding-right: 10px
+      margin-bottom: 0px
+      color: #ccc
+      a
+        color: #ccc
+    span.post_date
+      color: #ccc
+
+footer
+  color: $bg_text
+  position: relative
+  bottom: 0
+  left: 0
+  background: #ccc
+  min-width: $section_width
+  min-height: 300px
+  padding-left: $content_left_margin
+  padding-top: 20px
+  padding-bottom: 5px
+
+  div
+    width: $section_width
+  div.columns
+
+    div
+      float: left
+      width: 230px
+      height: 230px
+      margin-right: 10px
+
+      p
+        margin-left: 30px
+
+      h2
+        left: -105px
+        top: 70px
+        display: block
+        @include rotate(-90deg)
+        text-transform: uppercase
+        font-size: 30px
+        text-shadow: 1px -1px 0px
+        position: relative
+
+    div.twitter
+      p
+        margin-top: -40px
+        ul
+          list-style: none
+          li
+            margin-left: 0px
+
+            a.date            
+              color: #186487 
+        
+      p.handle
+        text-align: center
+        padding-bottom: 10px
+
+        a
+          text-decoration: none
+          span.twitter-handle
+            color: #186487
+
+  div.notes
+    clear: both
+    text-align: center
+    
+section#articles
+  width: $section_width
+  float: left
+  
+  ul
+    li
+      list-style: none
+
+      article
+        background: #353535
+        @include border-radius(3px)
+        margin: 4px
+        padding: 4px
+        width: 250px
+        height: 250px
+        float: left
+
+        h6.date
+          font-size: 16px
+          color: $grey
+
+        h2.title
+          font-size: 20px
+
+        div.meta-flybar
+          @include flybar
+          visibility: hidden
+
+        &:active, &:hover
