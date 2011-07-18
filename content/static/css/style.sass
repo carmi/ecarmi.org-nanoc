@@ -319,21 +319,34 @@ pre
 
 nav
   position: fixed
+  z-index: 100
   top: 250px
-  width: 50px
-  opacity: 0.9
-  border-right: 4px solid red
-  border-top: 1px solid red
-  border-bottom: 1px solid red
+  width: 40px
+  height: 190px
+  opacity: 0.2
+  overflow: hidden
+  background-color: #ccc
+  @include border-radius(15px)
+  margin-left: 20px
 
-  ul
-    visibility: visible
+  h2
+    @include rotate(-90deg)
+    position: absolute
+    text-transform: uppercase
+    left: -65px
+    top: 80px
+
+  div
+    margin-left: 60px
+  
+    ul
+      li
 
   &:hover
-    width: 100px
+    @include transition(width, .2s, ease-in, .1s)
+    @include transition(opacity, .2s, ease-in, .1s)
     opacity: 0.9
-    ul
-      visibility: visible
+    width: 200px
 
 //Style Blockquotes
 blockquote
@@ -373,11 +386,9 @@ header
   height: 35px
 
   hgroup
-    padding-bottom: 0px
-    
     div.flybar
       @include flybar
-      padding: 25px 0px 0px $content_left_margin
+      padding: 25px 0px 10px $content_left_margin
       
       h1.title
         max-width: 700px
@@ -414,7 +425,7 @@ header
 
 footer
   color: $bg_text
-  position: relative
+  position: inherit
   bottom: 0
   left: 0
   background: #ccc
@@ -426,6 +437,7 @@ footer
 
   div
     width: $section_width
+
   div.columns
 
     div
@@ -473,30 +485,48 @@ footer
     
 section#articles
   width: $section_width
-  float: left
   
+  article
+    overflow: auto
+    width: 100%
+    background: #353535
+    padding: 15px
+    margin-bottom: 20px
+    @include border-top-right-radius(15px)
+    border-left: 2px solid #ccc
+    opacity: .7
+    @include transition(opacity, .2s, ease-in, .1s)
+
+    &:hover
+      opacity: 1
+
+    h2.title
+      margin-bottom: 5px
+
+    h6.date
+  
+    div.main
+      float: left
+      width: 60%
+      
+    div.meta
+      width: 30%
+      float: right
+      ul
+        margin: 0
+        li
+          list-style: none
+div#ten-tweets
+  overflow: auto
+  margin-bottom: 20px
   ul
     li
-      list-style: none
-
-      article
-        background: #353535
-        @include border-radius(3px)
-        margin: 4px
-        padding: 4px
-        width: 250px
-        height: 250px
+      clear: both
+      padding: 5px
+      span.tweet
+        width: 70%
         float: left
-
-        h6.date
-          font-size: 16px
-          color: $grey
-
-        h2.title
-          font-size: 20px
-
-        div.meta-flybar
-          @include flybar
-          visibility: hidden
-
-        &:active, &:hover
+      
+      a.date
+        float: right
+        color: #186487 

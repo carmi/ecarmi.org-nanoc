@@ -1,22 +1,16 @@
 %section#articles
-  %ul
-    - articles.each do |item|
-      %li
-        %article
-          %h2.title= link_to item[:title], item
+  - sorted_articles.each do |item|
+    %article
+      %div.main
+        %h2.title= link_to item[:title], item
 
-          %h6.date
-            Posted
-            %time.timeago{:datetime => item[:timeago], :pubdate => "pubdate"}
-              = item[:print_time]
+        %p.summary= item[:summary]
 
-          %p.summary= item[:summary]
-
-          %div.meta-flybar
-            %ul
-              - [{"Title: " => item[:title]}, {"Slug (URL): " => item[:slug]}, {"Markup Type: " => item[:markup]}, {"Created: " => item[:print_time]}].each do |key, value|
-                %li
-                  %span.field
-                    =key
-                  %span.value
-                    =value
+      %div.meta
+        %ul
+          - [{"Slug (URL): " => item[:slug]}, {"Markup Type: " => item[:markup]}, {"Created: " => item[:created_time]}, {"Updated: " => item[:updated_time]}].each do |key, value|
+            %li
+              %span.field
+                =key
+              %span.value
+                =value

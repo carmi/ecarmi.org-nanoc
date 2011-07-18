@@ -7,8 +7,8 @@
     %link{:href => "/static/css/style.css", :media => "screen", :rel => "stylesheet", :type => "text/css"}
     %script{:src => "/static/js/jquery.js", :type => "text/javascript"}
     %script{:src => "/static/js/jquery-timeago.js", :type => "text/javascript"}
-    %script{:src => "/static/js/ecarmi.js", :type => "text/javascript"}
-    //<script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
+    //%script{:src => "/static/js/ecarmi.js", :type => "text/javascript"}
+    <script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
     %meta{:content => "nanoc 3.1.7", :name => "generator"}
     %meta{:content => "Evan H. Carmi", :name => "author"}
     %script{:type => "text/javascript"}
@@ -22,44 +22,50 @@
     \     id: 'ehc', 
     \     count: 1, 
     \     enableLinks: true, 
-    \     ignoreReplies: false, 
+    \     ignoreReplies: true, 
     \     clearContents: true,
     \     template: '<span class="tweet">&#8220;%text%&#8221;</span><a class="date" href="http://twitter.com/%user_screen_name%/statuses/%id_str%/"> \
     \      &rarr; %time%</a>'
     \ });
+    - if (@item.path == "/")
+      \ getTwitters('ten-tweets', { 
+      \     id: 'ehc', 
+      \     count: 10, 
+      \     enableLinks: true, 
+      \     ignoreReplies: true, 
+      \     clearContents: true,
+      \     template: '<span class="tweet">&#8220;%text%&#8221;</span><a class="date" href="http://twitter.com/%user_screen_name%/statuses/%id_str%/"> \
+      \      &rarr; %time%</a>'
+      \ });
     </script>
+
 
   %body
     %header
       %hgroup
         %div.flybar
           %h1.title= "#{@item[:title]}"
-          %h3.byline
-            by 
-            %a{:href => "http://ecarmi.org/"}
-              Evan Carmi
-          %span.post_date
-            Posted
-            %time.timeago{:datetime => item[:timeago]}
-              = item[:print_time]
+          -if @item[:kind] == 'article'
+            %h3.byline
+              by 
+              %a{:href => "http://ecarmi.org/"}
+                Evan Carmi
+            %span.post_date
+              Posted
+              %time.timeago{:datetime => item[:timeago]}
+                = item[:print_time]
 
         %h2.logo
           <span class="ecarmi">ecarmi</span><span class="dot">.</span><span class="tld">org</span>
 
-        %nav
-          %h2 nav
-          - breadcrumbs_trail.each do |crumb|
-            %p
-              =link_to(crumb.attributes[:title] || crumb.path ,crumb)
+      %nav
+        %h2 navigation
+        
+        %div
           %ul
+          - breadcrumbs_trail.each do |crumb|
             %li
-              %a{:href => "http://nanoc.stoneship.org/docs/"} Home
-            %li
-              %a{:href => "http://nanoc.stoneship.org/docs/3-getting-started/"} Writing
-            %li
-              %a{:href => "http://nanoc.stoneship.org/docs/3-getting-started/"} Getting Started
-            %li
-              %a{:href => "http://nanoc.stoneship.org/docs/3-getting-started/"} Projects
+              =link_to(crumb.path, crumb)
 
     %div#content
       = yield
