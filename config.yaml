@@ -39,3 +39,10 @@ data_sources:
     # The path where layouts should be mounted. The layouts root behaves the
     # same as the items root, but applies to layouts rather than items.
     layouts_root: /
+
+# The deploy configurations
+deploy:
+  prod:
+    dst: "jill@smarty.ecarmi.org:/home/jill/www/sites/prod/web/public"
+  staging:
+    dst: "jill@smarty.ecarmi.org:/home/jill/www/sites/staging/web/public"

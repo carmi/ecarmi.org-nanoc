@@ -1,0 +1,69 @@
+code span.hll { background-color: #ffffcc }
+code span.c { color: #8f5902; font-style: italic } /* Comment */
+code span.err { color: #a40000; border: 1px solid #ef2929 } /* Error */
+code span.g { color: #000000 } /* Generic */
+code span.k { color: #204a87; font-weight: bold } /* Keyword */
+code span.l { color: #000000 } /* Literal */
+code span.n { color: #000000 } /* Name */
+code span.o { color: #ce5c00; font-weight: bold } /* Operator */
+code span.x { color: #000000 } /* Other */
+code span.p { color: #000000; font-weight: bold } /* Punctuation */
+code span.cm { color: #8f5902; font-style: italic } /* Comment.Multiline */
+code span.cp { color: #8f5902; font-style: italic } /* Comment.Preproc */
+code span.c1 { color: #8f5902; font-style: italic } /* Comment.Single */
+code span.cs { color: #8f5902; font-style: italic } /* Comment.Special */
+code span.gd { color: #a40000 } /* Generic.Deleted */
+code span.ge { color: #000000; font-style: italic } /* Generic.Emph */
+code span.gr { color: #ef2929 } /* Generic.Error */
+code span.gh { color: #000080; font-weight: bold } /* Generic.Heading */
+code span.gi { color: #00A000 } /* Generic.Inserted */
+code span.go { color: #000000; font-style: italic } /* Generic.Output */
+code span.gp { color: #8f5902 } /* Generic.Prompt */
+code span.gs { color: #000000; font-weight: bold } /* Generic.Strong */
+code span.gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+code span.gt { color: #a40000; font-weight: bold } /* Generic.Traceback */
+code span.kc { color: #204a87; font-weight: bold } /* Keyword.Constant */
+code span.kd { color: #204a87; font-weight: bold } /* Keyword.Declaration */
+code span.kn { color: #204a87; font-weight: bold } /* Keyword.Namespace */
+code span.kp { color: #204a87; font-weight: bold } /* Keyword.Pseudo */
+code span.kr { color: #204a87; font-weight: bold } /* Keyword.Reserved */
+code span.kt { color: #204a87; font-weight: bold } /* Keyword.Type */
+code span.ld { color: #000000 } /* Literal.Date */
+code span.m { color: #0000cf; font-weight: bold } /* Literal.Number */
+code span.s { color: #4e9a06 } /* Literal.String */
+code span.na { color: #c4a000 } /* Name.Attribute */
+code span.nb { color: #204a87 } /* Name.Builtin */
+code span.nc { color: #000000 } /* Name.Class */
+code span.no { color: #000000 } /* Name.Constant */
+code span.nd { color: #5c35cc; font-weight: bold } /* Name.Decorator */
+code span.ni { color: #ce5c00 } /* Name.Entity */
+code span.ne { color: #cc0000; font-weight: bold } /* Name.Exception */
+code span.nf { color: #000000 } /* Name.Function */
+code span.nl { color: #f57900 } /* Name.Label */
+code span.nn { color: #000000 } /* Name.Namespace */
+code span.nx { color: #000000 } /* Name.Other */
+code span.py { color: #000000 } /* Name.Property */
+code span.nt { color: #204a87; font-weight: bold } /* Name.Tag */
+code span.nv { color: #000000 } /* Name.Variable */
+code span.ow { color: #204a87; font-weight: bold } /* Operator.Word */
+code span.w { color: #f8f8f8; text-decoration: underline } /* Text.Whitespace */
+code span.mf { color: #0000cf; font-weight: bold } /* Literal.Number.Float */
+code span.mh { color: #0000cf; font-weight: bold } /* Literal.Number.Hex */
+code span.mi { color: #0000cf; font-weight: bold } /* Literal.Number.Integer */
+code span.mo { color: #0000cf; font-weight: bold } /* Literal.Number.Oct */
+code span.sb { color: #4e9a06 } /* Literal.String.Backtick */
+code span.sc { color: #4e9a06 } /* Literal.String.Char */
+code span.sd { color: #8f5902; font-style: italic } /* Literal.String.Doc */
+code span.s2 { color: #4e9a06 } /* Literal.String.Double */
+code span.se { color: #4e9a06 } /* Literal.String.Escape */
+code span.sh { color: #4e9a06 } /* Literal.String.Heredoc */
+code span.si { color: #4e9a06 } /* Literal.String.Interpol */
+code span.sx { color: #4e9a06 } /* Literal.String.Other */
+code span.sr { color: #4e9a06 } /* Literal.String.Regex */
+code span.s1 { color: #4e9a06 } /* Literal.String.Single */
+code span.ss { color: #4e9a06 } /* Literal.String.Symbol */
+code span.bp { color: #3465a4 } /* Name.Builtin.Pseudo */
+code span.vc { color: #000000 } /* Name.Variable.Class */
+code span.vg { color: #000000 } /* Name.Variable.Global */
+code span.vi { color: #000000 } /* Name.Variable.Instance */
+code span.il { color: #0000cf; font-weight: bold } /* Literal.Number.Integer.Long */
