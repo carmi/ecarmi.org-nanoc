@@ -2,7 +2,10 @@
 %html{:lang => "en"}
   %head
     %meta{"http-equiv" => "Content-Type", :content => "text/html", :charset => "utf-8"}
+
     %title ecarmi.org - #{@item[:title]}
+
+    //%link{:href => "/static/css/1140/1140.css", :media => "screen", :rel => "stylesheet", :type => "text/css"}
     %link{:href => "/static/css/tango.css", :media => "screen", :rel => "stylesheet", :type => "text/css"}
     %link{:href => "/static/css/style.css", :media => "screen", :rel => "stylesheet", :type => "text/css"}
     %script{:src => "/static/js/jquery.js", :type => "text/javascript"}
@@ -17,8 +20,13 @@
       });
     <script src="http://twitterjs.googlecode.com/svn/trunk/src/twitter.min.js" type="text/javascript"></script>
 
+    //<script type="text/javascript" charset="utf-8">
+    //setInterval(function() {
+    //javascript:void(function(){var i,a,s;a=document.getElementsByTagName('link');for(i=0;i<a.length;i++){s=a[i];if(s.rel.toLowerCase().indexOf('stylesheet')>=0&&s.href) {var h=s.href.replace(/(&|%5C?)forceReload=\d+/,'');s.href=h+(h.indexOf('?')>=0?'&':'?')+'forceReload='+(new Date().valueOf())}}})();
+    //}, 4000);
+    //</script>
     <script type="text/javascript" charset="utf-8">
-    \ getTwitters('tweets', { 
+    \ geon-twitter('tweets', { 
     \     id: 'ehc', 
     \     count: 1, 
     \     enableLinks: true, 
@@ -41,9 +49,9 @@
 
 
   %body
-    %header
-      %hgroup
-        %div.flybar
+    %div.container
+      %header.flybar
+        %hgroup
           %h1.title= "#{@item[:title]}"
           -if @item[:kind] == 'article'
             %h3.byline
@@ -54,44 +62,50 @@
               Posted
               %time.timeago{:datetime => item[:timeago]}
                 = item[:print_time]
+          /
+            %h2.logo
+              <span class="ecarmi">ecarmi</span><span class="dot">.</span><span class="tld">org</span>
 
-        %h2.logo
-          <span class="ecarmi">ecarmi</span><span class="dot">.</span><span class="tld">org</span>
-
-      %nav
-        %h2 navigation
-        
-        %div
+        %nav.breadcrumbs
           %ul
-          - breadcrumbs_trail.each do |crumb|
-            %li
-              =link_to(crumb.path, crumb)
+            - breadcrumbs_trail.each do |crumb|
+              %li
+                =link_to(crumb.path.split('/').last || 'ecarmi.org', crumb)
 
-    %div#content
-      = yield
+      %div.content
+        = yield
+      %nav.sidebar
+        %h2 navigation
+        %p
+          <a href="bah">About</a>
+        %p
+          <a href="bah">Work</a>
+        %p
+          <a href="bah">Code</a>
+        %p
+          <a href="bah">Writing</a>
 
-    %footer
-      %div.columns
 
-        %div.ecarmi-org
+      %footer
+        %div.column.ecarmi-org
           %h2
             ecarmi.org
           %p is a web site that serves as a collection of thoughts and experiences.
 
-        %div.powered
+        %div.column.powered
           %h2
             powered by
           %p 
             Powered by <a class="nanoc" href="http://nanoc.stoneship.org/">nanoc</a> and the internets.
-        %div.evancarmi
+        %div.column.evancarmi
           %h2
             Evan Carmi
           %p is a programmer and developer living in New York City
 
-        %div.twitter
+        %div.column.twitter
           %h2
             on twitter
-          %p.handle
+          %div.handle
             %a.twitter-follow-button{:href => "https://twitter.com/ehc"}
               Follow
               %span.twitter-handle
@@ -99,15 +113,17 @@
           %p#tweets
             Most recent tweets are loading:
             <img src="/static/img/ajax-loader.gif">
-        
-      %div.notes
-        %p.best-viewed
-          This site is best viewed in
-          %a{:href => "http://curl.haxx.se/"}
-            cURL.
+          
+        %div.clear
 
-        %p.html5
-          <a href="http://www.w3.org/html/logo/"> <img src="http://www.w3.org/html/logo/badge/html5-badge-h-css3-performance-semantics.png" width="197" height="64" alt="HTML5 Powered with CSS3 / Styling, Performance &amp; Integration, and Semantics" title="HTML5 Powered with CSS3 / Styling, Performance &amp; Integration, and Semantics"> </a>
+        %div.notes
+          %p.best-viewed
+            This site is best viewed in
+            %a{:href => "http://curl.haxx.se/"}
+              cURL.
 
-        %p.copyright
-          <a rel="license" href="http://creativecommons.org/licenses/by/3.0/us/">Copyright Evan Carmi</a>
+          %p.html5
+            <a href="http://www.w3.org/html/logo/"> <img src="http://www.w3.org/html/logo/badge/html5-badge-h-css3-performance-semantics.png" width="197" height="64" alt="HTML5 Powered with CSS3 / Styling, Performance &amp; Integration, and Semantics" title="HTML5 Powered with CSS3 / Styling, Performance &amp; Integration, and Semantics"> </a>
+
+          %p.copyright
+            <a rel="license" href="http://creativecommons.org/licenses/by/3.0/us/">Copyright Evan Carmi</a>
