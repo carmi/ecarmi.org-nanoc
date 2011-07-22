@@ -1,18 +1,34 @@
+// ============================== */
+// ! Layout for desktop version   */
+// ============================== */
+
+    body {
+        
+    }
 @import url(http://fonts.googleapis.com/css?family=Ultra|Droid+Sans+Mono|Crimson+Text)
 
 @import "compass/css3/border-radius"
+@import "compass/css3/box-shadow"
+@import "compass/css3/text-shadow"
 @import "compass/css3/transition"
 @import "compass/css3/transform"
 @import "compass/layout/grid-background"
+
 @import "compass/typography/vertical_rhythm"
 
 @import "compass/reset/utilities"
-@include global-reset
 
 @include establish-baseline
 
-$section_width: 960px
-$content_left_margin: 65px
+// Vertical rhythm for 18px/24px
+p
+  font-size: 1em /* 18px */
+  line-height: 1.3333em /* 24px */
+  margin: 0 0 1.3333em 0
+
+
+$sidebar_width: 10em
+$margin_top: 7em
 
 // Colors
 //http://colorschemedesigner.com/#0u31Mw0w0w0w0
@@ -20,8 +36,12 @@ $content_left_margin: 65px
 
 $bg_dark: #1f1f1f
 $box_bg:  #303030
+$dark_bg:  #303030
 $box_border: #A64B00
-$bg_text: #686868
+
+$header_text: #686868
+$text: #000
+$bg: #cccccc
 
 $header_dark:     #A64B00
 $header_light:    #BF7130
@@ -40,62 +60,6 @@ $blue:    #0F4FA8
 $orange:  #FF7400
 $grey:    #B5B9BA
 // Basic styles
-
-img
-  display: inline-block
-  vertical-align: bottom
-
-h1, h2, h3, h4, h5, h6, strong, b, dt, th
-  font-weight: 700
-
-address, cite, em, i, caption, dfn, var
-  font-style: italic
-
-h1
-  margin: 0 0 0.75em
-  font-size: 2em
-
-h2
-  margin: 0 0 1em
-  font-size: 1.7em
-
-h3
-  margin: 0 0 1.286em
-  font-size: 1.5em
-
-h4
-  margin: 0 0 1.5em
-  font-size: 1.45em
-
-h5
-  margin: 0 0 1.8em
-  font-size: 1.4em
-
-h6
-  margin: 0 0 2em
-  font-size: 1.3em
-
-p, ul, ol, dl, blockquote, pre
-  margin: 0 0 1.5em
-
-li
-  ul, ol
-    margin: 0
-
-ul
-  list-style: outside disc
-
-ol
-  list-style: outside decimal
-
-li
-  margin: 0 0 0 2em
-
-dd
-  padding-left: 1.5em
-
-blockquote
-  padding: 0 1.5em
 
 a
   text-decoration: underline
@@ -123,146 +87,24 @@ sup
   line-height: 1em
   vertical-align: super
 
-tt, code, kbd, samp, pre
-  font-size: 1em
-  font-family: "Courier New", Courier, monospace
-
-/* Table styles
-
-table
-  border-collapse: collapse
-  border-spacing: 0
-  margin: 0 0 1.5em
-
-caption
-  text-align: left
-
-th, td
-  padding: .25em .5em
-
-tbody
-  td, th
-    border: 1px solid #000
-
-tfoot
-  font-style: italic
-
-/* Form styles
-
-fieldset
-  clear: both
-
-legend
-  padding: 0 0 1.286em
-  font-size: 1.167em
-  font-weight: 700
-
-fieldset fieldset legend
-  padding: 0 0 1.5em
-  font-size: 1em
-
-* html legend, *+html legend
-  margin-left: -7px
-
-form
-  .field, .buttons
-    clear: both
-    margin: 0 0 1.5em
-  .field label
-    display: block
-  ul
-    &.fields li
-      list-style-type: none
-      margin: 0
-    &.inline
-      li, label
-        display: inline
-      li
-        padding: 0 .75em 0 0
-
-input
-  &.radio, &.checkbox
-    vertical-align: top
-
-label, button
-  cursor: pointer
-
-input
-  &.submit, &.image
-    cursor: pointer
-
-* html input
-  &.radio, &.checkbox
-    vertical-align: middle
-
-*+html input
-  &.radio, &.checkbox
-    vertical-align: middle
-
-textarea
-  overflow: auto
-
-input
-  &.text, &.password
-    margin: 0
-    font: 1em / 1.3 Helvetica, Arial, "Liberation Sans", "Bitstream Vera Sans", sans-serif
-    vertical-align: baseline
-
-textarea, select
-  margin: 0
-  font: 1em / 1.3 Helvetica, Arial, "Liberation Sans", "Bitstream Vera Sans", sans-serif
-  vertical-align: baseline
-
-input
-  &.text, &.password
-    border: 1px solid #444
-    border-bottom-color: #666
-    border-right-color: #666
-    padding: 2px
-
-textarea
-  border: 1px solid #444
-  border-bottom-color: #666
-  border-right-color: #666
-  padding: 2px
-
-* html button, *+html button
-  margin: 0 .34em 0 0
-
-form.horizontal .field
-  padding-left: 150px
-  label
-    display: inline
-    float: left
-    width: 140px
-    margin-left: -150px
-
-/* Useful classes
-
-img
-  &.left
-    display: inline
-    float: left
-    margin: 0 1.5em .75em 0
-  &.right
-    display: inline
-    float: right
-    margin: 0 0 .75em .75em
-
-
 // Custom Styling
 
 @mixin header-shadow
   font-variant: small-caps
   text-shadow: -1px -1px 0px #999
 
+@mixin invert_colors
+  background: $dark_bg
+  color: $bg
+
 @mixin flybar
-  position: fixed
   z-index: 100
-  width: 100%
-  min-width: $section_width
   background: $header_light
-  border-bottom: 1px solid #ccc
+  border-bottom: 1px solid $dark_bg
+  margin-left: -20px
+  padding-right: 40px
+  // no max-width
+  max-width: none
   top: 0
   left: 0
   line-height: 24px
@@ -273,32 +115,20 @@ img
   &:hover
     opacity: 1
 
-div#content
-  width: $section_width
-  min-height: 400px
-  margin-top: 100px
-  margin-left: $content_left_margin
-  margin-right: auto
 
 body
   font-family: 'Crimson Text', arial, serif
-  color: #fff
-  background-color: $bg_dark
+  color: $text
+  background-color: $bg
 
   h1, h2, h3, h4, h5, h6
-    color: $bg_text
-  h1
-    @include header-shadow
-
-
-p
-  font-size: 18px
+    color: $header_text
 
 pre, code, tt, kdb, samp
   font-family: 'Droid Sans Mono', monospace, courier
   overflow: auto
   font-size: 14px
-  background: $box_bg
+  @include invert_colors
   overflow: auto
   @include border-radius(5px 0 0 0)
   border: 1px solid $box_border
@@ -317,44 +147,58 @@ pre
     border: none
     @include border-radius(0)
 
-nav
+div.content
+  margin-top: $margin_top
+  min-height: 5em
+  margin-left: $sidebar_width + 1em
+  float: left
+  // consider adding max-width
+  width: 75%
+
+div.article
+  max-width: 35em
+  min-width: 20em
+  margin-left: 11em
+
+
+nav.sidebar
+  // location
   position: fixed
-  z-index: 100
-  top: 250px
-  width: 40px
-  height: 190px
-  opacity: 0.2
-  overflow: hidden
-  background-color: #ccc
-  @include border-radius(15px)
-  margin-left: 20px
+  top: 5em
+  left: 1em
+  float: left
+  width: $sidebar_width
+
+  a
+    font-weight: bold
+    margin-left: 1.5em
+    text-transform: uppercase
+    text-decoration: none
+    color: $bg_dark
+    text-decoration: underline
+    opacity: .6
+    @include transition(.1s ease-in .1s)
+
+    &:hover
+      text-decoration: none
+      opacity: 1
 
   h2
     @include rotate(-90deg)
-    position: absolute
+    position: relative
     text-transform: uppercase
-    left: -65px
-    top: 80px
+    left: -3em
+    top: $margin_top - 3
+    opacity: 0.3
 
-  div
-    margin-left: 60px
-  
-    ul
-      li
-
-  &:hover
-    @include transition(width, .2s, ease-in, .1s)
-    @include transition(opacity, .2s, ease-in, .1s)
-    opacity: 0.9
-    width: 200px
 
 //Style Blockquotes
 blockquote
-  //border-left: 2px solid red
   quotes: "\201C""\201D""\2018""\2019"
   font-style: oblique
-  padding-top: 30px
-  background: $box_bg
+  padding: 2em 1em 0em 1em
+  @include invert_colors
+  color: #ccc
   @include border-radius(15px)
   
   &:before
@@ -382,115 +226,145 @@ a:visited
 a
   color: $link_color
 
-header
-  height: 35px
+header.flybar
+  // location and size
+  width: 100%
+  z-index: 100
+  position: fixed
+  top: 0
+  left: 0
+  margin-left: -1em
+  padding-left: 2em
+  padding-bottom: 0em
+  padding-top: .5em
+  margin-bottom: 1em
+  max-width: none
+
+  // color and style
+  background: $header_light
+  border-bottom: 1px solid $dark_bg
+  overflow: visible
+
+  opacity: 0.90
+
+  @include transition(opacity, .2s, ease-in)
+
+  &:hover
+    opacity: 1
+
+
+  nav.breadcrumbs
+    font-size: .8em
+    margin: 0
+    z-index: 110
+    float: right
+    padding-right: 2em
+    ul
+      list-style-type: none
+      margin: 0
+      li
+        float: left
+        padding-left: .2em
+        &:after
+          color: $bg
+          font-weight: bold
+          content: '\21D2'
+        &:last-child:after
+          content: ''
+
+        a
+          padding-right: .5em
+          padding-left: .5em
+          background: $bg
+          @include border-radius(5px)
+          font-weight: bold
+          text-transform: uppercase
+          text-decoration: none
+          color: $header_text
+          @include box-shadow(0 1px 2px rgba(0,0,0,.8))
+          @include transition(color .1s ease-in .1s)
+          &:hover
+            color: $bg_dark
+
 
   hgroup
-    div.flybar
-      @include flybar
-      padding: 25px 0px 10px $content_left_margin
-      
-      h1.title
-        max-width: 700px
-
-    h2.logo
-      overflow: visible
-      @include header-shadow
-      @include skewY(26.6deg)
-      text-shadow: 1px -1px 0px #999, 2px -2px 0px #888, 3px -3px 0px #777, 4px -4px 0px #666, 5px -5px 0px #555, 5px -5px 0px #444, 5px -5px 0px #333, 5px -5px 5px #222 
-      color: #fff
-      margin-right: 0px
-      font-size: 50px
-      opacity: 0.8
-      position: absolute
-      right: 20px
-      top: 80px
-      z-index: 110
-      
-      
-
-
     h1.title
       float: left
       padding-right: 10px
-      margin-bottom: 0px
+      padding-bottom: .2em
+      max-width: 60%
+      margin: 0
     h3.byline
-      padding-right: 10px
-      margin-bottom: 0px
+      //padding-right: 10px
+      margin: 0
+      padding-bottom: .35em
       color: #ccc
       a
         color: #ccc
     span.post_date
+      float: left
       color: #ccc
 
+    h2.logo
+      visibility: hidden
+      //  overflow: visible
+      //  @include header-shadow
+      //  @include skewY(26.6deg)
+      //  text-shadow: 1px -1px 0px #999, 2px -2px 0px #888, 3px -3px 0px #777, 4px -4px 0px #666, 5px -5px 0px #555, 5px -5px 0px #444, 5px -5px 0px #333, 5px -5px 5px #222 
+      //  color: #fff
+      //  margin-right: 0px
+      //  font-size: 50px
+      //  opacity: 0.8
+      //  position: absolute
+      //  right: 20px
+      //  top: 80px
+      //  z-index: 110
+
 footer
-  color: $bg_text
   position: inherit
-  bottom: 0
-  left: 0
   background: #ccc
-  min-width: $section_width
-  min-height: 300px
-  padding-left: $content_left_margin
-  padding-top: 20px
-  padding-bottom: 5px
+  margin-left: $sidebar_width + 1em
 
-  div
-    width: $section_width
+  div.column
+    float: left
+    width: 22%
+    height: 14em
 
-  div.columns
+    p
+      padding-right: 1em
 
-    div
-      float: left
-      width: 230px
-      height: 230px
-      margin-right: 10px
+    h2
+      position: relative
+      text-transform: uppercase
 
-      p
-        margin-left: 30px
+  div.twitter
+    ul
+      list-style: none
+      padding-left: 0
+      li
+        a.date            
+          color: #186487 
+      
+    div.handle
+      text-align: center
+      padding-bottom: 0
+      margin-bottom: 0
 
-      h2
-        left: -105px
-        top: 70px
-        display: block
-        @include rotate(-90deg)
-        text-transform: uppercase
-        font-size: 30px
-        text-shadow: 1px -1px 0px
-        position: relative
-
-    div.twitter
-      p
-        margin-top: -40px
-        ul
-          list-style: none
-          li
-            margin-left: 0px
-
-            a.date            
-              color: #186487 
-        
-      p.handle
-        text-align: center
-        padding-bottom: 10px
-
-        a
-          text-decoration: none
-          span.twitter-handle
-            color: #186487
+      a
+        text-decoration: none
+        span.twitter-handle
+          color: #186487
 
   div.notes
     clear: both
     text-align: center
     
 section#articles
-  width: $section_width
-  
   article
     overflow: auto
     width: 100%
     background: #353535
-    padding: 15px
+    //padding: 15px
     margin-bottom: 20px
     @include border-top-right-radius(15px)
     border-left: 2px solid #ccc
@@ -516,13 +390,14 @@ section#articles
         margin: 0
         li
           list-style: none
+
 div#ten-tweets
   overflow: auto
   margin-bottom: 20px
   ul
     li
       clear: both
-      padding: 5px
+      //padding: 5px
       span.tweet
         width: 70%
         float: left
@@ -530,3 +405,37 @@ div#ten-tweets
       a.date
         float: right
         color: #186487 
+
+.clear
+  clear: both
+  display: block
+
+// ============================= */
+// ! Layout for mobile version   */
+// ============================= */
+
+@media screen and (max-width: 767px)
+  // Disable flybar on small screens to conserve screen space
+  header.flybar
+    position: absolute
+    nav.breadcrumbs
+      display: none
+
+  div.content
+    width: 95%
+    margin-left: 1em
+
+  nav.sidebar
+    margin-left: 1em
+    float: none
+    position: inherit
+    h2
+      position: inherit
+      @include rotate(0)
+
+  footer
+    margin-left: 1em
+    div.column
+      float: none
+      width: 80%
+      height: 100%
