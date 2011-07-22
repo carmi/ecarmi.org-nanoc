@@ -15,4 +15,5 @@ task :gitdeploy do
   else
     puts "Failed: #{cmd}"
   end
+  `git checkout develop`
 end
