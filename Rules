@@ -68,7 +68,7 @@ compile '/writing/*/' do
   end
 
   filter :rubypants
-  #layout 'post'
+  layout 'post'
   layout 'default'
 end
 
