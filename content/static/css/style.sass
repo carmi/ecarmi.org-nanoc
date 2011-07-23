@@ -47,6 +47,7 @@ $bg: #cccccc
 
 $header_dark:     #A64B00
 $header_light:    #BF7130
+
 //Blue
 $primary_dark:    #05316D
 $primary_light:   #284C7E
@@ -141,6 +142,11 @@ div.content
   float: left
   // consider adding max-width
   width: 75%
+
+  h1, h2, h3
+    font-variant: small-caps
+    font-family: 'Ultra'
+    font-weight: lighter
 
 div.article
   max-width: 35em
@@ -282,6 +288,7 @@ header.flybar
       padding-bottom: .2em
       max-width: 60%
       margin: 0
+      font-variant: small-caps
     h3.byline
       //padding-right: 10px
       margin: 0
@@ -304,11 +311,13 @@ footer
     width: 25%
     padding: 0
     margin: 0
+    overflow: hidden
 
     p
       padding-right: 1em
 
     h2
+      font-size: 1.1em
       position: relative
       text-transform: uppercase
       font-family: 'Ultra'
@@ -328,7 +337,11 @@ footer
   div.notes
     clear: both
     text-align: center
-    
+
+div#disqus_thread
+  div
+    font-size: 1em
+
 section#articles
   article
     overflow: visible
@@ -346,6 +359,8 @@ section#articles
 
     h2.title
       margin-bottom: 5px
+      a
+        text-decoration: none
 
     h6.date
   
