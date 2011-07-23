@@ -7,6 +7,9 @@
     }
 @import url(http://fonts.googleapis.com/css?family=Ultra|Droid+Sans+Mono|Crimson+Text)
 
+// Import tango.scss code-highlighting css
+@import "tango"
+
 @import "compass/css3/border-radius"
 @import "compass/css3/box-shadow"
 @import "compass/css3/text-shadow"
@@ -25,7 +28,6 @@ p
   font-size: 1em /* 18px */
   line-height: 1.3333em /* 24px */
   margin: 0 0 1.3333em 0
-
 
 $sidebar_width: 10em
 $margin_top: 7em
@@ -96,21 +98,6 @@ sup
 @mixin invert_colors
   background: $dark_bg
   color: $bg
-
-@mixin flybar
-  z-index: 100
-  background: $header_light
-  border-bottom: 1px solid $dark_bg
-  margin-left: -20px
-  padding-right: 40px
-  // no max-width
-  max-width: none
-  top: 0
-  left: 0
-  line-height: 24px
-  overflow: visible
-  opacity: 0.90
-  @include transition(opacity, .2s, ease-in)
 
   &:hover
     opacity: 1
@@ -194,6 +181,7 @@ nav.sidebar
 
 //Style Blockquotes
 blockquote
+  margin-left: 0
   quotes: "\201C""\201D""\2018""\2019"
   font-style: oblique
   padding: 2em 1em 0em 1em
@@ -307,13 +295,15 @@ header.flybar
 
 footer
   position: inherit
+  border-top: 1em solid $header_text
   background: #ccc
   margin-left: $sidebar_width + 1em
 
   div.column
     float: left
     width: 25%
-    overflow: hidden
+    padding: 0
+    margin: 0
 
     p
       padding-right: 1em
@@ -321,32 +311,27 @@ footer
     h2
       position: relative
       text-transform: uppercase
+      font-family: 'Ultra'
+      font-weight: lighter
+      margin-bottom: .5em
+
 
   div.twitter
     ul
       list-style: none
-      padding-left: 0
+      padding: 0
+      margin: 0
       li
-        a.date            
+        a.tweet_time            
           color: #186487 
       
-    div.handle
-      text-align: center
-      padding-bottom: 0
-      margin-bottom: 0
-
-      a
-        text-decoration: none
-        span.twitter-handle
-          color: #186487
-
   div.notes
     clear: both
     text-align: center
     
 section#articles
   article
-    overflow: auto
+    overflow: visible
     width: 100%
     background: #353535
     //padding: 15px
