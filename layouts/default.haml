@@ -50,80 +50,9 @@
 
   %body
     %div.container
-      %header.flybar
-        %hgroup
-          %h1.title= "#{@item[:title]}"
-          -if @item[:kind] == 'article'
-            %h3.byline
-              by 
-              %a{:href => "http://ecarmi.org/"}
-                Evan Carmi
-            %span.post_date
-              Posted
-              %time.timeago{:datetime => item[:timeago]}
-                = item[:print_time]
-          /
-            %h2.logo
-              <span class="ecarmi">ecarmi</span><span class="dot">.</span><span class="tld">org</span>
-
-        %nav.breadcrumbs
-          %ul
-            - breadcrumbs_trail.each do |crumb|
-              %li
-                =link_to(crumb.path.split('/').last || 'ecarmi.org', crumb)
-
+      = render 'header'
       %div.content
         = yield
-      %nav.sidebar
-        %h2 navigation
-        %p
-          <a href="bah">About</a>
-        %p
-          <a href="bah">Work</a>
-        %p
-          <a href="bah">Code</a>
-        %p
-          <a href="bah">Writing</a>
-
-
-      %footer
-        %div.column.ecarmi-org
-          %h2
-            ecarmi.org
-          %p is a web site that serves as a collection of thoughts and experiences.
-
-        %div.column.powered
-          %h2
-            powered by
-          %p 
-            Powered by <a class="nanoc" href="http://nanoc.stoneship.org/">nanoc</a> and the internets.
-        %div.column.evancarmi
-          %h2
-            Evan Carmi
-          %p is a programmer and developer living in New York City
-
-        %div.column.twitter
-          %h2
-            on twitter
-          %div.handle
-            %a.twitter-follow-button{:href => "https://twitter.com/ehc"}
-              Follow
-              %span.twitter-handle
-                @ehc
-          %p#tweets
-            Most recent tweets are loading:
-            <img src="/static/img/ajax-loader.gif">
-          
-        %div.clear
-
-        %div.notes
-          %p.best-viewed
-            This site is best viewed in
-            %a{:href => "http://curl.haxx.se/"}
-              cURL.
-
-          %p.html5
-            <a href="http://www.w3.org/html/logo/"> <img src="http://www.w3.org/html/logo/badge/html5-badge-h-css3-performance-semantics.png" width="197" height="64" alt="HTML5 Powered with CSS3 / Styling, Performance &amp; Integration, and Semantics" title="HTML5 Powered with CSS3 / Styling, Performance &amp; Integration, and Semantics"> </a>
-
-          %p.copyright
-            <a rel="license" href="http://creativecommons.org/licenses/by/3.0/us/">Copyright Evan Carmi</a>
+      = render 'nav'
+      = render 'footer'
+      = render 'analytics'
