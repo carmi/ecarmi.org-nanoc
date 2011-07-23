@@ -11,9 +11,6 @@
         %time.timeago{:datetime => item[:timeago]}
           = item[:print_time]
     /
-      %h2.logo
-        <span class="ecarmi">ecarmi</span><span class="dot">.</span><span class="tld">org</span>
-
   %nav.breadcrumbs
     %ul
       - breadcrumbs_trail.each do |crumb|
