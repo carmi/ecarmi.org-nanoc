@@ -8,6 +8,9 @@ text_extensions: [ 'css', 'erb', 'haml', 'htm', 'html', 'js', 'less', 'markdown'
 # relative to the site directory.
 output_dir: output
 
+# Base URL, used for Atom feed
+base_url: http://ecarmi.org
+
 # A list of index filenames, i.e. names of files that will be served by a web
 # server when a directory is requested. Usually, index files are named
 # “index.hml”, but depending on the web server, this may be something else,
