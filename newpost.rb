@@ -14,7 +14,7 @@ FILE_ENDING = ".md"
 KIND = "article"
 MARKUP = "markdown"
 
-require 'time'
+require 'date'
 
 puts "Please enter the title of the new post:"
 raw_title = gets.strip
@@ -26,7 +26,7 @@ slug = slug.gsub(/[^a-z0-9-]/, '') # strip everything except a-z, 0-9, and -
 file_path = "#{DIR_BASE}/#{slug}#{FILE_ENDING}"
 
 # Date and title
-now = Time.now
+today = Date.today
 
 NEW_POST = <<EOF
 ---
@@ -35,9 +35,11 @@ slug: #{slug}
 markup: #{MARKUP}
 kind: #{KIND}
 author: #{AUTHOR}
-created_at: "#{Time.now.utc.iso8601.to_s}"
-updated_at: "#{Time.now.utc.iso8601.to_s}"
+created_at: "#{today.to_s}"
+updated_at: "#{today.to_s}"
 published: false
+comments_enabled: true
+tags:
 summary:
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lacus ligula,
