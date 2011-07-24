@@ -54,6 +54,24 @@ compile '/files/*/' do
   #don't compile files
 end
 
+# Sitemap
+compile '/sitemap/' do
+  filter :haml
+end
+
+route '/sitemap/' do
+  '/sitemap.xml'
+end
+
+# Atom Feed
+compile '/writing/feed/' do
+  filter :haml
+end
+
+route '/writing/feed/' do
+  '/writing/feed.xml'
+end
+
 compile '/writing/*/' do
   if @item[:markup] == "markdown"
     filter :kramdown
@@ -63,8 +81,9 @@ compile '/writing/*/' do
     }
   end
   if item[:created_at]
-    item[:print_time] = item[:created_at].strftime("%B %e, %Y")
-    item[:timeago] = item[:created_at].utc.iso8601.to_s
+    t = Time.parse(item[:created_at])
+    item[:print_time] = t.strftime("%B %e, %Y")
+    item[:timeago] = t.utc.iso8601.to_s
   end
 
   filter :rubypants
@@ -72,20 +91,30 @@ compile '/writing/*/' do
   layout 'default'
 end
 
+#create markdown text copies of all entries
+route '/writing/*/', :rep => :raw do
+  @item.identifier + 'index.markdown'
+end
+
+compile '/writing/*/', :rep => :raw do
+end
+
 compile '/writing/' do
   rep.item.children.each do |article|
-    attrs = article.attributes
-    created = attrs[:created_at]
-    updated = attrs[:updated_at]
+    if article[:extension] != 'xml' 
+      attrs = article.attributes
+      created = Time.parse(attrs[:created_at])
+      updated = Time.parse(attrs[:updated_at])
 
-    if created.is_a? Time
-      attrs[:created_time] = created.strftime("%B %e, %Y")
-      attrs[:created_timeago] = created.utc.iso8601.to_s
-    end
+      if created.is_a? Time
+        attrs[:created_time] = created.strftime("%B %e, %Y")
+        attrs[:created_timeago] = created.utc.iso8601.to_s
+      end
 
-    if updated.is_a? Time
-      attrs[:updated_time] = updated.strftime("%B %e, %Y")
-      attrs[:updated_timeago] = updated.utc.iso8601.to_s
+      if updated.is_a? Time
+        attrs[:updated_time] = updated.strftime("%B %e, %Y")
+        attrs[:updated_timeago] = updated.utc.iso8601.to_s
+      end
     end
   end
   layout 'writing_root'
