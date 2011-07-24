@@ -5,4 +5,3 @@ $highlight_syntax = false
 $use_minified_js = false
 $use_minified_css = false
 $development_mode = true
-$domain = "http://ecarmi.org"
