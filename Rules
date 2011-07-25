@@ -7,6 +7,10 @@ require 'time'
 
 Compass.add_project_configuration 'compass_config.rb'
 
+def build_route_with_slug(item, extension='html')
+  "/writing/#{item[:slug]}/index.#{extension}"
+end
+
 # A few helpful tips about the Rules file:
 #
 # * The order of rules is important: for each item, only the first matching
@@ -72,6 +76,10 @@ route '/writing/feed/' do
   '/writing/feed.xml'
 end
 
+route '/writing/*/' do
+  "/writing/#{item[:slug]}/index.html"
+end
+
 compile '/writing/*/' do
   if @item[:markup] == "markdown"
     filter :kramdown
@@ -93,10 +101,13 @@ end
 
 #create markdown text copies of all entries
 route '/writing/*/', :rep => :raw do
-  @item.identifier + 'index.markdown'
+  if @item[:markup] == 'markdown'
+    "/writing/#{@item[:slug]}/index.markdown"
+  end
 end
 
 compile '/writing/*/', :rep => :raw do
+  #don't compile
 end
 
 compile '/writing/' do

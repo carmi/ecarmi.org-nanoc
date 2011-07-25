@@ -1,0 +1,1 @@
+= atom_feed :title => "ecarmi.org", :author_name => "Evan Carmi", :author_uri => "http://ecarmi.org/about/", :limit => 1000
