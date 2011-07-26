@@ -1,27 +1,26 @@
-%h1 Everything Evan
-%p This is the blog and homepage of Evan Carmi. I'm a developer and programmer. Read more in the about section.
-%h1 Recent Writings
-%section#articles
-  - sorted_articles[0..1].each do |item|
+%div.landing
+  %h1.name Hello, my name is
+  %h1.evancarmi Evan Carmi.
+  %h1.i I
+  %hgroup
+    %ul
+      %li.action.code
+        %h1.action.code code
+      %li.action.write
+        %h1.action.write write
+      %li.action.work
+        %h1.action.work work
+      %li.action.tweet
+        %h1.action.tweet tweet
+
+  %div.action
+    %h3.featured Featured Post
     %article
-      %div.main
-        %h2.title= link_to item[:title], item
+      = render('post-link', :item => featured_articles[0])
 
-        %p.summary= item[:summary]
+  %h1 Ten Tweets
+  %div#ten-tweets
+    Tweets are loading.
 
-      %div.meta
-        %ul
-          - [{"Slug (URL): " => item[:slug]}, {"Markup Type: " => item[:markup]}, {"Created: " => item[:created_time]}, {"Updated: " => item[:updated_time]}].each do |key, value|
-            %li
-              %span.field
-                =key
-              %span.value
-                =value
-
-
-%h1 Ten Tweets
-%div#ten-tweets
-  Tweets are loading.
-
-%h1 Work
-%p I'm currently interning at The New York Times. I just built this
+  %h1 Work
+  %p I'm currently interning at The New York Times. I just built this

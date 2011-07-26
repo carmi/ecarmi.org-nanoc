@@ -1,19 +1,20 @@
-%header.flybar
-  %hgroup
-    %h1.title= "#{@item[:title]}"
-    -if @item[:kind] == 'article'
-      %h3.byline
-        by 
-        %a{:href => "http://ecarmi.org/"}
-          Evan Carmi
-      %span.post_date
-        Posted
-        %time.timeago{:datetime => item[:timeago]}
-          = item[:print_time]
-    /
-  %nav.breadcrumbs
-    %ul
-      - breadcrumbs_trail.each do |crumb|
-        %li
-          =link_to(crumb.path.split('/').last || 'ecarmi.org', crumb)
+- unless @item.path == '/'
+  %header.flybar
+    %hgroup
+      %h1.title= "#{@item[:title]}"
+      -if @item[:kind] == 'article'
+        %h3.byline
+          by 
+          %a{:href => "http://ecarmi.org/"}
+            Evan Carmi
+        %span.post_date
+          Posted
+          %time.timeago{:datetime => item[:timeago]}
+            = item[:print_time]
+      /
+    %nav.breadcrumbs
+      %ul
+        - breadcrumbs_trail.each do |crumb|
+          %li
+            =link_to(crumb.path.split('/').last || 'ecarmi.org', crumb)
 

@@ -97,6 +97,7 @@ compile '/writing/*/' do
   filter :rubypants
   layout 'post'
   layout 'default'
+  layout 'base'
 end
 
 #create markdown text copies of all entries
@@ -130,15 +131,17 @@ compile '/writing/' do
   end
   layout 'writing_root'
   layout 'default'
+  layout 'base'
 end
 
 compile '/' do
   layout 'homepage'
-  layout 'default'
+  layout 'base'
 end
 
 compile '*' do
   layout 'default'
+  layout 'base'
 end
 
 route '*' do

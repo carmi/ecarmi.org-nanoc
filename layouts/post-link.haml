@@ -1,0 +1,6 @@
+%div.post-content
+  %h2.title= link_to @item[:title], @item
+  %span.posted Posted
+  %time.timeago{:datetime => @item[:created_timego]}
+    = @item[:created_time]
+  %p.summary= @item[:summary]
