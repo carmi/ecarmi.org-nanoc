@@ -7,6 +7,7 @@ author: Evan H. Carmi
 created_at: "2011-03-28"
 updated_at: "2011-03-28"
 published: true
+featured: true
 comments_enabled: true
 tags: internship, google
 summary: I had a (well, three) interviews with Google for a summer internship position and lived to tell the tale.

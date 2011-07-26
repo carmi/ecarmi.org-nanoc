@@ -91,6 +91,8 @@ sup
   vertical-align: super
 
 // Custom Styling
+@mixin max-width
+  max-width: 80em
 
 @mixin header-shadow
   font-variant: small-caps
@@ -140,7 +142,7 @@ div.content
   min-height: 5em
   margin-left: $sidebar_width + 1em
   float: left
-  // consider adding max-width
+  @include max-width
   width: 75%
 
   h1, h2, h3
@@ -170,7 +172,7 @@ nav.sidebar
     color: $bg_dark
     text-decoration: underline
     opacity: .6
-    @include transition(.1s ease-in .1s)
+    @include single-transition(.1s ease-in .1s)
 
     &:hover
       text-decoration: none
@@ -190,18 +192,25 @@ blockquote
   margin-left: 0
   quotes: "\201C""\201D""\2018""\2019"
   font-style: oblique
-  padding: 2em 1em 0em 1em
+  padding: 1em 2em 1em 2em
   @include invert_colors
   color: #ccc
   @include border-radius(15px)
+
+  p
+    &:last-child
+      margin-bottom: 0
   
   &:before
     color: #ccc
     content: open-quote
     font-size: 6em
     line-height: .1em
-    margin-right: .15em
-    vertical-align: -.35em
+    margin-left: -.15em
+    position: relative
+    left: -.2em
+    top: .25em
+    float: left
 
   &:after
     color: #ccc
@@ -209,10 +218,10 @@ blockquote
     font-size: 6em
     line-height: .1em
     margin-left: -.15em
-    vertical-align: -.60em
-
-  p
-    display: inline
+    position: relative
+    right: -.1em
+    bottom: -.2em
+    float: right
 
 a:visited
   color: $link_color
@@ -227,11 +236,6 @@ header.flybar
   position: fixed
   top: 0
   left: 0
-  margin-left: -1em
-  padding-left: 2em
-  padding-bottom: 0em
-  padding-top: .5em
-  margin-bottom: 1em
   max-width: none
 
   // color and style
@@ -241,7 +245,7 @@ header.flybar
 
   opacity: 0.90
 
-  @include transition(opacity, .2s, ease-in)
+  @include single-transition(opacity, .2s, ease-in)
 
   &:hover
     opacity: 1
@@ -276,12 +280,15 @@ header.flybar
           text-decoration: none
           color: $header_text
           @include box-shadow(0 1px 2px rgba(0,0,0,.8))
-          @include transition(color .1s ease-in .1s)
+          @include single-transition(color .1s ease-in .1s)
           &:hover
             color: $bg_dark
 
 
   hgroup
+    
+    padding-top: .5em
+    padding-left: 2em
     h1.title
       float: left
       padding-right: 10px
@@ -301,7 +308,7 @@ header.flybar
       color: #ccc
 
 footer
-  position: inherit
+  @include max-width
   border-top: 1em solid $header_text
   background: #ccc
   margin-left: $sidebar_width + 1em
@@ -342,39 +349,32 @@ div#disqus_thread
   div
     font-size: 1em
 
+a.dsq-brlink
+  display: none
+
 section#articles
   article
+    float: left
     overflow: visible
-    width: 100%
-    background: #353535
-    //padding: 15px
-    margin-bottom: 20px
-    @include border-top-right-radius(15px)
-    border-left: 2px solid #ccc
+    min-width: 25em
+    margin-bottom: 1em
+    padding-right: 2em
     opacity: .7
-    @include transition(opacity, .2s, ease-in, .1s)
+    @include single-transition(opacity .2s linear .1s)
 
     &:hover
       opacity: 1
 
     h2.title
+      margin-top: 0
       margin-bottom: 5px
       a
         text-decoration: none
 
-    h6.date
-  
-    div.main
-      float: left
-      width: 60%
-      
-    div.meta
-      width: 30%
-      float: right
-      ul
-        margin: 0
-        li
-          list-style: none
+    div.post-content
+      span.posted
+        color: $header_text
+        font-weight: bold
 
 div#ten-tweets
   overflow: auto
@@ -394,6 +394,82 @@ div#ten-tweets
 .clear
   clear: both
   display: block
+// ============================= */
+//  Styles only for wide screens */
+// ============================= */
+
+@media screen and (min-width: 767px)
+  // Homepage styling
+  div.landing
+    width: 60em
+    margin-top: 4em
+    margin-left: auto
+    margin-right: auto
+    h1.name
+      font-size: 3em
+      text-align: center
+      margin-bottom: 0
+      padding-bottom: 0
+      opacity: .3
+      @include single-transition(opacity, .25s, linear, .1s)
+      &:hover
+        opacity: .5
+      &:before
+        content: '\264E'
+        text-align: center
+        font-size: 3em
+        display: block
+        padding-bottom: .25em
+      
+    h1.evancarmi
+      margin-top: .1em
+      font-size: 8em
+      line-height: 1em
+      text-align: center
+      margin-bottom: 0 
+    h1.i
+      font-size: 4em
+      text-align: center
+
+    hgroup
+      text-align: center
+      ul
+        overflow: visible
+        list-style-type: none
+        li
+          width: 23%
+          float: left
+          border-left: 10px solid $header_text
+          padding-top: .7em
+          font-size: 2em
+          height: 1.5em
+          margin-bottom: 2.2em
+          h1.action
+            height: 1em
+            padding: 0
+            margin: 0
+            margin-left: -.5em
+            margin-right: -.5em
+            opacity: .3
+            @include single-transition(opacity, .25s, linear, .1s)
+            &:after
+              color: #b6b6b6
+              position: relative
+              content: '\21A1'
+              margin-top: .7em
+              display: none
+            &:hover
+              height: 4em
+              opacity: 1
+              &:after
+                display: block
+
+        & > li:last-child
+          border-right: 10px solid $header_text
+      
+      div.action
+        display: inline-block
+        overflow: hidden
 
 // ============================= */
 // ! Layout for mobile version   */
@@ -403,6 +479,8 @@ div#ten-tweets
   // Disable flybar on small screens to conserve screen space
   header.flybar
     position: absolute
+    margin: 0
+    padding: .5em 0 0 0
     nav.breadcrumbs
       display: none
 
@@ -410,11 +488,21 @@ div#ten-tweets
     width: 95%
     margin-left: 1em
 
+  section#articles
+    article
+      min-width: 5em
+      width: 100%
+
   nav.sidebar
+    top: auto
+    left: auto
+    position: inherit
     margin-left: 1em
     float: none
-    position: inherit
     h2
+      display: inline
+      top: auto
+      left: auto
       position: inherit
       @include rotate(0)
 
@@ -424,3 +512,42 @@ div#ten-tweets
       float: none
       width: 80%
       height: 100%
+
+  // Homepage styling
+  div.landing
+    margin-left: auto
+    margin-right: auto
+    h1.name
+      font-size: 2em
+      text-align: center
+      &:before
+        content: '\264E'
+        text-align: center
+        font-size: 3em
+        display: block
+        padding-bottom: .25em
+      
+    h1.evancarmi
+      margin-top: .1em
+      font-size: 3em
+      line-height: 1em
+      text-align: center
+      margin-bottom: 0 
+    h1.i
+      font-size: 4em
+      text-align: center
+
+    hgroup
+      text-align: center
+      ul
+        padding: 0
+        margin: 0
+        overflow: visible
+        list-style-type: none
+        li
+          font-size: 2em
+          h1.action
+
+      div.action
+        display: inline-block
+        overflow: hidden

@@ -7,6 +7,7 @@ author: Evan H. Carmi
 created_at: "2011-01-24"
 updated_at: "2011-01-24"
 published: true
+featured: true
 comments_enabled: true
 tags: django, python, virtualenv, git, pip, joyent
 summary: A guide to installing a <a href="http://www.djangoproject.com/" title="A kick-ass Python Web framework">Django</a> application on a Joyent Shared Accelerator inside a <a href="http://virtualenv.openplans.org/" title="A tool to create isolated Python environments">Virtualenv</a> using <a href="http://pip.openplans.org/" title="pip installs packages. Python packages.">pip</a>, <a href="http://git-scm.com/" title="A distributed version control system">git</a> and <a href="http://nginx.org/" title="An HTTP server">NginX</a>
