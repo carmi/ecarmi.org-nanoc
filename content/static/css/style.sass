@@ -36,6 +36,7 @@ $margin_top: 7em
 //http://colorschemedesigner.com/#0u31Mw0w0w0w0
 //Orange
 
+$scrollpage_dark: #242122
 $bg_dark: #1f1f1f
 $box_bg:  #303030
 $dark_bg:  #303030
@@ -94,6 +95,19 @@ sup
 @mixin max-width
   max-width: 80em
 
+@mixin section_landing
+  position: relative
+  width: 100%
+  height: 42em
+  overflow: hidden
+  h1.section
+    font-variant: small-caps
+    font-family: 'Ultra'
+    font-weight: lighter
+    color: #ffffff
+    text-align: center
+    font-size: 7em
+
 @mixin header-shadow
   font-variant: small-caps
   text-shadow: -1px -1px 0px #999
@@ -145,10 +159,14 @@ div.content
   @include max-width
   width: 75%
 
+div.content, div.landing
   h1, h2, h3
     font-variant: small-caps
     font-family: 'Ultra'
     font-weight: lighter
+    a
+      color: $header_text
+      text-decoration: none
 
 div.article
   max-width: 35em
@@ -159,24 +177,25 @@ div.article
 nav.sidebar
   // location
   position: fixed
-  top: 5em
+  top: $margin_top
   left: 1em
   float: left
   width: $sidebar_width
 
-  a
-    font-weight: bold
-    margin-left: 1.5em
-    text-transform: uppercase
-    text-decoration: none
-    color: $bg_dark
-    text-decoration: underline
-    opacity: .6
-    @include single-transition(.1s ease-in .1s)
-
-    &:hover
+  p
+    margin-left: 1em
+    a
+      font-size: 2em
+      font-weight: bold
+      font-variant: small-caps
       text-decoration: none
-      opacity: 1
+      color: $bg_dark
+      opacity: .6
+      @include single-transition(.1s ease-in .1s)
+
+      &:hover
+        text-decoration: underline
+        opacity: 1
 
   h2
     @include rotate(-90deg)
@@ -307,9 +326,12 @@ header.flybar
       float: left
       color: #ccc
 
+div.container
+  footer
+    border-top: 1em solid $header_text
+
 footer
   @include max-width
-  border-top: 1em solid $header_text
   background: #ccc
   margin-left: $sidebar_width + 1em
 
@@ -359,7 +381,7 @@ section#articles
     min-width: 25em
     margin-bottom: 1em
     padding-right: 2em
-    opacity: .7
+    opacity: .8
     @include single-transition(opacity .2s linear .1s)
 
     &:hover
@@ -376,21 +398,6 @@ section#articles
         color: $header_text
         font-weight: bold
 
-div#ten-tweets
-  overflow: auto
-  margin-bottom: 20px
-  ul
-    li
-      clear: both
-      //padding: 5px
-      span.tweet
-        width: 70%
-        float: left
-      
-      a.date
-        float: right
-        color: #186487 
-
 .clear
   clear: both
   display: block
@@ -400,6 +407,9 @@ div#ten-tweets
 
 @media screen and (min-width: 767px)
   // Homepage styling
+  body
+    margin: 0
+    padding: 0
   div.landing
     width: 60em
     margin-top: 4em
@@ -450,7 +460,7 @@ div#ten-tweets
             margin: 0
             margin-left: -.5em
             margin-right: -.5em
-            opacity: .3
+            opacity: .7
             @include single-transition(opacity, .25s, linear, .1s)
             &:after
               color: #b6b6b6
@@ -470,6 +480,48 @@ div#ten-tweets
       div.action
         display: inline-block
         overflow: hidden
+
+section.scrollpage
+  @include section_landing
+  a
+    color: #fff
+    text-decoration: none
+    font-weight: bolder
+    &:hover
+      color: $scrollpage_dark
+  h1, h2
+    a
+      font-weight: lighter
+  h1, h2
+    font-variant: small-caps
+    font-family: 'Ultra'
+    font-weight: lighter
+    color: #ffffff
+  div.wrapper
+    padding-right: 3em
+    padding-left: 3em
+  p
+    font-size: 1.2em
+
+section#write
+  background: #00af65
+section#code
+  background: #0b61a4
+section#work
+  background: #ff9200
+section#tweet
+  background: #ff4900
+
+  ul.tweet_list
+    font-size: 1.2em
+    list-style-type: none
+    li
+      overflow: hidden
+      padding: .1em
+      span.tweet_text
+        width: 39em
+        float: right
+
 
 // ============================= */
 // ! Layout for mobile version   */
@@ -514,6 +566,8 @@ div#ten-tweets
       height: 100%
 
   // Homepage styling
+  section.scrollpage
+    height: auto
   div.landing
     margin-left: auto
     margin-right: auto

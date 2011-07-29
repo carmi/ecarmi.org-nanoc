@@ -5,22 +5,78 @@
   %hgroup
     %ul
       %li.action.code
-        %h1.action.code code
+        %h1.action.code
+          %a{:href => "#code"} code
       %li.action.write
-        %h1.action.write write
+        %h1.action.write
+          %a{:href => "#write"} write
       %li.action.work
-        %h1.action.work work
+        %h1.action.work
+          %a{:href => "#work"} work
       %li.action.tweet
-        %h1.action.tweet tweet
+        %h1.action.tweet
+          %a{:href => "#tweet"} tweet
 
-  %div.action
-    %h3.featured Featured Post
+%section.scrollpage#write
+  %div.wrapper
+    %h1.section.write write
+    %h2.featured
+      Featured Post
+    %h3
+      = link_to('Show me more', '/writing/')
     %article
-      = render('post-link', :item => featured_articles[0])
+      - featured_articles[0..1].each do |article|
+        = render('post-link', :item => article)
 
-  %h1 Ten Tweets
-  %div#ten-tweets
-    Tweets are loading.
+%section.scrollpage#code
+  %div.wrapper
+    %h1.section.code code
+    %h2 A few projets on #{link_to('github', 'https://github.com/carmi/')}
+    %dl.projects
+      %dt
+        %h2
+          #{link_to('ecarmi.org - nanoc', "https://github.com/carmi/ecarmi.org-nanoc")}
+      %dl
+        %p The source code to this blog.
+      %dt
+        %h2
+          %a{:href => "https://github.com/carmi/facebook-analyzer"} Facebook Analyzer
+      %dl
+        %p A fun project to parse and analyze a downloaded facebook account.
+      %dt
+        %h2
+          %a{:href => "https://github.com/carmi/comp356"} Comp356 - Computer Graphics in C
+      %dl
+        %p A 3D ray tracer and maze game written in C for a Computer Graphics course.
 
-  %h1 Work
-  %p I'm currently interning at The New York Times. I just built this
+%section.scrollpage#work
+  %div.wrapper
+    %h1.section.work work
+    %h2 
+      Work Status:
+      %span.current
+        I'm currently interning at The New York Times.
+    %dl.work
+      %dt
+        %h2 The New York Times
+      %dl
+        %p As a part of The New York Times Interactive News Technology devision I worked with developer/journalists building news applications.
+      %dt
+        %h2 Wesleyan University
+      %dl
+        %p I worked with Wesleyan's Program on Terrorism and Insurgency Research, a group seeking to improve knowledge about political violence, to develop a custom Django application to facilitate data research and analysis.
+      %dt
+        %h2 Myself
+      %dl
+        %p I built this web site from scratch using HTML5 and CSS3.
+
+
+%section.scrollpage#tweet
+  %div.wrapper
+    %h1.section.tweet tweet
+    %div.handle
+      <iframe allowtransparency="true" frameborder="0" scrolling="no" src="http://platform.twitter.com/widgets/follow_button.html?screen_name=ehc&show_count=false" style="width: 7em; margin-left: auto; margin-right: auto; display: block; height:20px;"></iframe>
+    %div#tweetlist
+
+
+= render 'footer'
