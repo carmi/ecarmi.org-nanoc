@@ -3,7 +3,7 @@
   \  <div id="disqus_thread"></div>
   \  <script type="text/javascript">
 
-  - if $development_mode
+  - if $development_mode 
     \ var disqus_developer = 1; // developer mode is on
 
   \  /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
@@ -12,6 +12,7 @@
   \  // The following are highly recommended additional parameters. Remove the slashes in front to use.
   \  var disqus_identifier = '#{@item.path}';
   \  var disqus_title = '#{@item[:title]}';
+  \  var disqus_url = '#{$domain}#{@item.path}';
   \
   \  /* * * DON'T EDIT BELOW THIS LINE * * */
   \  (function() {

@@ -139,6 +139,12 @@ compile '/' do
   layout 'base'
 end
 
+compile '/404/' do
+  filter :haml
+  layout 'default'
+  layout 'base'
+end
+
 compile '*' do
   if @item[:markup] == "markdown"
     filter :kramdown

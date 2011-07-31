@@ -24,9 +24,10 @@
       Featured Post
     %h3
       = link_to('Show me more', '/writing/')
-    %article
+    %section#articles
       - featured_articles[0..1].each do |article|
-        = render('post-link', :item => article)
+        %article
+          = render('post-link', :item => article)
 
 %section.scrollpage#code
   %div.wrapper
