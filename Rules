@@ -58,6 +58,22 @@ compile '/files/*/' do
   #don't compile files
 end
 
+# Humans.txt
+compile '/humans/' do
+end
+
+route '/humans/' do
+  '/humans.txt'
+end
+
+# Robots.txt
+compile '/robots/' do
+end
+
+route '/robots/' do
+  '/robots.txt'
+end
+
 # Sitemap
 compile '/sitemap/' do
   filter :haml
