@@ -9,9 +9,7 @@
             Evan Carmi
         %span.post_date
           Posted
-          %time.timeago{:datetime => item[:timeago]}
-            = item[:print_time]
-      /
+          = @item.timeago_time
     %nav.breadcrumbs
       %ul
         - breadcrumbs_trail.each do |crumb|

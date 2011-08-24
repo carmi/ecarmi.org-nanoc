@@ -3,6 +3,5 @@
   %h4.comments
     %a{:href => "#{@item.path}#disqus_thread", 'data-disqus-identifier' => @item.path} See comments
   %span.posted Posted
-  %time.timeago{:datetime => @item[:created_timeago]}
-    = @item[:created_time]
+  = @item.timeago_time
   %p.summary= @item[:summary]
