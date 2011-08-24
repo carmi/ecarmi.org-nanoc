@@ -9,6 +9,15 @@
     %meta{:name => "generator", :content => "nanoc 3.1.7"}
     %meta{:name => "author", :content => "Evan H. Carmi"}
 
+    - if @item.path == '/'
+      %meta{:name => "description", :content => "Evan H. Carmi's official Web site - a programmer and developer"}
+    - elsif @item.path == '/writing/'
+      %meta{:name => "description", :content => "Evan H. Carmi's programming and web development blog"}
+    - elsif @item.path == '/about/'
+      %meta{:name => "description", :content => "Evan H. Carmi's contact information and biography - a programmer and developer"}
+    - elsif @item[:kind] == 'article'
+      %meta{:name => "description", :content => "#{@item[:summary]}"}
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
   %body
