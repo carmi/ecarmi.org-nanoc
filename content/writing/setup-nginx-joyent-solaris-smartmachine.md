@@ -7,6 +7,7 @@ author: Evan H. Carmi
 created_at: "2011-08-11"
 updated_at: "2011-08-11"
 published: true
+featured: false
 comments_enabled: true
 tags: nginx, joyent, solaris
 summary: A guide to setting up Nginx on a Joyent SmartMachine.
@@ -306,3 +307,5 @@ and then back to curl
       hello staging server
 
 You are good to go!
+
+
