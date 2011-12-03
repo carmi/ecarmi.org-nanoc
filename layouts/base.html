@@ -18,8 +18,6 @@
     - elsif @item[:kind] == 'article'
       %meta{:name => "description", :content => "#{@item[:summary]}"}
 
-    = render 'head_analytics'
-
   %body
     = yield
 
