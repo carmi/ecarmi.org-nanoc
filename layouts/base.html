@@ -7,14 +7,14 @@
 
     %link{:href => "/static/css/style.css", :media => "screen", :rel => "stylesheet", :type => "text/css"}
     %meta{:name => "generator", :content => "nanoc 3.1.7"}
-    %meta{:name => "author", :content => "Evan H. Carmi"}
+    %meta{:name => "author", :content => "Evan Carmi"}
 
     - if @item.path == '/'
-      %meta{:name => "description", :content => "Evan H. Carmi's official Web site - a programmer and developer"}
+      %meta{:name => "description", :content => "Evan Carmi's Web site - a programmer and developer"}
     - elsif @item.path == '/writing/'
-      %meta{:name => "description", :content => "Evan H. Carmi's programming and web development blog"}
+      %meta{:name => "description", :content => "Evan Carmi's programming and web development blog"}
     - elsif @item.path == '/about/'
-      %meta{:name => "description", :content => "Evan H. Carmi's contact information and biography - a programmer and developer"}
+      %meta{:name => "description", :content => "Evan Carmi's contact information and biography - a programmer and developer"}
     - elsif @item[:kind] == 'article'
       %meta{:name => "description", :content => "#{@item[:summary]}"}
 

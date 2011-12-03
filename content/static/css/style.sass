@@ -159,10 +159,13 @@ div.content
   div.disclaimer
     background: rgba(255, 255, 153, 0.7)
     line-height: 2em
-    margin: 2em
+    margin: 2em 2em 2em 0em
     font-size: 1.2em
-    padding: 1em 1em 1px 1em
+    padding: 1em
     @include border-radius(5px)
+
+    p:last-child
+      margin: 0
 
 div.content, div.landing
   h1, h2, h3
@@ -314,7 +317,6 @@ header.flybar
 
 
   hgroup
-    
     padding-top: .5em
     padding-left: 2em
     h1.title
@@ -331,9 +333,11 @@ header.flybar
       color: #ccc
       a
         color: #ccc
-    span.post_date
+    h4.post_date
       float: left
       color: #ccc
+      margin: 0
+      padding: 0
 
 div.container
   footer
@@ -452,7 +456,7 @@ section#articles
       font-size: 4em
       text-align: center
 
-    hgroup
+    div.action-block
       text-align: center
       ul
         overflow: visible
@@ -602,7 +606,7 @@ section#tweet
       font-size: 4em
       text-align: center
 
-    hgroup
+    div.action-block
       text-align: center
       ul
         padding: 0
