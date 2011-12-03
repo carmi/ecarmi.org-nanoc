@@ -178,30 +178,33 @@ nav.sidebar
   left: 1em
   float: left
   width: $sidebar_width
+  opacity: .2
+  @include single-transition(.1s ease-in .1s)
 
-  p
-    margin-left: 1em
-    a
-      font-size: 2em
-      font-weight: bold
-      font-variant: small-caps
-      text-decoration: none
-      color: $bg_dark
-      opacity: .6
-      @include single-transition(.1s ease-in .1s)
+  &:hover
+    opacity: 1
 
-      &:hover
-        text-decoration: underline
-        opacity: 1
+  a, span
+    width: 90px
+    text-align: left
+    text-decoration: none
+    display: block
+    padding: 0px 6px 0px 8px
+    margin: 0px 2px
+    color: $header_text
+    background: $bg
+    &:hover
+      color: $bg
+      background: $header_text
+    &.active
+      color: $bg
+      background: $header_text
+      
 
-  h2
-    @include rotate(-90deg)
-    position: relative
-    text-transform: uppercase
-    left: -3em
-    top: $margin_top - 3
-    opacity: 0.3
-
+  img
+    margin: 2px
+    border: 2px solid $header_text
+    @include border-radius(3px)
 
 //Style Blockquotes
 blockquote

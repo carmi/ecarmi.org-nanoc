@@ -1,11 +1,8 @@
 %nav.sidebar
-  //%h2 navigation
-  %p
-    = link_to('About', '/about/')
-  //%p
-  //<a href="bah">Work</a>
-  //%p
-  //  <a href="bah">Code</a>
-  %p
-    = link_to('Writing', '/writing/')
+  %img{:src => "/static/img/evan-headstand.jpg", :title => "I like headstands."}
 
+  =link_to_unless_current('home', '/', :title => "Home")
+  =link_to_unless_current('about', '/about/', :title => "About")
+  =link_to('twitter', 'https://github.com/carmi/', :title => "Github")
+  =link_to('github', 'https://twitter.com/ehc', :title => "Twitter")
+  =link_to('linkedin', 'http://www.linkedin.com/in/evancarmi', :title => "LinkedIn")
