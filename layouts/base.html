@@ -18,10 +18,11 @@
     - elsif @item[:kind] == 'article'
       %meta{:name => "description", :content => "#{@item[:summary]}"}
 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    = render 'head_analytics'
 
   %body
     = yield
+
     = render 'analytics'
 
 
