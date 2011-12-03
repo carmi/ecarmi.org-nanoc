@@ -156,6 +156,14 @@ div.content
   @include max-width
   width: 75%
 
+  div.disclaimer
+    background: rgba(255, 255, 153, 0.7)
+    line-height: 2em
+    margin: 2em
+    font-size: 1.2em
+    padding: 1em 1em 1px 1em
+    @include border-radius(5px)
+
 div.content, div.landing
   h1, h2, h3
     font-variant: small-caps
@@ -191,6 +199,7 @@ nav.sidebar
     display: block
     padding: 0px 6px 0px 8px
     margin: 0px 2px
+    @include border-radius(2px)
     color: $header_text
     background: $bg
     &:hover

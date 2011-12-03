@@ -5,7 +5,7 @@ markup: markdown
 kind: article
 author: Evan H. Carmi
 created_at: "2011-03-28"
-updated_at: "2011-03-28"
+updated_at: "2011-12-03"
 published: true
 featured: true
 comments_enabled: true
@@ -14,6 +14,13 @@ summary: I had a (well, three) interviews with Google for a summer internship po
 ---
 
 # Applying for an internship at Google
+
+<div class="disclaimer">
+<p><strong>Disclaimer:</strong> This post has gotten nearly 100,000 views after being being on <a href="http://techcrunch.com/2011/05/07/why-the-new-guy-cant-code/">TechCrunch</a> and <a href="http://news.ycombinator.com/item?id=2384018">Hacker News</a> and much feedback. Some people liked it, and some absolutely did not.</p>
+
+<p>I did not share anything I was asked not to share, and I have received no requests to change or remove this post. The <a href="http://devinterviews.pen.io/">hiring process</a> is complicated, and I believe an open discussion about current practices in our industry is important. If you are going to interview me and have an opinion/concern about this article, bring it up. Let's chat.</p></div>
+
+
 Like most every Computer Science student looking for a summer internship, I applied to Google.
 
 I submitted my application on their [website][internships] on December 31st, 2010 and received a thank you email. About ten days later I was sent an automated email asking me to fill out a Google spreadsheet Beta candidate preference form.
@@ -33,7 +40,7 @@ At 9:30pm that same evening I got another email back:
 > Hi Evan,
 > 
 > Thank you for filling out the forms.
-> I have forwarded all of your information to Becky Harding (cc’d), the recruiter, who will be reaching out to you.
+> I have forwarded all of your information to Becky (cc’d), the recruiter, who will be reaching out to you.
 > 
 > Good luck :)
 
@@ -136,9 +143,6 @@ I really had the feeling that luck was a huge part of it. If I had more recently
 I'm glad I had the experience interviewing, and after having had trouble finding information on the internship application process and what to expect I thought I should write up my own story.
 
 I got an internship with The New York Times the following week.
-
-# Update
-This post made the front page of [Hacker News](http://news.ycombinator.com/item?id=2384018) and got around 20,000 visits. Some people liked it, and some didn't. If you found this interesting, or if it caused you to reevaluate your hiring process: great. However, if you don't fall in the former group I'd like to clarify that I didn't mean to divulge secret interview questions to enable unqualified applicants to break the system. Rather, I wanted to share my experience and create discussion about the developer hiring process. Something which I believe [this](http://devinterviews.pen.io/) [post](http://blog.simeonov.com/2011/03/30/getting-developer-interviewing-right/) [did](http://news.ycombinator.com/item?id=2384018).
 
 
 [internships]: http://www.google.com/jobs/students/us/internships/
