@@ -29,16 +29,25 @@ compile '/static/css/*/' do
 end
 
 route '/static/css/*/' do
-  path = hash_filename(item)
+  hashed_route(@item)
 end
 
 compile '/static/js/*/' do
+  if item[:combined]
+    filter :haml
+  end
   #TODO, minify js
 end
 
 route '/static/js/*/' do
-  path = @item.identifier.chop
-  path + '.' + @item[:extension]
+  if item[:combined]
+    #if combined haml, route to js file
+    path = "#{@item.identifier.chop}.js"
+    #todo minify
+  else
+    path = @item.identifier.chop
+    path + '.' + @item[:extension]
+  end
 end
 
 compile '/static/img/*/' do

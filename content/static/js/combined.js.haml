@@ -1,0 +1,8 @@
+---
+compressed: false
+combined: true
+---
+
+- @items.select {|i| i.identifier =~ %r{^/static/js/}}.each do |js_item|
+  - next unless js_item.attributes.fetch(:compressed, true)
+  = js_item.rep_named(:default).compiled_content

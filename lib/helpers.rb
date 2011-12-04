@@ -17,19 +17,27 @@ end
 
 # See: http://userprimary.net/posts/2011/01/10/optimizing-nanoc-based-websites/
 
-# Add unique string to css/js filename for use with expires headers.
+# Route an Nanoc3::Item to a fingerprinted string for expires HTTP header
+# happiness.
 #
-# @item - object or path to object
-# @returns - the filename to be used in routes and templates
-# Note: 6-hashed chars is enough
-
-def hash_filename(item)
-  unless @items.include?(item)
-    ext = item.match(/[.][a-z]+$/)[0]
-    item = @items.detect { |x| x.identifier.include?(item.gsub(ext,'')) }
-    return if item.nil?
-  end
+# @item - Nanoc3::Item to route
+# @return - string serving as url for templates and Nanoc compatible route
+def hashed_route(item)
+  # HACK for dealing with css,scss, and sass, and js files dynamically
+  # Assume directory name matches ending: /static/css/...
+  ext = item.identifier.split('/')[2]
 
   digest = Digest::MD5.hexdigest item.raw_content
-  "#{item.identifier.chop}.#{digest[0,6]}#{ext}"
+  # 6 hashed chars should be plenty.
+  "#{item.identifier.chop}.#{digest[0,6]}.#{ext}"
+end
+
+# Given a url to static object return the path to the unique object created
+# using hashed_route.
+def hashed_url(filename)
+  # Strip extension and find item by identifier.
+  ext = filename.match(/[.][a-z]+$/)[0]
+
+  item = @items.detect { |x| x.identifier.include?(filename.gsub(ext,'')) }
+  return hashed_route(item) unless item.nil?
 end
