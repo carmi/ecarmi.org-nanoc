@@ -29,8 +29,7 @@ compile '/static/css/*/' do
 end
 
 route '/static/css/*/' do
-  path = @item.identifier.chop
-  path + '.css'
+  path = hash_filename(item)
 end
 
 compile '/static/js/*/' do
