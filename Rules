@@ -42,8 +42,7 @@ end
 route '/static/js/*/' do
   if item[:combined]
     #if combined haml, route to js file
-    path = "#{@item.identifier.chop}.js"
-    #todo minify
+    hashed_route(@item)
   else
     path = @item.identifier.chop
     path + '.' + @item[:extension]
