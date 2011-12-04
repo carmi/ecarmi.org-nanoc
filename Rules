@@ -35,6 +35,7 @@ end
 compile '/static/js/*/' do
   if item[:combined]
     filter :haml
+    filter :yui_compress
   end
   #TODO, minify js
 end
