@@ -9,7 +9,17 @@
 <a class="addthis_button_compact"></a>
 <a class="addthis_counter addthis_bubble_style"></a>
 </div>
-<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4eda10a35fb88ae2"></script>
+\  <script type="text/javascript">
+\  // prevent jQuery from appending cache busting string to the end of the URL 
+\  var cache = jQuery.ajaxSettings.cache; 
+\  jQuery.ajaxSettings.cache = true;
+\  
+\  jQuery.getScript('http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4eda10a35fb88ae2&domready=1');
+\  
+\  // Restore jQuery caching setting
+\  jQuery.ajaxSettings.cache = cache;
+\  </script>
+
 <!-- AddThis Button END -->
 
 - if @item[:comments_enabled]

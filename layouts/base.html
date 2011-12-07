@@ -19,16 +19,16 @@
       %meta{:name => "description", :content => "#{@item[:summary]}"}
 
   %body
+    // Load MediaTemple (Jquery) CDN's Jquery
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     = yield
 
-    = render 'analytics'
-
-
     // Javascript
-    // Load MediaTemple (Jquery) CDN's Jquery
-    <script src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
 
     %script{:src => hashed_url('/static/js/combined.js'), :type => "text/javascript"}
+
+    = render 'analytics'
 
     %script{:type => "text/javascript"}
       jQuery(document).ready(function() {
