@@ -42,7 +42,7 @@ def hashed_url(filename)
   return hashed_route(item) unless item.nil?
 end
 
-YUI_JAR = File.dirname(__FILE__) + "/../../tools/yuicompressor-2.4.7.jar"
+YUI_JAR = File.dirname(__FILE__) + "/../tools/yuicompressor-2.4.7.jar"
 
 class YuiCompressor < Nanoc3::Filter
   identifier :yui_compress
