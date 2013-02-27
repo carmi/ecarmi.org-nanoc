@@ -1,26 +1,30 @@
 GEM
   remote: http://rubygems.org/
   specs:
-    builder (3.0.0)
-    chunky_png (1.2.5)
-    coderay (1.0.6)
-    compass (0.12.1)
+    builder (3.2.0)
+    chunky_png (1.2.7)
+    coderay (1.0.9)
+    colored (1.2)
+    compass (0.12.2)
       chunky_png (~> 1.2)
       fssm (>= 0.2.7)
       sass (~> 3.1)
-    cri (2.2.1)
-    fssm (0.2.9)
-    haml (3.1.6)
-    kramdown (0.13.6)
-    mime-types (1.18)
-    nanoc (3.3.7)
-      cri (~> 2.2)
-    nokogiri (1.5.2)
-    rack (1.4.1)
+    cri (2.3.0)
+      colored (>= 1.2)
+    fssm (0.2.10)
+    haml (4.0.0)
+      tilt
+    kramdown (0.14.2)
+    mime-types (1.21)
+    nanoc (3.6.1)
+      cri (~> 2.3)
+    nokogiri (1.5.6)
+    rack (1.5.2)
     rainpress (1.0)
     rubypants (0.2.0)
-    sass (3.1.19)
-    systemu (2.5.0)
+    sass (3.2.6)
+    systemu (2.5.2)
+    tilt (1.3.3)
 
 PLATFORMS
   ruby
@@ -29,7 +33,7 @@ DEPENDENCIES
   builder
   coderay
   compass
-  cri (~> 2.2.1)
+  cri
   haml
   kramdown
   mime-types

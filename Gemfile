@@ -1,6 +1,6 @@
 source :rubygems
 
-gem "cri", "~> 2.2.1"
+gem "cri"
 gem "nanoc"
 gem "haml"
 gem "sass"
