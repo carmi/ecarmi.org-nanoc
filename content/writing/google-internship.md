@@ -16,7 +16,7 @@ summary: I had a (well, three) interviews with Google for a summer internship po
 # Applying for an internship at Google
 
 <div class="disclaimer">
-<p><strong>Disclaimer:</strong> This post has gotten nearly 100,000 views after being being on <a href="http://techcrunch.com/2011/05/07/why-the-new-guy-cant-code/">TechCrunch</a> and <a href="http://news.ycombinator.com/item?id=2384018">Hacker News</a> and much feedback. Some people liked it, and some absolutely did not.</p>
+<p><strong>Disclaimer:</strong> This post has gotten nearly 100,000 views after being being on <a href="http://techcrunch.com/2011/05/07/why-the-new-guy-cant-code/">TechCrunch</a> and <a href="http://news.ycombinator.com/item?id=2384018">Hacker News</a>. Some people liked it, and some absolutely did not.</p>
 
 <p>I did not share anything I was asked not to share, and I have received no requests to change or remove this post. The <a href="http://devinterviews.pen.io/">hiring process</a> is complicated, and I believe an open discussion about current practices in our industry is important. If you are going to interview me and have an opinion/concern about this article, bring it up. Let's chat.</p></div>
 
