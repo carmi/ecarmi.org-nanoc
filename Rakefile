@@ -6,11 +6,11 @@ task :rebuild => [:fullclean, :compile]
 
 task :fullclean => :clean do
   system('git', 'clean', '-qdf')
-  system('rm', '-r', 'output', 'tmp')
+  system('rm', '-rf', 'output', 'tmp')
 end
 
 task :compile do
-  system('nanoc3', 'compile')
+  system('nanoc', 'compile')
 end
 
 task :rebuild do
@@ -26,5 +26,5 @@ end
 task :publish do
   puts "Deploying to PRODUCITON"
   Rake::Task["build_production"].invoke
-  system('rake', 'deploy:rsync', 'config=prod')
+  system('nanoc', 'deploy', '--target=prod')
 end

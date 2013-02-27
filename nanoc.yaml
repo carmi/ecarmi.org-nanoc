@@ -51,6 +51,8 @@ data_sources:
 #    dst: "jill@smarty.ecarmi.org:/home/jill/www/sites/staging/web/public"
 deploy:
   prod:
+    kind: rsync
     dst: "root@gandi.ecarmi.org:/srv/www/ecarmi.org/prd"
   staging:
+    kind: rsync
     dst: "root@gandi.ecarmi.org:/srv/www/ecarmi.org/stg"
