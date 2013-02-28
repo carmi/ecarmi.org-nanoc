@@ -150,6 +150,8 @@ compile '*' do
       # To use the default_colorizer option you need the nanoc3.2 version Colorize_Syntax filter.
       :default_colorizer => :pygmentize,
     }
+  elsif @item[:markup] == "haml"
+    filter :haml
   end
   layout 'default'
   layout 'base'
