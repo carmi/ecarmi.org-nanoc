@@ -48,7 +48,7 @@ If I still have time remaining, I'll ask [FizzBuzz](http://www.codinghorror.com/
 
 Overall, I just try to have a conversation with the interviewee throughout the process. It's not so important what they get right and what they don't. Through talking with them and being attentive to their approach and problem solving I develop a general sense about them. Will they be self-directed? Be able to figure things out? Will they take my job in a few years? As many others say, you don't want to be working with someone you don't like. So lastly, I simply ask myself if I like them and would enjoy working and hanging out with them.
 
-Have you hired beginning programmers? Have you hired looking for potential? Share your experience in the comments.
+Have you hired beginning programmers? Have you hired looking for potential? Share your experience in the comments or on [Hacker News](https://news.ycombinator.com/item?id=5401663).
 
 
 *[HTML]: HyperText Markup Language
