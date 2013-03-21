@@ -19,9 +19,21 @@ $('div.landing li').each(function() {
   });
 });
 
-$('nav.sidebar div.links').hide();
+// Hide nav links
+$(window).load(function() {
+  $('nav.sidebar div.links').fadeOut({duration: 2500});
+});
+
+$('nav.sidebar div.links').mouseover(
+    function () {
+      if($(this).is(':animated')) {
+         $(this).stop().animate({opacity:'100'});
+      }
+    }
+);
+
 $('nav.sidebar a.toggle').click(function() {
-  $('nav.sidebar div.links').animate({width: 'toggle', duration: 'slow'}, function() {
+  $('nav.sidebar div.links').fadeToggle({duration: '50'}, function() {
     // Animation complete.
     $('nav.sidebar').toggleClass("visible");
   });

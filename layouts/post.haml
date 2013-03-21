@@ -1,5 +1,10 @@
 = yield
 
+%p.prev
+  = previous_link
+%p.next
+  = next_link
+
 
 - if @item[:comments_enabled]
   \  <div id="disqus_thread"></div>

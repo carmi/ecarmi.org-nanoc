@@ -34,16 +34,6 @@
       jQuery(document).ready(function() {
       jQuery("time.timeago").timeago();
       });
-    \ <script type='text/javascript'>
-    \ $(document).ready(function(){
-    \     $("#tweets").tweet({
-    \         username: "ehc",
-    \         join_text: ":",
-    \         count: 1,
-    \         loading_text: 'Tweets are loading... <img src="/static/img/ajax-loader.gif">'
-    \     });
-    \ });
-    \ </script>
 
     - if (@item.path == '/') || (@item.path == '/writing/')
       \ <script type="text/javascript">
@@ -57,18 +47,4 @@
       \         s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
       \         (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
       \     }());
-      \ </script>
-
-
-
-    - if @item.path == '/'
-      \ <script type='text/javascript'>
-      \ $(document).ready(function(){
-      \     $("#tweetlist").tweet({
-      \         username: "ehc",
-      \         join_text: ":",
-      \         count: 10,
-      \         loading_text: 'Tweets are loading... <img src="/static/img/ajax-loader.gif">'
-      \     });
-      \ });
       \ </script>

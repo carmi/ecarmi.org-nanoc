@@ -36,7 +36,6 @@ $box_border: #A64B00
 
 $header_text: #686868
 $text: #000
-$bg: #fff
 
 
 $link_color:         #A64B00
@@ -45,12 +44,10 @@ $link_color_hover:   #BF7130
 // Basic styles
 a
   color: $link_color
-  text-decoration: underline
+  text-decoration: none
   &:hover
-    text-decoration: none
+    text-decoration: underline
     color: $link_color_hover
-  &:visited
-    color: $link_color
 
 abbr, acronym
   border-bottom: 1px dotted
@@ -60,6 +57,12 @@ ins
   text-decoration: overline
 
 // Custom Styling
+
+// Posts
+.prev
+  float: left
+.next
+  float: right
 
 // Portfolio
 div.portfolio
@@ -83,7 +86,6 @@ div.portfolio
 
 @mixin invert_colors
   background: $dark_bg
-  color: $bg
 
   &:hover
     opacity: 1
@@ -92,22 +94,21 @@ div.portfolio
 body
   font-family: $body_font
   color: $text
-  background-color: $bg
 
 
 pre, code, tt, kdb, samp
   font-family: 'Droid Sans Mono', monospace, courier
   overflow: auto
   font-size: 14px
-  @include invert_colors
   overflow: auto
   border: 1px solid $box_border
+  padding: 1px
 
 pre
   padding-right: 5px
   padding-left: 5px
   border: 1px solid $box_border
-  border-left: 4px solid $box_border
+  border-left: 1rem solid $box_border
 
 // Unstyle code inside <pre> tag
 pre
@@ -143,37 +144,32 @@ div.content
     border-bottom: 1px solid rgb(177, 59, 59)
 
 nav.sidebar
-  // location
   position: fixed
   top: 1rem
   left: 1em
   float: left
   width: $sidebar_width
   a.toggle
-    font-size: 7rem
     opacity: .2
+    font-size: 7rem
     text-decoration: none
-    &:hover
-      @include single-transition(opacity, .2s, linear, .2s)
-      opacity: 1
 
   &.visible
     a.toggle
-      opacity: 1
 
   div.links
-    a, span
-      width: 90px
+    span.active, a
       text-align: left
-      text-decoration: none
       display: block
       padding: 0px 6px 0px 8px
       margin: 1px 2px
-      color: $header_text
-      background: $bg
       &:hover
-      &.active
-        text-decoration: underline
+        i
+          text-decoration: none
+      i
+        width: 2rem
+        display: inline-block
+        text-decoration: none
 
 //Style Blockquotes
 blockquote
@@ -204,7 +200,6 @@ header
         a
           padding-right: .5em
           padding-left: .5em
-          background: $bg
           color: $header_text
           &:hover
             color: $bg_dark
@@ -231,44 +226,28 @@ div.container
     border-top: 1em solid $header_text
 
 footer
-  background: #ccc
-  margin-left: $sidebar_width + 1em
-
   div.column
     float: left
-    width: 25%
+    width: 33%
     padding: 0
     margin: 0
     overflow: hidden
-
     p
       padding-right: 1em
-
     h2
-      font-size: 1.1em
       position: relative
-      text-transform: uppercase
       font-family: $headline_font
       font-weight: lighter
       margin-bottom: .5em
 
 
-  div.twitter
-    ul
-      list-style: none
-      padding: 0
-      margin: 0
-      li
-        a.tweet_time            
-          color: #186487 
-      
   div.notes
     clear: both
     text-align: center
 
 div#disqus_thread
   padding-top: 3rem
-  border-top: 2rem solid rgb(15, 43, 102)
+  border-top: 2px solid #5a2626
 
 a.dsq-brlink
   display: none
