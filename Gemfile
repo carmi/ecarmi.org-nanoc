@@ -17,3 +17,5 @@ gem "systemu"
 gem "listen"
 gem "adsf"
 gem 'rb-inotify'
+gem 'pry'
+gem 'rb-readline'
