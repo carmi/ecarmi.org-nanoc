@@ -1,4 +1,5 @@
 settings.rb
 output/*
 tmp/*
+crash.log
 .sass-cache/*
