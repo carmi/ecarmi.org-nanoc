@@ -18,3 +18,12 @@ $('div.landing li').each(function() {
     return false;
   });
 });
+
+$('nav.sidebar div.links').hide();
+$('nav.sidebar a.toggle').click(function() {
+  $('nav.sidebar div.links').animate({width: 'toggle', duration: 'slow'}, function() {
+    // Animation complete.
+    $('nav.sidebar').toggleClass("visible");
+  });
+  return false;
+});

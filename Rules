@@ -17,6 +17,9 @@ Compass.add_project_configuration 'compass_config.rb'
 #   item, use the pattern “/about/*/”; “/about/*” will also select the parent,
 #   because “*” matches zero or more characters.
 
+compile '/static/fonts/*/' do
+end
+
 compile '/static/css/*/' do
   if @item[:extension] == 'sass'
     filter :sass, Compass.sass_engine_options
@@ -28,6 +31,9 @@ compile '/static/css/*/' do
   end
 end
 
+route '/static/fonts/*' do
+  item.identifier.gsub(/_/, '.').chomp('/')
+end
 route '/static/css/*/' do
   hashed_route(@item)
 end
@@ -35,7 +41,7 @@ end
 compile '/static/js/*/' do
   if item[:combined]
     filter :haml
-    filter :yui_compress
+    filter :yui_compress unless $development_mode
   end
   #TODO, minify js
 end

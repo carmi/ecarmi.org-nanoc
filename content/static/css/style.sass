@@ -3,94 +3,63 @@
 // ============================== */
 
 @import url(http://fonts.googleapis.com/css?family=Ultra|Droid+Sans+Mono|Crimson+Text)
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro|Droid+Sans|PT+Sans|Oswald|Open+Sans|Open+Sans+Condensed|Josefin+Sans|Dosis|Habibi|Strait|Enriqueta|Vollkorn|Goudy+Bookletter+1911|Quattrocento)
 
 // Import tango.scss code-highlighting css
 @import "tango"
+@import "font-awesome"
 
-@import "compass/css3/border-radius"
-@import "compass/css3/box-shadow"
-@import "compass/css3/text-shadow"
 @import "compass/css3/transition"
-@import "compass/css3/transform"
-@import "compass/layout/grid-background"
-
 @import "compass/typography/vertical_rhythm"
-
 @import "compass/reset/utilities"
 
 @include establish-baseline
 
-// Vertical rhythm for 18px/24px
-p
-  font-size: 1em /* 18px */
-  line-height: 1.3333em /* 24px */
-  margin: 0 0 1.3333em 0
+html
+  font-size: 112.5%
+body
+  font-size: 1.3rem
+  line-height: 2rem
+h1
+  font-size: 2.4rem
 
 $sidebar_width: 10em
-$margin_top: 7em
 
-// Colors
-//http://colorschemedesigner.com/#0u31Mw0w0w0w0
-//Orange
+$headline_font: 'Goudy Bookletter 1911'
+
+$body_font: 'Habibi', arial, serif
 
 $scrollpage_dark: #242122
 $bg_dark: #1f1f1f
-$box_bg:  #303030
 $dark_bg:  #303030
 $box_border: #A64B00
 
 $header_text: #686868
 $text: #000
-$bg: #cccccc
+$bg: #fff
 
-$header_dark:     #A64B00
-$header_light:    #BF7130
-
-//Blue
-$primary_dark:    #05316D
-$primary_light:   #284C7E
-//Green
-$secondary_dark:  #007929
-$secondary_light: #238C47
 
 $link_color:         #A64B00
 $link_color_hover:   #BF7130
 
-$green:   #00BB3F
-$blue:    #0F4FA8
-$orange:  #FF7400
-$grey:    #B5B9BA
 // Basic styles
-
 a
+  color: $link_color
   text-decoration: underline
   &:hover
     text-decoration: none
     color: $link_color_hover
+  &:visited
+    color: $link_color
 
 abbr, acronym
   border-bottom: 1px dotted
-  cursor: help
-
 del
   text-decoration: line-through
-
 ins
   text-decoration: overline
 
-sub
-  font-size: .734em
-  line-height: 1em
-  vertical-align: sub
-
-sup
-  font-size: .734em
-  line-height: 1em
-  vertical-align: super
-
 // Custom Styling
-@mixin max-width
-  max-width: 80em
 
 // Portfolio
 div.portfolio
@@ -105,15 +74,12 @@ div.portfolio
   overflow: hidden
   h1.section
     font-variant: small-caps
-    font-family: 'Ultra'
+    font-family: $headline_font
     font-weight: lighter
     color: #ffffff
     text-align: center
     font-size: 7em
 
-@mixin header-shadow
-  font-variant: small-caps
-  text-shadow: -1px -1px 0px #999
 
 @mixin invert_colors
   background: $dark_bg
@@ -124,12 +90,10 @@ div.portfolio
 
 
 body
-  font-family: 'Crimson Text', arial, serif
+  font-family: $body_font
   color: $text
   background-color: $bg
 
-  h1, h2, h3, h4, h5, h6
-    color: $header_text
 
 pre, code, tt, kdb, samp
   font-family: 'Droid Sans Mono', monospace, courier
@@ -137,13 +101,11 @@ pre, code, tt, kdb, samp
   font-size: 14px
   @include invert_colors
   overflow: auto
-  @include border-radius(5px 0 0 0)
   border: 1px solid $box_border
 
 pre
   padding-right: 5px
   padding-left: 5px
-  @include border-radius(0 15px 0 0)
   border: 1px solid $box_border
   border-left: 4px solid $box_border
 
@@ -152,15 +114,7 @@ pre
   code, tt, kdb, samp, pre
     padding: 0
     border: none
-    @include border-radius(0)
 
-div.content
-  margin-top: $margin_top
-  min-height: 5em
-  margin-left: $sidebar_width + 1em
-  float: left
-  @include max-width
-  width: 75%
 
   div.disclaimer
     background: rgba(255, 255, 153, 0.7)
@@ -168,132 +122,71 @@ div.content
     margin: 2em 2em 2em 0em
     font-size: 1.2em
     padding: 1em
-    @include border-radius(5px)
 
     p:last-child
       margin: 0
 
-div.content, div.landing
-  h1, h2, h3
-    font-variant: small-caps
-    font-family: 'Ultra'
-    font-weight: lighter
-    a
-      color: $header_text
-      text-decoration: none
+h1, h2, h3, h4, h5, h6
+  font-family: $headline_font
+  font-weight: 100
+  a
+    color: $header_text
+    text-decoration: none
 
-div.article
-  max-width: 35em
-  min-width: 20em
-  margin-left: 11em
+div.content
+  max-width: 40rem
+  margin-left: auto
+  margin-right: auto
+  border-top: 3em solid rgb(251, 251, 250)
 
+  h1
+    border-bottom: 1px solid rgb(177, 59, 59)
 
 nav.sidebar
   // location
   position: fixed
-  top: 7em
+  top: 1rem
   left: 1em
   float: left
   width: $sidebar_width
-  opacity: .2
-  @include single-transition(.1s ease-in .1s)
-
-  &:hover
-    opacity: 1
-
-  a, span
-    width: 90px
-    text-align: left
+  a.toggle
+    font-size: 7rem
+    opacity: .2
     text-decoration: none
-    display: block
-    padding: 0px 6px 0px 8px
-    margin: 1px 2px
-    @include border-radius(2px)
-    color: $header_text
-    background: $bg
     &:hover
-      color: $bg
-      background: $header_text
-    &.active
-      color: $bg
-      background: $header_text
-      
+      @include single-transition(opacity, .2s, linear, .2s)
+      opacity: 1
 
-  img
-    margin: 2px
-    border: 2px solid $header_text
-    @include border-radius(3px)
+  &.visible
+    a.toggle
+      opacity: 1
+
+  div.links
+    a, span
+      width: 90px
+      text-align: left
+      text-decoration: none
+      display: block
+      padding: 0px 6px 0px 8px
+      margin: 1px 2px
+      color: $header_text
+      background: $bg
+      &:hover
+      &.active
+        text-decoration: underline
 
 //Style Blockquotes
 blockquote
   margin-left: 0
-  quotes: "\201C""\201D""\2018""\2019"
   font-style: oblique
   padding: 1em 2em 1em 2em
-  @include invert_colors
-  color: #ccc
-  @include border-radius(15px)
+  border-left: 3rem solid rgb(25, 170, 164)
 
-  p
-    &:last-child
-      margin-bottom: 0
   
-  &:before
-    color: #ccc
-    content: open-quote
-    font-size: 6em
-    line-height: .1em
-    margin-left: -.15em
-    position: relative
-    left: -.2em
-    top: .25em
-    float: left
-
-  &:after
-    color: #ccc
-    content: close-quote
-    font-size: 6em
-    line-height: .1em
-    margin-left: -.15em
-    position: relative
-    right: -.1em
-    bottom: -.2em
-    float: right
-
-a:visited
-  color: $link_color
-
-a
-  color: $link_color
-
-header.flybar
-  // location and size
-  width: 100%
-  z-index: 100
-  position: fixed
-  top: 0
-  left: 0
-  max-width: none
-
-  // color and style
-  background: $header_light
-  border-bottom: 1px solid $dark_bg
-  overflow: visible
-
-  opacity: 0.90
-
-  @include single-transition(opacity, .2s, ease-in)
-
-  &:hover
-    opacity: 1
 
 
+header
   nav.breadcrumbs
-    font-size: .8em
-    margin: 0
-    z-index: 110
-    float: right
-    padding-right: 2em
     ul
       list-style-type: none
       margin: 0
@@ -301,56 +194,43 @@ header.flybar
         float: left
         padding-left: .2em
         &:after
-          color: $bg
           font-weight: bold
-          content: '\21D2'
+          content: '\2192'
         &:last-child:after
           content: ''
+        &:last-child
+          float: none
 
         a
           padding-right: .5em
           padding-left: .5em
           background: $bg
-          @include border-radius(5px)
-          font-weight: bold
-          text-transform: uppercase
-          text-decoration: none
           color: $header_text
-          @include box-shadow(0 1px 2px rgba(0,0,0,.8))
-          @include single-transition(color .1s ease-in .1s)
           &:hover
             color: $bg_dark
 
 
   hgroup
-    padding-top: .5em
-    padding-left: 2em
+    text-align: center
     h1.title
-      float: left
-      padding-right: 10px
-      padding-bottom: .2em
-      max-width: 60%
-      margin: 0
-      font-variant: small-caps
-    h3.byline
-      //padding-right: 10px
-      margin: 0
-      padding-bottom: .35em
-      color: #ccc
-      a
-        color: #ccc
-    h4.post_date
-      float: left
-      color: #ccc
-      margin: 0
-      padding: 0
+      font-size: 4.5rem
+      line-height: 5.5rem
+      margin-bottom: 0
+      color: rgb(90, 38, 38)
 
 div.container
+  min-height: 5em
+  margin-left: auto
+  margin-right: auto
+  padding: 0em 10em 1em 10em
+  width: 65%
+  max-width: 1260px
+  background-color: #fff
+
   footer
     border-top: 1em solid $header_text
 
 footer
-  @include max-width
   background: #ccc
   margin-left: $sidebar_width + 1em
 
@@ -368,7 +248,7 @@ footer
       font-size: 1.1em
       position: relative
       text-transform: uppercase
-      font-family: 'Ultra'
+      font-family: $headline_font
       font-weight: lighter
       margin-bottom: .5em
 
@@ -387,8 +267,8 @@ footer
     text-align: center
 
 div#disqus_thread
-  div
-    font-size: 1em
+  padding-top: 3rem
+  border-top: 2rem solid rgb(15, 43, 102)
 
 a.dsq-brlink
   display: none
@@ -399,11 +279,6 @@ section#articles
     min-width: 25em
     margin-bottom: 1em
     padding-right: 2em
-    opacity: .8
-    @include single-transition(opacity .2s linear .1s)
-
-    &:hover
-      opacity: 1
 
     h2.title
       margin-top: 0
@@ -440,17 +315,6 @@ section#articles
       text-align: center
       margin-bottom: 0
       padding-bottom: 0
-      opacity: .3
-      @include single-transition(opacity, .25s, linear, .1s)
-      &:hover
-        opacity: .5
-      &:before
-        content: '\264E'
-        text-align: center
-        font-size: 3em
-        display: block
-        padding-bottom: .35em
-      
     h1.evancarmi
       margin-top: .1em
       font-size: 8em
@@ -481,7 +345,6 @@ section#articles
             margin-left: -.5em
             margin-right: -.5em
             opacity: .7
-            @include single-transition(opacity, .25s, linear, .1s)
             &:after
               color: #b6b6b6
               position: relative
@@ -514,7 +377,7 @@ section.scrollpage
       font-weight: lighter
   h1, h2
     font-variant: small-caps
-    font-family: 'Ultra'
+    font-family: $headline_font
     font-weight: lighter
     color: #ffffff
   div.wrapper
@@ -548,79 +411,3 @@ section#tweet
 // ============================= */
 
 @media screen and (max-width: 767px)
-  // Disable flybar on small screens to conserve screen space
-  header.flybar
-    position: absolute
-    margin: 0
-    padding: .5em 0 0 0
-    nav.breadcrumbs
-      display: none
-
-  div.content
-    width: 95%
-    margin-left: 1em
-
-  section#articles
-    article
-      min-width: 5em
-      width: 100%
-
-  nav.sidebar
-    top: auto
-    left: auto
-    position: inherit
-    margin-left: 1em
-    float: none
-    h2
-      display: inline
-      top: auto
-      left: auto
-      position: inherit
-      @include rotate(0)
-
-  footer
-    margin-left: 1em
-    div.column
-      float: none
-      width: 80%
-      height: 100%
-
-  // Homepage styling
-  section.scrollpage
-    height: auto
-  div.landing
-    margin-left: auto
-    margin-right: auto
-    h1.name
-      font-size: 2em
-      text-align: center
-      &:before
-        content: '\264E'
-        text-align: center
-        font-size: 3em
-        display: block
-        padding-bottom: .25em
-      
-    h1.evancarmi
-      margin-top: .1em
-      font-size: 3em
-      line-height: 1em
-      text-align: center
-      margin-bottom: 0 
-    h1.i
-      font-size: 4em
-      text-align: center
-
-    div.action-block
-      text-align: center
-      ul
-        padding: 0
-        margin: 0
-        overflow: visible
-        list-style-type: none
-        li
-          font-size: 2em
-
-      div.action
-        display: inline-block
-        overflow: hidden

@@ -14,3 +14,6 @@ gem "rack"
 gem "rainpress"
 gem "builder"
 gem "systemu"
+gem "listen"
+gem "adsf"
+gem 'rb-inotify'

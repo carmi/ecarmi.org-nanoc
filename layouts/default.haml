@@ -1,9 +1,11 @@
-%div.container
-  - unless @item.path == '/'
+- if @item.path == '/'
+  %div.container
+    %div.content
+      = yield
+- else
+  %div.container
     = render 'header'
-  %div.content
-    = yield
-  - unless @item.path == '/'
+    %div.content
+      = yield
     = render 'nav'
-  - unless @item.path == '/'
     = render 'footer'

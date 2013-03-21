@@ -1,6 +1,8 @@
 GEM
   remote: http://rubygems.org/
   specs:
+    adsf (1.1.1)
+      rack (>= 1.0.0)
     builder (3.2.0)
     chunky_png (1.2.7)
     coderay (1.0.9)
@@ -11,16 +13,20 @@ GEM
       sass (~> 3.1)
     cri (2.3.0)
       colored (>= 1.2)
+    ffi (1.4.0)
     fssm (0.2.10)
     haml (4.0.0)
       tilt
     kramdown (0.14.2)
+    listen (0.7.3)
     mime-types (1.21)
     nanoc (3.6.1)
       cri (~> 2.3)
     nokogiri (1.5.6)
     rack (1.5.2)
     rainpress (1.0)
+    rb-inotify (0.9.0)
+      ffi (>= 0.5.0)
     rubypants (0.2.0)
     sass (3.2.6)
     systemu (2.5.2)
@@ -30,17 +36,20 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  adsf
   builder
   coderay
   compass
   cri
   haml
   kramdown
+  listen
   mime-types
   nanoc
   nokogiri
   rack
   rainpress
+  rb-inotify
   rubypants
   sass
   systemu
