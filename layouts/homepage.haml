@@ -1,5 +1,5 @@
 %div.landing
-  %h1.name Hello, my name is
+  %h2.name Hello, my name is
   %h1.evancarmi Evan Carmi.
   %h1.i I
   %div.action-block
@@ -13,21 +13,15 @@
       %li.action.work
         %h1.action.work
           %a{:href => "#work"} work
-      %li.action.tweet
-        %h1.action.tweet
-          %a{:href => "#tweet"} tweet
 
 %section.scrollpage#write
   %div.wrapper
-    %h1.section.write write
-    %h2.featured
-      Featured Post
-    %h3
-      = link_to('Show me more', '/writing/')
-    %section#articles
-      - featured_articles[0..1].each do |article|
-        %article
-          = render('post-link', :item => article)
+    %h1.section.write
+      = link_to('write', '/writing/')
+    - featured_articles[0..2].each do |item|
+      %article
+        %h2.title= link_to item[:title], item
+        %p.summary= item[:summary]
 
 %section.scrollpage#code
   %div.wrapper
@@ -75,5 +69,3 @@
         %h2 Myself
       %dl
         %p I designed and built this web site from scratch using HTML5 and CSS3.
-
-= render 'footer'

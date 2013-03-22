@@ -19,3 +19,4 @@ gem "adsf"
 gem 'rb-inotify'
 gem 'pry'
 gem 'rb-readline'
+gem 'w3c_validators'

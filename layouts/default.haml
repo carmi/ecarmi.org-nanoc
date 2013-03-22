@@ -1,11 +1,15 @@
 - if @item.path == '/'
-  %div.container
-    %div.content
-      = yield
+  = yield
+  %div.footer
+    %div.container
+      = render 'footer'
+
 - else
   %div.container
     = render 'header'
     %div.content
       = yield
     = render 'nav'
-    = render 'footer'
+  %div.footer
+    %div.container
+      = render 'footer'

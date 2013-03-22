@@ -140,6 +140,7 @@ end
 
 compile '/' do
   layout 'homepage'
+  layout 'default'
   layout 'base'
 end
 

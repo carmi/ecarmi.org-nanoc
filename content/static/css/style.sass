@@ -3,7 +3,7 @@
 // ============================== */
 
 @import url(http://fonts.googleapis.com/css?family=Ultra|Droid+Sans+Mono|Crimson+Text)
-@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro|Droid+Sans|PT+Sans|Oswald|Open+Sans|Open+Sans+Condensed|Josefin+Sans|Dosis|Habibi|Strait|Enriqueta|Vollkorn|Goudy+Bookletter+1911|Quattrocento)
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro|Droid+Sans|PT+Sans|Oswald|Open+Sans|Open+Sans+Condensed|Josefin+Sans|Dosis|Habibi|Strait|Enriqueta|Vollkorn|Goudy+Bookletter+1911|Quattrocento|Ubuntu+Condensed)
 
 // Import tango.scss code-highlighting css
 @import "tango"
@@ -16,19 +16,22 @@
 @include establish-baseline
 
 html
-  font-size: 112.5%
+  font-size: 100%
 body
-  font-size: 1.3rem
+  font-size: 1.2rem
   line-height: 2rem
 h1
   font-size: 2.4rem
 
+$main_bg: #fff
 $sidebar_width: 10em
 
 $headline_font: 'Goudy Bookletter 1911'
 
 $body_font: 'Habibi', arial, serif
+$sans_font: 'Source Sans Pro'
 
+$title_color: rgb(90, 38, 38)
 $scrollpage_dark: #242122
 $bg_dark: #1f1f1f
 $dark_bg:  #303030
@@ -70,25 +73,6 @@ div.portfolio
     width: 300px
   
 
-@mixin section_landing
-  position: relative
-  width: 100%
-  height: 42em
-  overflow: hidden
-  h1.section
-    font-variant: small-caps
-    font-family: $headline_font
-    font-weight: lighter
-    color: #ffffff
-    text-align: center
-    font-size: 7em
-
-
-@mixin invert_colors
-  background: $dark_bg
-
-  &:hover
-    opacity: 1
 
 
 body
@@ -142,22 +126,32 @@ div.content
 
   h1
     border-bottom: 1px solid rgb(177, 59, 59)
+    padding-bottom: 6px
+    margin-bottom: 19px
 
 nav.sidebar
   position: fixed
   top: 1rem
-  left: 1em
+  left: 1rem
   float: left
   width: $sidebar_width
+  font-size: .9rem
+  font-family: $sans_font
   a.toggle
-    opacity: .2
+    color: #eddbcc
     font-size: 7rem
+    padding-left: 10px
     text-decoration: none
+  &:hover
+    a.toggle
+      color: $link_color
 
   &.visible
     a.toggle
+      color: $link_color
 
   div.links
+    background: $main_bg
     span.active, a
       text-align: left
       display: block
@@ -211,7 +205,7 @@ header
       font-size: 4.5rem
       line-height: 5.5rem
       margin-bottom: 0
-      color: rgb(90, 38, 38)
+      color: $title_color
 
 div.container
   min-height: 5em
@@ -220,12 +214,65 @@ div.container
   padding: 0em 10em 1em 10em
   width: 65%
   max-width: 1260px
-  background-color: #fff
 
-  footer
-    border-top: 1em solid $header_text
 
-footer
+$footer-border-color: rgb(228, 228, 228)
+
+div.footer
+  border-top: 2rem solid rgb(228, 228, 228)
+  background: #000
+  color: rgb(134, 134, 134)
+  font-family: $sans_font
+  font-size: 1rem
+  line-height: 1.5rem
+  .header
+    text-transform: lowercase
+    font-variant: small-caps
+    font-size: 1.3rem
+    color: rgb(228, 228, 228)
+    padding: 0
+    margin: 0
+    font-family: $sans_font
+  div.wrap
+    padding: 1rem
+  .work-thumb
+    height: 80px
+    padding: 5px
+  div#column1
+    width: 60%
+    float: left
+    border-right: 1px solid $footer-border-color
+  div#column2
+    width: 39%
+    float: left
+  div.row
+    min-width: 3rem
+    float: left
+  div#ll
+    border-top: 1px solid $footer-border-color
+  div#hire
+    width: 100%
+    float: left
+  div#colophon
+    border-right: 1px solid $footer-border-color
+    width: 49%
+    float: left
+  div#about
+    border-bottom: 1px solid $footer-border-color
+    img#headstand
+      float: right
+      padding-bottom: 1rem
+  div#web
+    float: left
+    width: 49%
+  p.links a
+    color: rgb(134, 134, 134)
+    font-size: 1rem
+    padding-left: 3rem
+    &:hover
+      text-decoration: none
+      color: rgb(90, 38, 38)
+    
   div.column
     float: left
     width: 33%
@@ -242,6 +289,7 @@ footer
 
 
   div.notes
+    padding-top: 1rem
     clear: both
     text-align: center
 
@@ -258,12 +306,11 @@ section#articles
     min-width: 25em
     margin-bottom: 1em
     padding-right: 2em
+    border-bottom: 1px solid rgb(177, 59, 59)
 
     h2.title
       margin-top: 0
       margin-bottom: 5px
-      a
-        text-decoration: none
 
     div.post-content
       span.posted
@@ -285,16 +332,19 @@ section#articles
     margin: 0
     padding: 0
   div.landing
-    width: 60em
+    width: 80%
+    max-width: 65rem
     margin-top: 4em
     margin-left: auto
     margin-right: auto
-    h1.name
+    color: #b6b6b6
+    h2.name
       font-size: 3em
       text-align: center
       margin-bottom: 0
       padding-bottom: 0
     h1.evancarmi
+      color: rgb(72, 94, 72)
       margin-top: .1em
       font-size: 8em
       line-height: 1em
@@ -303,48 +353,48 @@ section#articles
     h1.i
       font-size: 4em
       text-align: center
-
-    div.action-block
-      text-align: center
-      ul
-        overflow: visible
-        list-style-type: none
-        li
-          width: 23%
-          float: left
-          border-left: 10px solid $header_text
-          padding-top: .7em
-          font-size: 1.7em
-          height: 1.5em
-          margin-bottom: 2.2em
-          h1.action
-            height: 1em
-            padding: 0
-            margin: 0
-            margin-left: -.5em
-            margin-right: -.5em
-            opacity: .7
+    ul
+      list-style-type: none
+      li
+        width: 31%
+        float: left
+        border-left: 10px solid $header_text
+        padding-top: .7em
+        font-size: 1.7em
+        height: 1.5em
+        margin-bottom: 2.2em
+        text-align: center
+        h1.action
+          height: 1em
+          padding: 0
+          margin: 0
+          margin-left: -.5em
+          margin-right: -.5em
+          opacity: .7
+          &:after
+            position: relative
+            content: '\21D3'
+            margin-top: .7em
+            display: none
+        &:hover
+          h1
+            height: 4em
+            opacity: 1
             &:after
-              color: #b6b6b6
-              position: relative
-              content: '\21A1'
-              margin-top: .7em
-              display: none
-            &:hover
-              height: 4em
-              opacity: 1
-              &:after
-                display: block
+              display: block
 
-        & > li:last-child
-          border-right: 10px solid $header_text
-      
-      div.action
-        display: inline-block
-        overflow: hidden
+      & > li:last-child
+        border-right: 10px solid $header_text
 
 section.scrollpage
-  @include section_landing
+  position: relative
+  width: 100%
+  overflow: hidden
+  h1.section
+    font-variant: small-caps
+    color: #ffffff
+    text-align: center
+    font-size: 7em
   a
     color: #fff
     text-decoration: none
@@ -352,37 +402,21 @@ section.scrollpage
     &:hover
       color: $scrollpage_dark
   h1, h2
-    a
-      font-weight: lighter
-  h1, h2
-    font-variant: small-caps
-    font-family: $headline_font
-    font-weight: lighter
-    color: #ffffff
+    color: #fff
   div.wrapper
     padding-right: 3em
     padding-left: 3em
-  p
-    font-size: 1.2em
+    padding-bottom: 3em
 
 section#write
   background: #00af65
+
 section#code
   background: #0b61a4
 section#work
   background: #ff9200
 section#tweet
   background: #ff4900
-
-  ul.tweet_list
-    font-size: 1.2em
-    list-style-type: none
-    li
-      overflow: hidden
-      padding: .1em
-      span.tweet_text
-        width: 39em
-        float: right
 
 
 // ============================= */
