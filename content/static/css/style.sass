@@ -22,11 +22,14 @@ body
   font-size: 1.2rem
   line-height: 2rem
 h1
-  font-size: 2.4rem
+  line-height: 2.8rem
+  margin-top: 15px
+  margin-bottom: 15px
 
 $main_bg: #fff
 $sidebar_width: 10em
 
+$content_width: 65rem
 $headline_font: 'Goudy Bookletter 1911'
 
 $body_font: 'Habibi', arial, serif
@@ -67,6 +70,11 @@ ins
   float: left
 .next
   float: right
+
+//About
+img#headstand-about
+  float: right
+  padding-left: 2rem
 
 // Portfolio
 div.portfolio
@@ -118,6 +126,7 @@ h1, h2, h3, h4, h5, h6
   a
     color: $header_text
     text-decoration: none
+
 
 article.post
   max-width: 40rem
@@ -214,7 +223,7 @@ div.container
   margin-right: auto
   padding: 0em 10em 1em 10em
   width: 65%
-  max-width: 1260px
+  max-width: $content_width
 
 
 $footer-border-color: rgb(228, 228, 228)
@@ -263,7 +272,7 @@ div.footer
     img#headstand
       float: right
       padding-bottom: 1rem
-  div#web
+  div#work
     float: left
     width: 49%
   p.links a
@@ -327,15 +336,30 @@ section#articles
 
 // Portfolio Styles
 
+div#about
+  max-width: 40rem
+  p
+    font-size: 16px
+
+$gray-border: rgb(72, 94, 72)
 div#portfolio
   div.content
-    max-width: 1260px
+    max-width: $content_width
+  div.contact
+    text-align: center
+    border-bottom: 1px solid $gray_border
   div.grid
     @include column-count(2)
-    @include column-rule(1px, solid, rgb(72, 94, 72))
+    @include column-gap(1px)
+    @include column-rule(1px, solid, $gray_border)
   div.grid-item
-    @include column-break-inside(avoid)
-    margin: 1%
+    border-bottom: 1px solid $gray_border
+    display:  inline-block
+    padding-right: 8%
+    padding-left: 8%
+    @include single-transition(background-color, .2s)
+    &:hover
+      background-color: #fafafa
 
 // ============================= */
 //  Styles only for wide screens */
@@ -359,7 +383,7 @@ div#portfolio
       margin-bottom: 0
       padding-bottom: 0
     h1.evancarmi
-      color: rgb(72, 94, 72)
+      color: $gray_border
       margin-top: .1em
       font-size: 8em
       line-height: 1em
@@ -410,6 +434,7 @@ section.scrollpage
     color: #ffffff
     text-align: center
     font-size: 7em
+    line-height: 7rem
   a
     color: #fff
     text-decoration: none

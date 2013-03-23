@@ -39,15 +39,3 @@ $('nav.sidebar a.toggle').click(function() {
   });
   return false;
 });
-
-
-//// Portfolio masonry
-//var $container = $('div.portfolio div.grid');
-//$container.imagesLoaded(function(){
-//  $container.masonry({
-//    itemSelector : '.grid-item',
-//    columnWidth: function( containerWidth ) {
-//       return containerWidth / 2;
-//     }
-//  });
-//});

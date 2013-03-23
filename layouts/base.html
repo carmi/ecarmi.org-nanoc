@@ -3,7 +3,12 @@
   %head
     %meta{:charset => "utf-8"}
 
-    %title #{@item[:title]} - ecarmi.org  
+    %title
+      - unless @item[:title].nil?
+        #{@item[:title]} | Evan Carmi
+      - else
+        Evan Carmi
+
 
     <link href="/writing/feed.xml" type="application/atom+xml" rel="alternate" title="Writing ATOM Feed">
     %link{:href => hashed_url('/static/css/style.css'), :media => "screen", :rel => "stylesheet", :type => "text/css"}
@@ -21,9 +26,13 @@
 
   %body
     // Load MediaTemple (Jquery) CDN's Jquery
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     = yield
+
+    %div.footer
+      %div.container
+        = render 'footer'
 
     // Javascript
 

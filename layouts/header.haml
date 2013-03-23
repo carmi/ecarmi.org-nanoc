@@ -1,7 +1,8 @@
 - unless @item.path == '/'
   %header
     %hgroup
-      %h1.title= "#{@item[:title]}"
+      - title = @item[:header] || @item[:title]
+      %h1.title #{title}
       -if @item[:kind] == 'article'
         %h3.post_date
           Posted

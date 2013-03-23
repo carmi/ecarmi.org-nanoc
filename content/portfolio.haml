@@ -1,67 +1,61 @@
 --- 
-title: Evan Carmi's Portfolio
+title: Portfolio
 markup: haml
+container_id: portfolio
 ---
 %div.portfolio
-
-  %h1 Things I've Built
-
   %div.contact
-  <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#101;&#118;&#097;&#110;&#064;&#101;&#099;&#097;&#114;&#109;&#105;&#046;&#111;&#114;&#103;" title="Send me an email">Send me an email to discuss working together.</a>
-
-  %ul
-    %li
-      %h2
+    %h2 Hire Me
+    %p
+      If you are interested in working with me, <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#101;&#118;&#097;&#110;&#064;&#101;&#099;&#097;&#114;&#109;&#105;&#046;&#111;&#114;&#103;" title="send me an email">send me an email</a>.
+  %div.grid
+    %div.grid-item
+      %h1
         =link_to('The New York Times', 'http://www.nytimes.com/', :title => "The New York Times")
 
-      %img{:src => "/static/img/nytoly.png", :title => "New York Times London Olympics"}
-      %img{:src => "/static/img/nytolychina.png", :title => "New York Times London Olympics"}
+      %img{:src => "/static/img/nytoly.png", :alt => "New York Times London Olympics"}
+      %img{:src => "/static/img/nytolychina.png", :alt => "New York Times London Olympics"}
 
       :markdown
         As an Interactive News Developer for The New York Times I worked on one of the web's best [London 2012 Olympics sites](http://london2012.nytimes.com/results). Additionally, our data and site were syndicated and translated into many languages, [including Chinese](http://london2012.cn.nytimes.com/results).
 
-  %ul
-    %li
-      %h2
+    %div.grid-item
+      %h1
         =link_to('SchoolBook.org', 'http://www.schoolbook.org', :title => "SchoolBook.org")
 
-      %img{:src => "/static/img/schoolbook.png", :title => "Schoolbook"}
+      %img{:src => "/static/img/schoolbook.png", :alt => "Schoolbook"}
 
       :markdown
         Contributed to a [schoolbook.org](http://www.schoolbook.org/), a site dedicated to news, data and conversation about schools in New York City.
 
-  %ul
-    %li
-      %h2
+    %div.grid-item
+      %h1
         =link_to('Fech', 'https://github.com/NYTimes/Fech', :title => "Fech")
 
 
       :markdown
         Created the [first version of Fech](http://open.blogs.nytimes.com/2011/08/29/introducing-fech/), a Ruby parser for Federal Election Commission data while working on Campaign Finance apps at The New York Times. Our data was used to build [interactive](http://www.nytimes.com/interactive/2011/07/23/us/politics/20110723-romney-fundraising-map.html) [graphics](http://elections.nytimes.com/2012/campaign-finance/primaries).
 
-  %ul
-    %li
-      %h2
-        =link_to('wesleying.org', 'http://wesleying.org', :title => "wesleying.org")
+    %div.grid-item
+      %h1
+        =link_to('Wesleying.org', 'http://wesleying.org', :title => "wesleying.org")
 
-      %img{:src => "/static/img/wesleying.png", :title => "wesleying.org"}
+      %img{:src => "/static/img/wesleying.png", :alt => "wesleying.org"}
 
       :markdown
         Served as Chief Technology Mastermind for [wesleying.org](http://wesleying.org), a very popular blog about student life at Wesleyan University. While an undergraduate at Wesleyan University, I moved the WordPress site to a dedicated Linode VPS and optimized the server to handle increased traffic. I also completed a major redesign of the site in January 2013.
-  
-  %ul
-    %li
-      %h2
+
+    %div.grid-item
+      %h1
         =link_to('Sketchasong', 'http://sketchasong.com/', :title => "Sketch-a-song")
 
-      %img{:src => "/static/img/sketchasong.png", :title => "Sketch-a-Song"}
+      %img{:src => "/static/img/sketchasong.png", :alt => "Sketch-a-Song"}
 
       :markdown
         I developed a website and API to programmatically mix and create MP3 songs for Sketch-a-Song,an app to create songs with friends.
 
-  %ul
-    %li
-      %h2
+    %div.grid-item
+      %h1
         =link_to('Program on Terrorism and Insurgency Research', 'https://ptir.du.edu/', :title => "Program on Terrorism and Insurgency Research")
 
       :markdown
@@ -70,6 +64,3 @@ markup: haml
         > "Evan was highly professional and punctual in his completion of my website and database. He was able to combine database functionality with a user-friendly site in a relatively short amount of time. He was also extremely responsive and helpful with requests, revisions, additions, and updates throughout the process."
         >
         > &mdash; [Erica Chenoweth](http://www.ericachenoweth.com/), PhD
-
-  %p
-    If you are interested in working with me, <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#101;&#118;&#097;&#110;&#064;&#101;&#099;&#097;&#114;&#109;&#105;&#046;&#111;&#114;&#103;" title="send me an email">send me an email</a>.

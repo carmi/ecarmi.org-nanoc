@@ -103,7 +103,7 @@ route '/writing/feed/' do
 end
 
 route '/writing/*/' do
-  "/writing/#{item[:slug]}/index.html"
+  "/writing/#{item[:slug]}.html"
 end
 
 compile '/writing/*/' do
@@ -124,7 +124,7 @@ end
 #create markdown text copies of all entries
 route '/writing/*/', :rep => :raw do
   if @item[:markup] == 'markdown'
-    "/writing/#{@item[:slug]}/index.markdown"
+    "/writing/#{@item[:slug]}.markdown"
   end
 end
 
@@ -138,9 +138,14 @@ compile '/writing/' do
   layout 'base'
 end
 
+compile '/portfolio/' do
+  filter :haml
+  layout 'default'
+  layout 'base'
+end
+
 compile '/' do
   layout 'homepage'
-  layout 'default'
   layout 'base'
 end
 

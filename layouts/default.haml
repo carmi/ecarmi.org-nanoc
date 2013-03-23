@@ -1,15 +1,5 @@
-- if @item.path == '/'
-  = yield
-  %div.footer
-    %div.container
-      = render 'footer'
-
-- else
-  %div.container
-    = render 'header'
-    %div.content
-      = yield
-    = render 'nav'
-  %div.footer
-    %div.container
-      = render 'footer'
+%div.container{:id => @item[:container_id]}
+  = render 'header'
+  %div.content
+    = yield
+  = render 'nav'
