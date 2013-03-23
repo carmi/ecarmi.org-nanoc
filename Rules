@@ -103,7 +103,7 @@ route '/writing/feed/' do
 end
 
 route '/writing/*/' do
-  "/writing/#{item[:slug]}.html"
+  "/writing/#{item[:slug]}/index.html"
 end
 
 compile '/writing/*/' do

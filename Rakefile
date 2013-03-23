@@ -23,6 +23,12 @@ task :build_production do
   Rake::Task["rebuild"].invoke
 end
 
+task :publish_stg do
+  puts "Deploying to STAGING"
+  Rake::Task["build_production"].invoke
+  system('nanoc', 'deploy', '--target=stg')
+end
+
 task :publish do
   puts "Deploying to PRODUCITON"
   Rake::Task["build_production"].invoke

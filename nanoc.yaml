@@ -53,6 +53,6 @@ deploy:
   prod:
     kind: rsync
     dst: "root@gandi.ecarmi.org:/srv/www/ecarmi.org/prd"
-  staging:
+  stg:
     kind: rsync
     dst: "root@gandi.ecarmi.org:/srv/www/ecarmi.org/stg"
