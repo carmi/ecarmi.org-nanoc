@@ -2,7 +2,7 @@
 title: About
 header: Meet Evan Carmi
 markup: markdown
-container_id: about
+container_id: about-page
 ---
 <div class="disclaimer">
 <p>Work Status: <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#101;&#118;&#097;&#110;&#064;&#101;&#099;&#097;&#114;&#109;&#105;&#046;&#111;&#114;&#103;">Available for hire</a> </p>
@@ -12,7 +12,7 @@ container_id: about
 
 I'm passionate about meaningful projects, thoughtful code and modal editors. I've been doing contract programming since 2008. I've developed [Django] and [Rails] application. I've configured and launched multi-zone multi-region infrastructure serving thousands of requests a second on [AWS]. And I've hired programmers.
 
-<img alt="I like headstands." id="headstand-about" src="/static/img/headstand-309x500.jpg">
+<img alt="I like headstands." id="headstand-about" src="/static/img/headstand-309x500.jpg" width="309" height="500">
 
 My first entrance to technology was an apprenticeship with a computer consultant helping clients and small businesses. I built custom computers from scratch and setup software in a methodological process that emphasized serviceability. Eventually, my interests moved from building hardware to creating software. I began programming in [Python] and building web sites. In 2007 I wrote my first blog in [Django].
 

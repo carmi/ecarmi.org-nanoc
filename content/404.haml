@@ -1,0 +1,12 @@
+--- 
+title: Page not found
+markup: haml
+---
+%h1 Oops, maybe you'd like to read something from the #{link_to('blog', '/writing/')}:
+
+%section#articles
+  - featured_articles[0..2].each do |item|
+    %article
+      %h2.title= link_to item[:title], item
+      %p.summary= item[:summary]
+

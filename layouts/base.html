@@ -10,8 +10,10 @@
         Evan Carmi
 
 
-    <link href="/writing/feed.xml" type="application/atom+xml" rel="alternate" title="Writing ATOM Feed">
     %link{:href => hashed_url('/static/css/style.css'), :media => "screen", :rel => "stylesheet", :type => "text/css"}
+
+    <link href='http://fonts.googleapis.com/css?family=Goudy+Bookletter+1911|Habibi|Droid+Sans' rel='stylesheet' type='text/css'>
+    <link href="/writing/feed.xml" type="application/atom+xml" rel="alternate" title="Writing ATOM Feed">
     %meta{:name => "generator", :content => "nanoc"}
     %meta{:name => "author", :content => "Evan Carmi"}
 
@@ -26,7 +28,6 @@
 
   %body
     // Load MediaTemple (Jquery) CDN's Jquery
-    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 
     = yield
 
@@ -36,6 +37,7 @@
 
     // Javascript
 
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
     %script{:src => hashed_url('/static/js/combined.js'), :type => "text/javascript"}
 
     = render 'analytics'
