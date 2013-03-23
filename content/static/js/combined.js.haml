@@ -4,6 +4,6 @@ combined: true
 ---
 
 // Define list of js items (in order) to combine 
-- ['jquery-timeago.js', 'jquery-scrollTo-min.js', 'jquery.masonry.min.js', 'ecarmi.js'].each do |js_asset|
+- ['jquery-timeago.js', 'jquery-scrollTo-min.js', 'jquery-masonry-min.js', 'ecarmi.js'].each do |js_asset|
   - js_item = @items.detect {|i| i.identifier == "/static/js/#{js_asset.chop.chop.chop}/"}
   = js_item.compiled_content

@@ -10,6 +10,7 @@
 @import "font-awesome"
 
 @import "compass/css3/transition"
+@import "compass/css3/columns"
 @import "compass/typography/vertical_rhythm"
 @import "compass/reset/utilities"
 
@@ -118,7 +119,7 @@ h1, h2, h3, h4, h5, h6
     color: $header_text
     text-decoration: none
 
-div.content
+article.post
   max-width: 40rem
   margin-left: auto
   margin-right: auto
@@ -306,6 +307,7 @@ section#articles
     min-width: 25em
     margin-bottom: 1em
     padding-right: 2em
+    padding-top: 1rem
     border-bottom: 1px solid rgb(177, 59, 59)
 
     h2.title
@@ -322,6 +324,19 @@ section#articles
 .clear
   clear: both
   display: block
+
+// Portfolio Styles
+
+div#portfolio
+  div.content
+    max-width: 1260px
+  div.grid
+    @include column-count(2)
+    @include column-rule(1px, solid, rgb(72, 94, 72))
+  div.grid-item
+    @include column-break-inside(avoid)
+    margin: 1%
+
 // ============================= */
 //  Styles only for wide screens */
 // ============================= */
