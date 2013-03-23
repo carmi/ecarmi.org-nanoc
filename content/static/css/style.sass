@@ -29,6 +29,7 @@ h1
 $main_bg: #fff
 $sidebar_width: 10em
 
+$gray_border: rgb(72, 94, 72)
 $content_width: 65rem
 $headline_font: 'Goudy Bookletter 1911'
 
@@ -139,6 +140,14 @@ article.post
     padding-bottom: 6px
     margin-bottom: 19px
 
+  blockquote
+    margin-left: 0
+    padding: 1em 2em 1em 2em
+    border-left: 2px solid $gray_border
+
+blockquote
+  font-style: oblique
+
 nav.sidebar
   position: fixed
   top: 1rem
@@ -174,16 +183,6 @@ nav.sidebar
         width: 2rem
         display: inline-block
         text-decoration: none
-
-//Style Blockquotes
-blockquote
-  margin-left: 0
-  font-style: oblique
-  padding: 1em 2em 1em 2em
-  border-left: 3rem solid rgb(25, 170, 164)
-
-  
-
 
 header
   nav.breadcrumbs
@@ -341,7 +340,6 @@ div#about
   p
     font-size: 16px
 
-$gray-border: rgb(72, 94, 72)
 div#portfolio
   div.content
     max-width: $content_width
@@ -394,6 +392,7 @@ div#portfolio
       text-align: center
     ul
       list-style-type: none
+      padding-top: 2rem
       li
         width: 31%
         float: left
@@ -407,8 +406,9 @@ div#portfolio
           height: 1em
           padding: 0
           margin: 0
-          margin-left: -.5em
-          margin-right: -.5em
+          margin-left: auto
+          margin-right: auto
+          width: 10rem
           opacity: .7
           &:after
             position: relative
@@ -416,8 +416,7 @@ div#portfolio
             margin-top: .7em
             font-size: 3rem
             display: none
-        &:hover
-          h1
+          &:hover
             height: 4em
             opacity: 1
             &:after
