@@ -27,7 +27,7 @@
       %div.row#web
         %div.wrap
           %h4.header Elsewhere on the web
-          %p Evan can also be found on #{link_to('twitter', 'https://twitter.com/ehc', :title => "twitter")} and #{link_to('github', 'https://github.com/carmi/', :title => "github")}.
+          %p Evan can also be found on #{link_to('twitter', 'https://twitter.com/ehc', :title => "twitter", :rel => "me")} and #{link_to('github', 'https://github.com/carmi/', :title => "github", :rel => "me")}.
 
  
   %div.notes
@@ -45,6 +45,6 @@
       <a href="/sitemap.xml" title="Sitemap"><i class="icon-sitemap"></i></a>
       <a rel="license" href="http://creativecommons.org/licenses/by/3.0/us/" title="License"><i class="icon-legal"></i></a>
       <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#101;&#118;&#097;&#110;&#064;&#101;&#099;&#097;&#114;&#109;&#105;&#046;&#111;&#114;&#103;" title="Send me an email"><i class="icon-envelope-alt"></i></a>
-      =link_to('<i class="icon-github"></i>', 'https://github.com/carmi/', :title => "Github")
-      =link_to('<i class="icon-twitter"></i>', 'https://twitter.com/ehc', :title => "Twitter")
-      =link_to('<i class="icon-linkedin"></i>', 'http://www.linkedin.com/in/evancarmi', :title => "LinkedIn")
+      =link_to('<i class="icon-github"></i>', 'https://github.com/carmi/', :title => "Github", :rel => "me")
+      =link_to('<i class="icon-twitter"></i>', 'https://twitter.com/ehc', :title => "Twitter", :rel => "me")
+      =link_to('<i class="icon-linkedin"></i>', 'http://www.linkedin.com/in/evancarmi', :title => "LinkedIn", :rel => "me")
