@@ -1,4 +1,3 @@
-%div.clear
 %footer
   %div.clear
     %div#column1
@@ -17,7 +16,8 @@
             %h4.header Portfolio
             =link_to('<img src="/static/img/nytoly-thumb.png" alt="New York Times London Olympics" class="work-thumb">', 'http://london2012.nytimes.com/', :title => "The New York Times London 2012 Olympics Website", :width => '111', :height => '90')
             =link_to('<img src="/static/img/wesleying-thumb.png" alt="Wesleying.org" class="work-thumb">', 'http://wesleying.org', :title => "Wesleying.org", :width => '111', :height => '90')
-            =link_to('See more work in my portfolio', '/portfolio/', :title => "See my portfolio")
+            %p
+              =link_to('See more work in my portfolio', '/portfolio/', :title => "See my portfolio")
     %div#column2
       %div.row#about
         %div.wrap

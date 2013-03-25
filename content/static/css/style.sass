@@ -19,6 +19,8 @@
 html
   font-size: 100%
 body
+  margin: 0
+  padding: 0
   font-size: 1.2rem
   line-height: 2rem
 h1
@@ -218,9 +220,6 @@ div.container
   min-height: 5em
   margin-left: auto
   margin-right: auto
-  padding: 0em 10em 1em 10em
-  width: 65%
-  max-width: $content_width
 
 
 $footer-border-color: rgb(228, 228, 228)
@@ -236,42 +235,14 @@ div.footer
     color: rgb(228, 228, 228)
     padding: 0
     margin: 0
-  div.wrap
-    padding: 1rem
-  .work-thumb
-    height: 80px
-    padding: 5px
-  div#column1
-    width: 60%
-    float: left
-    border-right: 1px solid $footer-border-color
-  div#column2
-    width: 39%
-    float: left
-  div.row
-    min-width: 3rem
-    float: left
-  div#ll
-    border-top: 1px solid $footer-border-color
-  div#hire
-    width: 100%
-    float: left
-  div#colophon
-    border-right: 1px solid $footer-border-color
-    width: 49%
-    float: left
   div#about
-    border-bottom: 1px solid $footer-border-color
     img#headstand
       float: right
       padding-bottom: 1rem
-  div#work
-    float: left
-    width: 49%
   p.links a
     color: rgb(134, 134, 134)
     font-size: 1rem
-    padding-left: 3rem
+    padding-left: 3%
     &:hover
       text-decoration: none
       color: rgb(90, 38, 38)
@@ -353,15 +324,8 @@ div#portfolio
     &:hover
       background-color: #fafafa
 
-// ============================= */
-//  Styles only for wide screens */
-// ============================= */
-
-@media screen and (min-width: 767px)
-  // Homepage styling
-  body
-    margin: 0
-    padding: 0
+// Homepage styling
+@media all and (min-width: 800px)
   div.landing
     width: 80%
     max-width: 65rem
@@ -419,6 +383,44 @@ div#portfolio
       & > li:last-child
         border-right: 10px solid $header_text
 
+  // Wide screen styles for footer
+  div.wrap
+    padding: 1rem
+  .work-thumb
+    height: 80px
+    padding: 5px
+  div#column1
+    width: 60%
+    float: left
+    border-right: 1px solid $footer-border-color
+  div#column2
+    width: 39%
+    float: left
+  div.row
+    min-width: 3rem
+    float: left
+  div#ll
+    border-top: 1px solid $footer-border-color
+  div#hire
+    width: 100%
+    float: left
+  div#colophon
+    border-right: 1px solid $footer-border-color
+    width: 49%
+    float: left
+  div#about
+    border-bottom: 1px solid $footer-border-color
+  div#work
+    float: left
+    width: 49%
+
+  
+  div.container
+    padding: 0em 10em 1em 10em
+    width: 65%
+    max-width: $content_width
+
+
 section.scrollpage
   position: relative
   width: 100%
@@ -438,8 +440,8 @@ section.scrollpage
   h1, h2
     color: #fff
   div.wrapper
-    padding-right: 3em
-    padding-left: 3em
+    padding-right: 10%
+    padding-left: 10%
     padding-bottom: 3em
 
 section#write
@@ -456,5 +458,49 @@ section#tweet
 // ============================= */
 // ! Layout for mobile version   */
 // ============================= */
+@media all and (max-width: 800px)
+  div.landing
+    width: 90%
+    margin-left: auto
+    margin-right: auto
+    color: #b6b6b6
+    h2.name
+      font-size: 2em
+      text-align: center
+      margin-bottom: 0
+      padding-bottom: 0
+    h1.evancarmi
+      color: $gray_border
+      font-size: 4rem
+      line-height: 1em
+      text-align: center
+      margin-bottom: 0 
+    h1.i
+      font-size: 4rem
+      text-align: center
+    div.action-block
+      text-align: center
+      ul
+        padding: 0
+        margin: 0
+        overflow: visible
+        list-style-type: none
+        li
+          h1
+            font-size: 3rem
+            line-height: 3rem
 
-@media screen and (max-width: 767px)
+      div.action
+        display: inline-block
+        overflow: hidden
+  h1.section
+    font-size: 5rem
+  nav.sidebar
+    display: none
+  div.content
+    padding: 2%
+
+  //Footer
+  div.footer
+    div.container
+      padding: 5%
