@@ -6,10 +6,11 @@ kind: article
 author: Evan H. Carmi
 created_at: "2013-08-11"
 updated_at: "2013-08-11"
-published: false
+published: true
+featured: true
 comments_enabled: true
-tags: Resque
-summary:
+tags: Resque, YAML
+summary: Ruby metaprogramming + Resque + YAML = one slick configuration file.
 ---
 ## One config to rule them all
 
@@ -65,13 +66,10 @@ end
  The majority of jobs run on the `low` queue and this seems like a good default queue for us. Then whenever we have a special job that needs to be run on a separate queue we can define it separately. Let's imagine what we would want a YAML file to look like:
 
 ~~~ yaml
-# Define the queue that each resque worker should run on
 job_queues:
   # Defaults for all jobs if not specified
   default_queue:
     "low"
-
-  # Specfics by class
   high_priority_job:
     queue: "high"
   medium_priority_job:
@@ -96,14 +94,11 @@ In our BaseJob class let's add an `#inherited` method that will assign the queue
 
 ~~~ ruby
 class BaseJob
-
-  # things that are common to all jobs
+  # things that are common to all jobs go up here...
 
   def self.inherited(subclass)
-
     # Lookup class specific settings from config/resque-pool.yml
     subclass_config = Resque::RESQUE_JOB_QUEUES[subclass.name.underscore]
-
     # this is replaces having to do @queue = 'low-heavy' in the worker classes
     subclass.instance_variable_set(:@queue, self.resque_queue_name(subclass_config))
   end
