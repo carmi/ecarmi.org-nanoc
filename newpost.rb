@@ -37,9 +37,9 @@ kind: #{KIND}
 author: #{AUTHOR}
 created_at: "#{today.to_s}"
 updated_at: "#{today.to_s}"
-published: false
+published: true
+featured: true
 comments_enabled: true
-tags:
 summary:
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lacus ligula,
