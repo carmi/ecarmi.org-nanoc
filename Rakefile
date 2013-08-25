@@ -5,7 +5,7 @@ task :default => [:compile]
 task :rebuild => [:fullclean, :compile]
 
 task :fullclean => :clean do
-  system('git', 'clean', '-qdf')
+  #system('git', 'clean', '-qdf')
   system('rm', '-rf', 'output', 'tmp')
 end
 
