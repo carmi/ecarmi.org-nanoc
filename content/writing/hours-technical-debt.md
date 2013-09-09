@@ -37,9 +37,9 @@ Taking on technical debt may be necessary, maybe it isn't. But you will definite
 
 I think that at almost any point in the timeline of a company you must avoid technical debt furiously. And if you have debt you must deal with it, you must improve your codebase, improve your tests, improve everything.
 
-Technical debt should be used like duck tape. It should be used when something is broken, and you need to fix it as fast as possible, no matter how terribly. But you will have to spend even more time in the future fixing it. It doesn't simply fade away.
+Technical debt should be used like duct tape. It should be used when something is broken, and you need to fix it as fast as possible, no matter how terribly. But you will have to spend even more time in the future fixing it. It doesn't simply fade away.
 
-When you share [user passwords](https://blog.dropbox.com/2011/06/yesterdays-authentication-bug/) or the like you use duck tape to fix it. And that's the only time.
+When you share [user passwords](https://blog.dropbox.com/2011/06/yesterdays-authentication-bug/) or the like you use duct tape to fix it. And that's the only time.
 
 When you start deciding to take on technical debt to push a feature, you are making a poor choice. You may end up finishing the feature, but then you find bugs in it later, and fixing those bugs is costly and damaging in numerous ways. It is not effective, efficient, or worthwhile.
 In this way, I think programming is very different from writing, or cramming for a test, or creating a powerpoint for a talk. When you're done with any of these, you are done. With programming you aren't, instead you are taking on dangerous technical debt.
