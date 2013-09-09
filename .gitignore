@@ -3,3 +3,4 @@ output/*
 tmp/*
 crash.log
 .sass-cache/*
+.DS_STORE
