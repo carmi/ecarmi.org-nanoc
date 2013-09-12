@@ -83,3 +83,5 @@ Zach Holman finally says:
 > By allowing for a more flexible work schedule, you create an atmosphere where employees can be excited about their work. Ultimately it should lead to more hours of work, with those hours being even more productive. Working weekends blur into working nights into working weekdays, since none of the work feels like work.
 
 So if you have a deadline looming, you shouldn't work more hours, you should work more focused, smarter hours. By prioritization and working smart you will get your release done on time.
+
+Comment on [Hacker News](https://news.ycombinator.com/item?id=6357830),  [Reddit](http://www.reddit.com/r/programming/comments/1m7z2q/technical_debt_long_hours_and_the_myth_of/), or here.
