@@ -7,6 +7,7 @@ author: Evan H. Carmi
 created_at: "2013-08-18"
 updated_at: "2013-08-18"
 published: true
+featured: true
 comments_enabled: true
 summary: If you're playing the startup game just to get lucky at the end, you're out of luck.
 ---

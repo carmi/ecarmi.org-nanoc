@@ -7,7 +7,7 @@ author: Evan H. Carmi
 created_at: "2013-03-18"
 updated_at: "2013-03-18"
 published: true
-featured: true
+featured: false
 comments_enabled: true
 summary: There are plenty of guides to hiring rockstar developers, but how do you tell if someone has potential.
 ---
