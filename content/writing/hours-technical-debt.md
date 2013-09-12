@@ -62,7 +62,7 @@ I fundamentally and unequivocally believe that a company culture that cares abou
 
 So you have a deadline and that's not going to change. How do you meet that deadline? Work smarter, not longer hours. You prioritize intensely, working on only the key things that are necessary for the release. You focus intelligently, removing meetings, hiring, and devops that aren't completely required for the release. (Generally meetings, devops, etc, need to be done, but not doing them doesn't create a debt with interest like poor design decisions in your code do.)
 
-If your are hitting a wall on something, you stop, leave the office, hangout with friends, and then go back at it with fresh eyes.
+If you are hitting a wall on something, you stop, leave the office, hangout with friends, and then go back at it with fresh eyes.
 
 The 37Signals folks say this in [Rework](http://37signals.com/rework):
 
