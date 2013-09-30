@@ -9,7 +9,7 @@ updated_at: "2013-09-29"
 published: true
 featured: true
 comments_enabled: true
-summary:
+summary: A new beginning, one without a fixed end.
 ---
 Yesterday I woke up early in Manhattan. Well, early for a Saturday. This wasn't the dreadful alarm-induced wake-up. Rather, I was pulled awake excited by the day to come.
 
