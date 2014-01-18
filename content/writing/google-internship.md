@@ -13,10 +13,20 @@ tags: internship, google
 summary: I had a (well, three) interviews with Google for a summer internship position and lived to tell the tale.
 ---
 
+## Ebook: How to get a Google Internship
+<div class="ebook-flyer">
+<p>
+Are you wondering how to get a great internship with a top company? Purchase this ebook now to learn what the what it takes to get a job with companies including Google, The New York Times, and startups.
+</p>
+<div class="buy-it-today"><a href="https://gum.co/google-internship-ebook" class="buy-it-today">Buy it today!</a>
+</div>
+<script type="text/javascript" src="https://gumroad.com/js/gumroad.js"></script>
+</div>
+
 # Applying for an internship at Google
 
 <div class="disclaimer">
-<p><strong>Disclaimer:</strong> This post has gotten nearly 100,000 views after being being on <a href="http://techcrunch.com/2011/05/07/why-the-new-guy-cant-code/">TechCrunch</a> and <a href="http://news.ycombinator.com/item?id=2384018">Hacker News</a>. Some people liked it, and some absolutely did not.</p>
+<p><strong>Disclaimer:</strong> This post has received hundreds of thousands of visits including being on <a href="http://techcrunch.com/2011/05/07/why-the-new-guy-cant-code/">TechCrunch</a> and <a href="http://news.ycombinator.com/item?id=2384018">Hacker News</a>. Some people liked it, and some absolutely did not.</p>
 
 <p>I did not share anything I was asked not to share, and I have received no requests to change or remove this post. The <a href="http://devinterviews.pen.io/">hiring process</a> is complicated, and I believe an open discussion about current practices in our industry is important. If you are going to interview me and have an opinion/concern about this article, bring it up. Let's chat.</p></div>
 
@@ -143,6 +153,17 @@ I really had the feeling that luck was a huge part of it. If I had more recently
 I'm glad I had the experience interviewing, and after having had trouble finding information on the internship application process and what to expect I thought I should write up my own story.
 
 I got an internship with The New York Times the following week.
+
+<div class="ebook-flyer">
+<p>
+If you got all the way down here, why not keep reading. Buy my 
+<a href="https://gum.co/google-internship-ebook">ebook</a>
+and learn how you too can get a top notch internship!
+</p>
+<div class="buy-it-today"><a href="https://gum.co/google-internship-ebook" class="buy-it-today">Buy it today!</a>
+</div>
+</div>
+
 
 
 [internships]: http://www.google.com/jobs/students/us/internships/
