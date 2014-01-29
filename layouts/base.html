@@ -38,7 +38,7 @@
 
     // Javascript
 
-    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.9.1.min.js"></script>
     %script{:src => hashed_url('/static/js/combined.js'), :type => "text/javascript"}
 
     = render 'analytics'
@@ -57,7 +57,7 @@
       \     (function () {
       \         var s = document.createElement('script'); s.async = true;
       \         s.type = 'text/javascript';
-      \         s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+      \         s.src = '//' + disqus_shortname + '.disqus.com/count.js';
       \         (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
       \     }());
       \ </script>
