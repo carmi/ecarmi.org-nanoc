@@ -13,8 +13,6 @@ $('div.landing li').each(function() {
 
   $(this).click(function() {
     $.scrollTo($(section), duration); 
-    // Log click with mixpanel
-    mpq.track("[homepage]: " + $(this).first('a').text() +  " clicked");
     return false;
   });
 });
