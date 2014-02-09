@@ -2,3 +2,11 @@ Hello! You are browsing the source code to ecarmi.org, a Nanoc powered blog by E
 
 To publish, update the nanoc.yaml file and then run
   `rake publish`
+
+For local development start guard:
+
+  `guard`
+
+and then run adsf from the output/ directory
+
+  `adsf -r output -p 3333`
