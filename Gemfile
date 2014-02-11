@@ -15,7 +15,6 @@ gem "rainpress"
 gem "builder"
 gem "systemu"
 gem "listen"
-gem "adsf"
 gem 'rb-inotify'
 gem 'pry'
 gem 'rb-readline'
@@ -23,3 +22,7 @@ gem 'w3c_validators'
 gem "guard-nanoc"
 gem 'redcarpet'
 gem 'adsf'
+
+group :development do
+  gem 'guard-livereload', require: false
+end
