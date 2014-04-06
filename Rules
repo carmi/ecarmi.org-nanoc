@@ -121,6 +121,20 @@ compile '/writing/*/' do
   layout 'base'
 end
 
+compile '/books/*/' do
+  if @item[:markup] == "markdown"
+    filter :kramdown
+    filter :colorize_syntax, {
+      # To use the default_colorizer option you need the nanoc3.2 version Colorize_Syntax filter.
+      :default_colorizer => :pygmentize,
+    }
+  end
+
+  layout 'book'
+  layout 'default'
+  layout 'base'
+end
+
 #create markdown text copies of all entries
 route '/writing/*/', :rep => :raw do
   if @item[:markup] == 'markdown'
