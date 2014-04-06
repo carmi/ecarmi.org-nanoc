@@ -18,6 +18,10 @@
   %div.wrapper
     %h1.section.write
       = link_to('write', '/writing/')
+    - books[0..2].each do |item|
+      %article
+        %h2.title= link_to item[:title], item
+        %p.summary= item[:summary]
     - featured_articles[0..2].each do |item|
       %article
         %h2.title= link_to item[:title], item

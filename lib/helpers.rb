@@ -15,6 +15,13 @@ def featured_articles
   articles.sort_by { |post| attribute_to_time(post[:created_at])}.reverse
 end
 
+def books
+  books = @items.select do |item|
+    item[:kind] == 'book' && item[:featured] == true
+  end
+  books.sort_by { |post| attribute_to_time(post[:created_at])}.reverse
+end
+
 # See: http://userprimary.net/posts/2011/01/10/optimizing-nanoc-based-websites/
 
 # Route an Nanoc3::Item to a fingerprinted string for expires HTTP header

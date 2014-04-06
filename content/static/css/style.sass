@@ -154,6 +154,18 @@ article.post
     padding: 1em 2em 1em 2em
     border-left: 2px solid $gray_border
 
+article.book
+  margin-left: auto
+  margin-right: auto
+  max-width: 40rem
+  img.cover
+    width: 240px
+    padding: 10px
+    margin: auto
+  div.buy-link
+    text-align: center
+
+
 blockquote
   font-style: oblique
 
@@ -331,6 +343,15 @@ div#portfolio
     @include single-transition(background-color, .2s)
     &:hover
       background-color: #fafafa
+
+div#books-index
+  min-height: 25em
+  max-width: 45rem
+  img.cover
+    width: 240px
+    float: left
+    padding-right: 15px
+
 
 // Homepage styling
 @media all and (min-width: 800px)
