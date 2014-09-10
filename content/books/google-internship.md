@@ -1,5 +1,5 @@
 ---
-title: How to get a Google Internship - book
+title: How to get a Google Internship - ebook
 header: How to get a Google Internship
 kind: book
 featured: true
@@ -8,12 +8,30 @@ markup: markdown
 summary: Learn what it takes to get a software engineering internship with companies such as Google, The New York Times, and startups.
 ---
 
+# A Candid Guide to Getting Top Computer Science Internships, by Evan Carmi ##
+
 <div class="buy-link">
-<a href="https://gum.co/google-internship-ebook"><img alt="How to get a Google Internship." class="cover" src="/static/img/google-internship-book-cover-240.png" />
-<p>Buy the ebook!</p>
+<a style="float: right; padding: 20px;" href="https://gum.co/google-internship-ebook"><img alt="How to get a Google Internship." class="cover" src="/static/img/google-internship-book-cover-short-300.png" />
 </a></div>
 
 Learn what it takes to get a software engineering internship with companies such as Google, The New York Times, and startups.
+
+<a class="buy-button" href="https://gum.co/google-internship-ebook?wanted=true"><em>Purchase ebook $4.99</em></a>
+
+<p class="hint">eBook includes PDF, ePub and Kindle versions</p>
+
+## Testimonials
+
+<blockquote class="left-bar">I love your book. I think it's concise, well structured, and easy to read/follow. I'd definitely give you 10/10.
+<br />
+<b>- Edwin, San Jose State University</b>
+</blockquote>
+
+<blockquote class="left-bar">Your book is a big help!
+<br />
+<b>- Falco, Germany</b>
+</blockquote>
+
 
 How do you get a software engineering internship at Google? If you read this
 book, can I promise that Google will hire you? Of course not!  There is no
@@ -58,6 +76,7 @@ navigate the internship application process.
 *  Question #4-Singly linked lists
 8. Conclusion
 
+<a class="buy-button" href="https://gum.co/google-internship-ebook?wanted=true"><em>Purchase ebook $4.99</em></a>
 
 <div>
 <script type="text/javascript" src="https://gumroad.com/js/gumroad.js"></script>
