@@ -76,6 +76,10 @@ navigate the internship application process.
 *  Question #4-Singly linked lists
 8. Conclusion
 
+**Money Back Guarantee**
+
+If this book doesn't help you get an internship, I'll refund 100% of your money.
+
 <a class="buy-button" href="https://gum.co/google-internship-ebook?wanted=true"><em>Purchase ebook $4.99</em></a>
 
 <div>
