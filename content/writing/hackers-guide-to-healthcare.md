@@ -7,7 +7,7 @@ author: Evan H. Carmi
 created_at: "2013-11-09"
 updated_at: "2013-11-09"
 published: true
-featured: true
+featured: false
 comments_enabled: true
 summary: A few phone calls saved me $400 dollars.
 ---
