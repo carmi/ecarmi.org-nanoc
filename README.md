@@ -7,6 +7,6 @@ For local development start guard:
 
   `guard`
 
-and then run adsf from the output/ directory
+and then run adsf from the root directory
 
   `adsf -r output -p 3333`
