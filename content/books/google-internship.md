@@ -16,7 +16,7 @@ summary: Learn what it takes to get a software engineering internship with compa
 
 Learn what it takes to get a software engineering internship with companies such as Google, The New York Times, and startups.
 
-<a class="buy-button" href="https://gum.co/google-internship-ebook?wanted=true"><em>Purchase ebook $4.99</em></a>
+<a class="buy-button" href="https://gum.co/google-internship-ebook?wanted=true"><em>Purchase ebook $10.00</em></a>
 
 <p class="hint">eBook includes PDF, ePub and Kindle versions</p>
 
@@ -80,7 +80,7 @@ navigate the internship application process.
 
 If this book doesn't help you get an internship, I'll refund 100% of your money.
 
-<a class="buy-button" href="https://gum.co/google-internship-ebook?wanted=true"><em>Purchase ebook $4.99</em></a>
+<a class="buy-button" href="https://gum.co/google-internship-ebook?wanted=true"><em>Purchase ebook $10.00</em></a>
 
 <div>
 <script type="text/javascript" src="https://gumroad.com/js/gumroad.js"></script>
