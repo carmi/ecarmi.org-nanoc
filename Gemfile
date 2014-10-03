@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 
 gem "cri"
+gem "bourbon"
+gem "neat"
 gem "nanoc"
 gem "haml"
 gem "sass"
