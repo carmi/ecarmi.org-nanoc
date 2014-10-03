@@ -5,8 +5,16 @@
 @import "base/base"
 @import "neat/neat"
 
+$max-width: em(600) !global
+$base-font-size: em(24)
+$base-line-height: em(32)
 
 
+h1, h2, h3, h4, h5, h6
+  font-family: "Josefin Sans"
 
-.test
-  padding: 5
+body
+  font-family: "Josefin Sans"
+
+article
+  @include outer-container
