@@ -3,6 +3,21 @@
   %head
     %meta{:charset => "utf-8"}
 
+    :plain
+      <link href="//fonts.googleapis.com/css?family=Josefin+Sans:100italic,100,300italic,300,400italic,400,600italic,600,700italic,700" rel="stylesheet" type="text/css">
+
+
+    :plain
+      <script>
+        (function(d) {
+          var config = {
+            kitId: 'hfy3ldl',
+            scriptTimeout: 3000
+          },
+          h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+        })(document);
+      </script>
+
     %title
       - unless @item[:title].nil?
         #{@item[:title]} | Evan Carmi
@@ -12,7 +27,6 @@
 
     %link{:href => hashed_url('/static/css/application.css'), :media => "screen", :rel => "stylesheet", :type => "text/css"}
 
-    <link href='//fonts.googleapis.com/css?family=Goudy+Bookletter+1911|Habibi|Droid+Sans' rel='stylesheet' type='text/css'>
     <link href="/writing/feed.xml" type="application/atom+xml" rel="alternate" title="Writing ATOM Feed">
     %meta{:name => "generator", :content => "nanoc"}
     %meta{:name => "author", :content => "Evan Carmi"}
@@ -61,3 +75,4 @@
       \         (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
       \     }());
       \ </script>
+
