@@ -1,0 +1,20 @@
+{
+  "name": "ecarmi-org-nanoc",
+  "version": "0.2.0",
+  "homepage": "https://github.com/carmi/ecarmi.org-nanoc",
+  "authors": [
+    "Evan Carmi <evan@ecarmi.org>"
+  ],
+  "description": "Ecarmi.org website",
+  "main": "content/static/css/application.sass",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize.scss": "~3.0.1+normalize.3.0.1"
+  }
+}
