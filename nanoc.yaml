@@ -56,3 +56,5 @@ deploy:
   stg:
     kind: rsync
     dst: "root@gandi.ecarmi.org:/srv/www/ecarmi.org/stg"
+
+allow_periods_in_identifiers: true

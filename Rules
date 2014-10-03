@@ -2,10 +2,9 @@
 
 # Load settings
 require './settings.rb' # There should be a settings.rb in root derived from dev or prod settings
-require 'compass'
+require 'bourbon'
 require 'time'
-
-Compass.add_project_configuration 'compass_config.rb'
+require './sass_config.rb'
 
 # A few helpful tips about the Rules file:
 #
@@ -22,7 +21,7 @@ end
 
 compile '/static/css/*/' do
   if @item[:extension] == 'sass'
-    filter :sass, Compass.sass_engine_options
+    filter :sass, $sass_configuration
   end
 
   if $use_minified_css then
