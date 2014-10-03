@@ -20,7 +20,7 @@ compile '/static/fonts/*/' do
 end
 
 compile '/static/css/*/' do
-  if @item[:extension] == 'sass'
+  if @item[:extension] =~ /sass$/
     filter :sass, $sass_configuration
   end
 
