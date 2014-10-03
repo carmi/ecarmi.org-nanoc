@@ -1,15 +1,18 @@
 source 'https://rubygems.org'
 
+gem "nanoc"
+
 gem "cri"
+
 gem "bourbon"
 gem "neat"
-gem "nanoc"
+gem "bitters"
+
 gem "haml"
 gem "sass"
 gem "nokogiri"
 gem "rubypants"
 gem "kramdown"
-gem "compass"
 gem "coderay"
 gem "mime-types"
 gem "rack"
