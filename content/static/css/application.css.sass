@@ -2,19 +2,133 @@
 @import "normalize"
 
 @import "bourbon/bourbon"
-@import "base/base"
+@import "base/grid-settings"
 @import "neat/neat"
 
+@import "tango"
+
+@import "base/variables"
+
+// Bitters Variable Overrides
+$base-font-family: "Adobe Garamond W01", $serif
+$header-font-family: "ITC Kabel W01", $base-font-family
+
+@import "base/base"
+
 $max-width: em(600) !global
-$base-font-size: em(24)
-$base-line-height: em(32)
+
+$link-hover-color: rgba(11,72,107, 1)
+$header-background-color: rgba(255, 242, 139, 0.64)
+$header-text-color: #383737
+
+$box-border: $header-text-color
 
 
-h1, h2, h3, h4, h5, h6
-  font-family: "Josefin Sans"
+@mixin link-hover-color
+  &:hover
+    color: $link-hover-color
 
-body
-  font-family: "Josefin Sans"
+a
+  @include link-hover-color
+
+h1,h2,h3,h4,h5,h6
+  text-align: center
+
+h1
+  font-size: 2.5em
+  font-weight: 400
+  padding-top: 1rem
+
+h2
+  font-weight: 100
+  font-size: 1.1em
+
+
+.article-metadata
+  font-family: $header-font-family
+  font-weight: 100
+  font-size: .85em
+
+.author
+  text-transform: uppercase
+  a
+    @include link-hover-color
+    color: rgba(68, 68, 68, 1)
+
 
 article
+  padding-top: 2em
   @include outer-container
+
+
+.first-letter
+  font-weight: normal
+  font-size: 330%
+  line-height: 100%
+
+.first-letter.tight-kerning
+  margin-right: -.22em
+
+header
+  background-color: $header-background-color
+  padding-top: 4em
+  padding-bottom: 2em
+
+.header-contents
+  @include outer-container
+  text-align: center
+  color: $header-text-color
+  padding-bottom: 1em
+  border-bottom: 1px solid $header-text-color
+
+iframe.twitter-tweet
+  margin-top: 2em !important
+  margin-bottom: 2em !important
+  margin-left: auto !important
+  margin-right: auto !important
+
+.prev
+  float: left
+.next
+  float: right
+
+.line-numbers
+  padding-right: 1rem
+  @include user-select(none)
+
+pre, code, tt, kdb, samp
+  font-family: 'Consolas W99', monospace, courier
+  overflow: auto
+  font-size: 14px
+  overflow: auto
+  padding-top: 4px
+  padding: 1px
+
+pre
+  padding-right: 5px
+  padding-left: .7rem
+  border-left: 1rem solid rgba(236, 236, 236, 0.28)
+  line-height: 1.2rem
+
+// Unstyle code inside <pre> tag
+pre
+  code, tt, kdb, samp, pre
+    padding: 0
+    border: none
+
+div.ebook-flyer
+  background: rgba(255, 255, 153, 0.7)
+  margin: 2em 2em 2em 0em
+  padding: 1em
+
+div.buy-it-today
+  text-align: center
+
+div.disclaimer
+  background: rgba(175, 175, 175, 0.2)
+  margin: 2em 2em 2em 0em
+  padding: 1em
+
+  p:last-child
+    margin: 0
+
