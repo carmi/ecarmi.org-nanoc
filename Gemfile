@@ -30,4 +30,5 @@ gem 'adsf'
 
 group :development do
   gem 'guard-livereload', require: false
+  gem 'growl'
 end
