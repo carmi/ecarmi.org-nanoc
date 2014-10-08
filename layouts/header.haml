@@ -1,20 +1,27 @@
 - unless @item.path == '/'
   %header
-    %hgroup
+    %div.header-contents
+      %hgroup.article-metadata
+        -if @item[:kind] == 'article'
+          By 
+          %span.author
+            %a{:href => "http://ecarmi.org/"}
+              Evan
+              %b> Carmi
+          &#183;
+
+          %span.post-date
+            Posted
+            = @item.timeago_time
+
       - title = @item[:header] || @item[:title]
       %h1.title #{title}
-      -if @item[:kind] == 'article'
-        %h3.post_date
-          Posted
-          = @item.timeago_time
-          by 
-          %a{:href => "http://ecarmi.org/"}
-            Evan Carmi
-    /
-      %p
-        %nav.breadcrumbs
-          %ul
-            - breadcrumbs_trail.each do |crumb|
-              %li
-                =link_to(crumb.path.split('/').last || 'ecarmi.org', crumb)
+
+      /
+        %p
+          %nav.breadcrumbs
+            %ul
+              - breadcrumbs_trail.each do |crumb|
+                %li
+                  =link_to(crumb.path.split('/').last || 'ecarmi.org', crumb)
 
