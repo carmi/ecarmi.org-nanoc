@@ -5,6 +5,8 @@ require './settings.rb' # There should be a settings.rb in root derived from dev
 require 'bourbon'
 require 'time'
 require './sass_config.rb'
+require 'tilt/redcarpet'
+require 'benchmark'
 
 # A few helpful tips about the Rules file:
 #
@@ -33,6 +35,7 @@ end
 route '/static/fonts/*' do
   item.identifier.gsub(/_/, '.').chomp('/')
 end
+
 route '/static/css/*/' do
   hashed_route(@item)
 end
@@ -40,9 +43,8 @@ end
 compile '/static/js/*/' do
   if item[:combined]
     filter :haml
-    filter :yui_compress unless $development_mode
+    #filter :yui_compress unless $development_mode
   end
-  #TODO, minify js
 end
 
 route '/static/js/*/' do
@@ -116,7 +118,6 @@ compile '/writing/*/' do
 
   filter :rubypants
   layout 'post'
-  layout 'default'
   layout 'base'
 end
 
@@ -130,7 +131,7 @@ compile '/books/*/' do
   end
 
   layout 'book'
-  layout 'default'
+  layout 'header'
   layout 'base'
 end
 
@@ -147,13 +148,13 @@ end
 
 compile '/writing/' do
   layout 'writing_root'
-  layout 'default'
+  layout 'header'
   layout 'base'
 end
 
 compile '/portfolio/' do
   filter :haml
-  layout 'default'
+  layout 'header'
   layout 'base'
 end
 
@@ -164,7 +165,7 @@ end
 
 compile '/404/' do
   filter :haml
-  layout 'default'
+  layout 'header'
   layout 'base'
 end
 
@@ -178,7 +179,7 @@ compile '*' do
   elsif @item[:markup] == "haml"
     filter :haml
   end
-  layout 'default'
+  layout 'header'
   layout 'base'
 end
 

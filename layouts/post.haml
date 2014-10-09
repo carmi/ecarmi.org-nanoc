@@ -1,3 +1,21 @@
+%header.post
+  %div.header-contents
+    %hgroup.article-metadata
+      -if @item[:kind] == 'article'
+        By 
+        %span.author
+          %a{:href => "http://ecarmi.org/"}
+            Evan
+            %b> Carmi
+        &#183;
+
+        %span.post-date
+          Posted
+          = @item.timeago_time
+
+    - title = @item[:header] || @item[:title]
+    %h1.title #{title}
+
 %article.post
   = yield
 
