@@ -66,8 +66,14 @@ route '/static/img/*/' do
 end
 
 compile '/files/*/' do
-  #don't compile files
+  # Do nothing
 end
+
+route '/files/*/' do
+  # Make sure that "/files/thing/" becomes "/files/thing.mp4"
+  item.identifier.gsub(/^\/files/, '').chop + '.' + item[:extension]
+end
+
 
 # Humans.txt
 compile '/humans/' do
