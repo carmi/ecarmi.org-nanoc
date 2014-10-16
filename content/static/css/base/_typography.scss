@@ -17,6 +17,7 @@ h6 {
   line-height: $header-line-height;
   margin: 0;
   text-rendering: optimizeLegibility; // Fix the character spacing for headings
+  font-weight: 400
 }
 
 h1 {
@@ -54,6 +55,7 @@ a {
 
   &:hover {
     color: $hover-link-color;
+    text-decoration: none;
   }
 
   &:active, &:focus {
@@ -77,8 +79,9 @@ picture {
 }
 
 blockquote {
-  border-left: 2px solid $base-border-color;
-  color: lighten($base-font-color, 15);
+  border-left: 2px solid lighten($base-border-color, 12);
+  font-style: italic;
+  color: lighten($base-font-color, 5);
   margin: $base-spacing 0;
   padding-left: $base-spacing / 2;
 }
@@ -91,3 +94,14 @@ cite {
     content: "\2014 \00A0";
   }
 }
+
+.first-letter {
+  font-weight: normal;
+  font-size: 330%;
+  line-height: 100%;
+}
+
+.first-letter.tight-kerning {
+  margin-right: -.22em;
+}
+
