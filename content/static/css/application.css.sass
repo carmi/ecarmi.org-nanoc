@@ -20,6 +20,11 @@ $max-width: em(600) !global
 $link-hover-color: rgba(11,72,107, 1)
 $header-background-color: rgba(255, 242, 139, 0.64)
 $header-text-color: #383737
+$header-border-color: rgba(56, 55, 55, 0.13)
+
+$inline-code-color: #A60
+
+$code-background-color: #f0f2f4
 
 $box-border: $header-text-color
 
@@ -31,17 +36,14 @@ $box-border: $header-text-color
 a
   @include link-hover-color
 
-h1,h2,h3,h4,h5,h6
-  text-align: center
+article
+  h1,h2,h3,h4,h5,h6
+    padding-top: 1rem
+    margin-bottom: 1rem
+    border-bottom: 1px solid $header-border-color
 
-h1
-  font-size: 2.5em
-  font-weight: 400
-  padding-top: 1rem
-
-h2
-  font-weight: 100
-  font-size: 1.1em
+  ul,ol
+    @extend %default-ul
 
 
 .article-metadata
@@ -50,24 +52,14 @@ h2
   font-size: .85em
 
 .author
-  text-transform: uppercase
   a
     @include link-hover-color
-    color: rgba(68, 68, 68, 1)
+    text-decoration: none
 
-
-article
+article.post
   padding-top: 2em
+article
   @include outer-container
-
-
-.first-letter
-  font-weight: normal
-  font-size: 330%
-  line-height: 100%
-
-.first-letter.tight-kerning
-  margin-right: -.22em
 
 header
   background-color: $header-background-color
@@ -79,7 +71,28 @@ header
   text-align: center
   color: $header-text-color
   padding-bottom: 1em
-  border-bottom: 1px solid $header-text-color
+
+footer
+  padding-top: 4em
+  padding-bottom: 4em
+  background-color: $code-background-color
+
+.footer-div
+  .social-links
+    text-align: center
+
+  section
+    @include outer-container
+    border-top: 1px solid #fff
+    padding-bottom: 1rem
+    aside
+      padding-top: .5rem
+      @include span-columns(3)
+    article
+      padding-top: .5rem
+      border-left: 1px solid #fff
+      padding-left: 1rem
+      @include span-columns(9)
 
 iframe.twitter-tweet
   margin-top: 2em !important
@@ -91,30 +104,35 @@ iframe.twitter-tweet
   float: left
 .next
   float: right
+.next, .previous
+  text-decoration: none
 
 .line-numbers
+  a
+    text-decoration: none
   padding-right: 1rem
   @include user-select(none)
 
 pre, code, tt, kdb, samp
   font-family: 'Consolas W99', monospace, courier
+  color: $inline-code-color
+  font-size: 80%
+
   overflow: auto
-  font-size: 14px
-  overflow: auto
-  padding-top: 4px
-  padding: 1px
 
 pre
-  padding-right: 5px
-  padding-left: .7rem
-  border-left: 1rem solid rgba(236, 236, 236, 0.28)
   line-height: 1.2rem
+  border-radius: 1em
+  margin: 2em 0
+  padding: 2.5em
+  background: $code-background-color
 
 // Unstyle code inside <pre> tag
 pre
   code, tt, kdb, samp, pre
     padding: 0
     border: none
+    color: $base-font-color
 
 div.ebook-flyer
   background: rgba(255, 255, 153, 0.7)
@@ -132,3 +150,10 @@ div.disclaimer
   p:last-child
     margin: 0
 
+
+i
+  text-decoration: none
+  width: 1em
+  color: $base-font-color
+  &:hover
+    text-decoration: none
