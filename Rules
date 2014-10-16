@@ -186,6 +186,7 @@ compile '*' do
     filter :haml
   end
   layout 'header'
+  layout 'generic'
   layout 'base'
 end
 

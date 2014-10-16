@@ -32,11 +32,16 @@ end
 def hashed_route(item)
   # HACK for dealing with css,scss, and sass, and js files dynamically
   # Assume directory name matches ending: /static/css/...
+
   ext = item.identifier.split('/')[2]
 
-  digest = Digest::MD5.hexdigest item.raw_content
-  # 6 hashed chars should be plenty.
-  "#{item.identifier.chop}.#{digest[0,6]}.#{ext}"
+  if $development_mode
+    "#{item.identifier.chop}.#{ext}"
+  else
+    digest = Digest::MD5.hexdigest item.raw_content
+    # 6 hashed chars should be plenty.
+    "#{item.identifier.chop}.#{digest[0,6]}.#{ext}"
+  end
 end
 
 # Given a url to static object return the path to the unique object created
@@ -48,30 +53,30 @@ def hashed_url(filename)
   item = @items.detect { |x| x.identifier.include?(filename.gsub(ext,'')) }
   return hashed_route(item) unless item.nil?
 end
-
-YUI_JAR = File.dirname(__FILE__) + "/../tools/yuicompressor-2.4.7.jar"
-
-class YuiCompressor < Nanoc3::Filter
-  identifier :yui_compress
-  type :text => :binary
-  def run(content, params={})
-    type = type_from_extension
-    cmd = "java -jar #{YUI_JAR} --type #{type} -o #{output_filename}"
-    IO.popen(cmd, 'w') { |f| f.write(content) }
-    raise "yuicompressor exited with #{$?} for '#{cmd}'" unless $? == 0
-  end
-
-  def type_from_extension
-    case @item[:extension]
-    when /^css/
-      "css"
-    when /^js/
-      "js"
-    else
-      raise "unknown type for yuicompressor '#{@item[:extension]}'"
-    end
-  end
-end
+#
+#YUI_JAR = File.dirname(__FILE__) + "/../tools/yuicompressor-2.4.7.jar"
+#
+#class YuiCompressor < Nanoc3::Filter
+#  identifier :yui_compress
+#  type :text => :binary
+#  def run(content, params={})
+#    type = type_from_extension
+#    cmd = "java -jar #{YUI_JAR} --type #{type} -o #{output_filename}"
+#    IO.popen(cmd, 'w') { |f| f.write(content) }
+#    raise "yuicompressor exited with #{$?} for '#{cmd}'" unless $? == 0
+#  end
+#
+#  def type_from_extension
+#    case @item[:extension]
+#    when /^css/
+#      "css"
+#    when /^js/
+#      "js"
+#    else
+#      raise "unknown type for yuicompressor '#{@item[:extension]}'"
+#    end
+#  end
+#end
 
 # Articles are sorted by descending creation date, so newer articles appear
 # before older articles. Thus sorted_articles[0] is the newest article

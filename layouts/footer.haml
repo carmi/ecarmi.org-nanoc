@@ -1,50 +1,23 @@
 %footer
-  %div.clear
-    %div#column1
-      %div.row
-        %div#hire
-          %div.wrap
-            %h4.header Let&rsquo;s work together
-            %p I love working with great people on interesting projects. If you're interested in hiring me <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#101;&#118;&#097;&#110;&#064;&#101;&#099;&#097;&#114;&#109;&#105;&#046;&#111;&#114;&#103;">send me an email</a>.
-      %div.row#ll
-        %div#colophon
-          %div.wrap
-            %h4.header Colophon
-            %p Evan Carmi designed and coded this site with love in #{link_to('Vim', 'https://github.com/carmi/dotfiles/blob/master/.vimrc')}. It is powered by #{link_to('Nanoc', 'http://nanoc.stoneship.org/')} and served by #{link_to('Nginx', 'http://nginx.org/')} on the #{link_to('Joyent Cloud', 'http://joyent.com/')}. The complete source code is #{link_to('online', "https://github.com/carmi/ecarmi.org-nanoc")}.
-        %div#work
-          %div.wrap
-            %h4.header Portfolio
-            =link_to('<img src="/static/img/nytoly-thumb.png" alt="New York Times London Olympics" class="work-thumb">', 'http://london2012.nytimes.com/', :title => "The New York Times London 2012 Olympics Website", :width => '111', :height => '90')
-            =link_to('<img src="/static/img/wesleying-thumb.png" alt="Wesleying.org" class="work-thumb">', 'http://wesleying.org', :title => "Wesleying.org", :width => '111', :height => '90')
-            %p
-              =link_to('See more work in my portfolio', '/portfolio/', :title => "See my portfolio")
-    %div#column2
-      %div.row#about
-        %div.wrap
-          %img{:src => "/static/img/headstand-100x162.jpg", :alt => "I like headstands.", :id => 'headstand'}
-          %h4.header A few words about myself
-          %p Evan Carmi enjoys tea and headstands. He also writes code. Read more on the #{link_to('about page', '/about/')}.
-      %div.row#web
-        %div.wrap
-          %h4.header Elsewhere on the web
-          %p Evan can also be found on #{link_to('twitter', 'https://twitter.com/ehc', :title => "twitter", :rel => "me")} and #{link_to('github', 'https://github.com/carmi/', :title => "github", :rel => "me")}.
+  %div.footer-div
+    %div.footer-contents
+      %section
+        %aside
+          %h6 Whose site is this?
+        %article
+          %p This is the digital abode of Evan Carmi. #{link_to('Moreover...', '/about/', title: 'About')}.
+      %section
+        %aside
+          %h6 Does he use email?
+        %article
+          %p Email me for work inquiries or just to say hello at <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#101;&#118;&#097;&#110;&#064;&#101;&#099;&#097;&#114;&#109;&#105;&#046;&#111;&#114;&#103;">&#101;&#118;&#097;&#110;&#064;&#101;&#099;&#097;&#114;&#109;&#105;&#046;&#111;&#114;&#103;</a>
+      %section
+        %aside
+          %h6 How was the site made?
+        %article
+          %p Evan Carmi designed and coded this site by hand with love in #{link_to('Vim', 'https://github.com/carmi/dotfiles/blob/master/.vimrc')}.  It is powered by #{link_to('Nanoc', 'http://nanoc.stoneship.org/')} and served by #{link_to('Nginx', 'http://nginx.org/')} on the #{link_to('Joyent Cloud', 'http://joyent.com/')}. The complete source code is #{link_to('online', "https://github.com/carmi/ecarmi.org-nanoc")}.
 
- 
-  %div.notes
-    %p.best-viewed
-      This site is best viewed with
-      %a{:href => "http://curl.haxx.se/"}
-        cURL.
-
-    %p.links
-      =link_to('<i class="icon-info-sign"></i>', '/about/', :title => "About")
-      =link_to('<i class="icon-home"></i>', '/', :title => "Home")
-      =link_to('<i class="icon-picture"></i>', '/portfolio/', :title => "Portfolio")
-      =link_to('<i class="icon-pencil"></i>', '/writing/', :title => "Writing")
-      <a href="/writing/feed.xml" type="application/atom+xml" rel="alternate" title="Writing ATOM Feed"><i class="icon-rss"></i></a>
-      <a href="/sitemap.xml" title="Sitemap"><i class="icon-sitemap"></i></a>
-      <a rel="license" href="http://creativecommons.org/licenses/by/3.0/us/" title="License"><i class="icon-legal"></i></a>
-      <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#101;&#118;&#097;&#110;&#064;&#101;&#099;&#097;&#114;&#109;&#105;&#046;&#111;&#114;&#103;" title="Send me an email"><i class="icon-envelope-alt"></i></a>
-      =link_to('<i class="icon-github"></i>', 'https://github.com/carmi/', :title => "Github", :rel => "me")
-      =link_to('<i class="icon-twitter"></i>', 'https://twitter.com/ehc', :title => "Twitter", :rel => "me")
-      =link_to('<i class="icon-linkedin"></i>', 'http://www.linkedin.com/in/evancarmi', :title => "LinkedIn", :rel => "me")
+    %p.social-links
+      =link_to('<i class="fa fa-github"></i>', 'https://github.com/carmi/', :title => "Github", :rel => "me")
+      =link_to('<i class="fa fa-twitter"></i>', 'https://twitter.com/ehc', :title => "Twitter", :rel => "me")
+      =link_to('<i class="fa fa-linkedin"></i>', 'http://www.linkedin.com/in/evancarmi', :title => "LinkedIn", :rel => "me")
