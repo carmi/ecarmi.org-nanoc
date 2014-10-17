@@ -1,73 +1,27 @@
 %div.landing
-  %h2.name Hello, my name is
-  %h1.evancarmi Evan Carmi.
-  %h1.i I
+  %span.hello Hello, my name is
+  %span.name
+    %span.evan Evan
+    %span.carmi Carmi
+  %span.iam I am a
+
   %div.action-block
-    %ul
-      %li.action.code
-        %h1.action.code
-          %a{:href => "#code"} code
-      %li.action.write
-        %h1.action.write
-          %a{:href => "#write"} write
-      %li.action.work
-        %h1.action.work
-          %a{:href => "#work"} work
+    %div.actions-center
+      %div.action
+        %a{:href => "#developer"}
+          %button developer
+      %div.action
+        %a{:href => "#designer"}
+          %button designer
+      %div.action
+        %a{:href => "#author"}
+          %button author
 
-%section.scrollpage#write
-  %div.wrapper
-    %h1.section.write
-      = link_to('write', '/writing/')
-    - books[0..2].each do |item|
-      %article
-        %h2.title= link_to item[:title], item
-        %p.summary= item[:summary]
-    - featured_articles[0..2].each do |item|
-      %article
-        %h2.title= link_to item[:title], item
-        %p.summary= item[:summary]
+  %div.action-descriptions
+    %p.developer
+      I've built high traffic web applications for The New York Times, I've worked at early stage startups, and I want to work with you.
+    %p.designer
+      I've studied graphic design, printed on a Vandercook letterpress, and designed the site you're currently viewing from scratch in HTML and CSS.
+    %p.author
+      My ebook has been purchased by people in eight countries and counting. My blog posts have been read thousands of times and linked to from publications such as Business Insider and TechCrunch.
 
-%section.scrollpage#code
-  %div.wrapper
-    %h1.section.code code
-    %h2 A few projets on #{link_to('github', 'https://github.com/carmi/')}
-    %dl.projects
-      %dt
-        %h2
-          #{link_to('ecarmi.org - nanoc', "https://github.com/carmi/ecarmi.org-nanoc")}
-      %dl
-        %p The source code to this blog.
-      %dt
-        %h2
-          %a{:href => "https://github.com/carmi/facebook-analyzer"} Facebook Analyzer
-      %dl
-        %p A fun project to parse and analyze a downloaded facebook account.
-      %dt
-        %h2
-          %a{:href => "https://github.com/carmi/comp356"} Comp356 - Computer Graphics in C
-      %dl
-        %p A 3D ray tracer and maze game written in C for a Computer Graphics course.
-
-%section.scrollpage#work
-  %div.wrapper
-    %h1.section.work work
-    %h2 
-      Work Status: <a href="https://www.brewster.com/">Engineer at Brewster</a>
-    %dl.work
-      %dt
-        %img{:src => "/static/img/nyt-350.png"}
-      %dl
-        %p
-          As a part of The New York Times Interactive News Technology desk I built news apps, ranging from 
-          %a{:href => 'http://elections.nytimes.com/2012/campaign-finance/primaries'} campaign
-          %a{:href => 'https://github.com/NYTimes/Fech'} finance
-          to the Times 
-          %a{:href => 'http://london2012.nytimes.com/'} London 2012 Olympics website.
-      %dt
-        %h2 Wesleyan University
-      %dl
-        %p I worked with Wesleyan's Program on Terrorism and Insurgency Research, a group seeking to improve knowledge about political violence, to develop a custom Django application to facilitate data research and analysis.
-      %dt
-        %h2 Myself
-      %dl
-        %p I designed and built this web site from scratch using HTML5 and CSS3.
