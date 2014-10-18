@@ -43,7 +43,8 @@
 
   %body
 
-    = yield
+    %div.container{:id => @item[:container_id]}
+      = yield
 
     = render 'footer'
 

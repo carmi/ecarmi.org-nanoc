@@ -1,6 +1,7 @@
-%header
-  %div.header-contents
-    - title = @item[:header] || @item[:title]
-    %h1.title #{title}
+- unless @item[:hide_header]
+  %header
+    %div.header-contents
+      - title = @item[:header] || @item[:title]
+      %h1.title #{title}
 
 = yield
