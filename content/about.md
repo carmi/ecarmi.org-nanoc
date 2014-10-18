@@ -13,7 +13,7 @@ Evan Carmi
 
 I'm passionate about meaningful projects, thoughtful code and modal editors. I've programmed on the web (mostly) since 2008. I've developed [Django] applications and I've developed [Rails] application. I've configured and launched multi-zone multi-region infrastructure serving thousands of requests a second on [AWS]. And I've hired programmers.
 
-<img alt="I like headstands." id="headstand-about" src="/static/img/headstand-309x500.jpg" width="309" height="500">
+<img alt="Evan Carmi" id="headstand-about" src="/static/img/evan-head-circle-500.png">
 
 My first entrance to technology was an apprenticeship with a computer consultant helping clients and small businesses. I built custom computers from scratch and setup software in a methodological process that emphasized serviceability. Eventually, my interests moved from building hardware to creating software. I began programming in [Python] and building web sites. In 2007 I wrote my first blog in [Django].
 
