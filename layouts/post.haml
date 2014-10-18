@@ -4,7 +4,7 @@
       -if @item[:kind] == 'article'
         By 
         %span.author
-          %a{:href => "http://ecarmi.org/"}
+          %a{:href => "#{@config[:base_url]}"}
             Evan Carmi
         &#183;
 
@@ -37,7 +37,7 @@
     \  // The following are highly recommended additional parameters. Remove the slashes in front to use.
     \  var disqus_identifier = '#{@item.path}';
     \  var disqus_title = '#{@item[:title].gsub("'","")}';
-    \  var disqus_url = '#{$domain}#{@item.path}';
+    \  var disqus_url = '#{@config[:base_url]}#{@item.path}';
     \
     \  /* * * DON'T EDIT BELOW THIS LINE * * */
     \  (function() {
