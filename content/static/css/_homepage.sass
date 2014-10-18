@@ -1,3 +1,5 @@
+$name-color: #485e48
+
 @mixin action-coloring($base-color, $number)
   &:nth-child(#{$number})
     button
@@ -10,6 +12,10 @@
 @mixin action-description-border($base-color, $number)
   &:nth-child(#{$number})
     border-color: $base-color
+
+.name
+  font-size: 7rem
+  color: $name-color
 
 .landing
   @include outer-container
@@ -24,7 +30,7 @@
     color: #b6b6b6
   .name
     font-size: 7rem
-    color: #485e48
+    color: $name-color
     line-height: 1
   .iam
     font-size: 3rem
