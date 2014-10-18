@@ -41,9 +41,9 @@
     - elsif @item[:kind] == 'article'
       %meta{:name => "description", :content => "#{@item[:summary]}"}
 
-  %body
+  %body{:id => @item[:container_id]}
 
-    %div.container{:id => @item[:container_id]}
+    %div.container
       = yield
 
     = render 'footer'

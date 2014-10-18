@@ -195,8 +195,8 @@ compile '*' do
   elsif @item[:markup] == "haml"
     filter :haml
   end
-  layout 'header'
   layout 'generic'
+  layout 'header'
   layout 'base'
 end
 
