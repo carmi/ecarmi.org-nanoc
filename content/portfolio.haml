@@ -39,6 +39,15 @@ container_id: portfolio
 
     %div.grid-item
       %h1
+        =link_to('Brewster', 'https://www.brewster.com/', :title => "Brewster Social Addressbook")
+
+      %img{:src => "/static/img/brewster.png", :alt => "Brewster"}
+
+      :markdown
+        [Brewster](https://www.brewster.com/) is [VC-backed](https://www.usv.com/portfolio) startup building the next-generation addressbook. As a Software Engineer within a small team I had numerous responsibilities including developing and managing multiple platforms. I was also the lead engineer on Brewster's syncing platform using CardDAV. CardDAV is a client/server protocol designed to allow syncing of contact information between a client and a server. I built the first version of a syncing solution that connected with Google's Contacts and Apple's iCloud services.
+
+    %div.grid-item
+      %h1
         =link_to('Wesleying.org', 'http://wesleying.org', :title => "wesleying.org")
 
       %img{:src => "/static/img/wesleying.png", :alt => "wesleying.org"}
