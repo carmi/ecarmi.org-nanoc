@@ -18,6 +18,7 @@
           %p Evan Carmi designed and coded this site by hand with love in #{link_to('Vim', 'https://github.com/carmi/dotfiles/blob/master/.vimrc')}.  It is powered by #{link_to('Nanoc', 'http://nanoc.stoneship.org/')} and served by #{link_to('Nginx', 'http://nginx.org/')} on the #{link_to('Joyent Cloud', 'http://joyent.com/')}. The complete source code is #{link_to('online', "https://github.com/carmi/ecarmi.org-nanoc")}.
 
     %p.social-links
+      =link_to('<i class="fa fa-home"></i>', '/', :title => "Home")
       =link_to('<i class="fa fa-github"></i>', 'https://github.com/carmi/', :title => "Github", :rel => "me")
       =link_to('<i class="fa fa-twitter"></i>', 'https://twitter.com/ehc', :title => "Twitter", :rel => "me")
       =link_to('<i class="fa fa-linkedin"></i>', 'http://www.linkedin.com/in/evancarmi', :title => "LinkedIn", :rel => "me")
