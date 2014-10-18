@@ -5,7 +5,7 @@ gem "nanoc"
 gem "cri"
 
 gem "bourbon"
-gem "neat"
+gem 'neat', '~> 1.7.0.rc'
 gem "bitters"
 
 gem "haml"
