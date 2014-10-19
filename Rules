@@ -5,7 +5,6 @@ require './settings.rb' # There should be a settings.rb in root derived from dev
 require 'bourbon'
 require 'time'
 require './sass_config.rb'
-require 'tilt/redcarpet'
 require 'benchmark'
 
 # A few helpful tips about the Rules file:
