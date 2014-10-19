@@ -8,6 +8,7 @@
   %div.action-block
     %div.actions-center
       %div.action
+
         %a{:href => "#developer"}
           %button developer
       %div.action
@@ -18,10 +19,13 @@
           %button author
 
   %div.action-descriptions
-    %p.developer
-      I've built high traffic web applications for The New York Times, I've worked at early stage startups, and I want to work with you.
-    %p.designer
-      I've studied graphic design, printed on a Vandercook letterpress, and designed the site you're currently viewing from scratch in HTML and CSS.
-    %p.author
-      My ebook has been purchased by people in eight countries and counting. My blog posts have been read thousands of times and linked to from publications such as Business Insider and TechCrunch.
+    :markdown
+      I've built high traffic web applications for [The New York Times](http://www.nytimes.com/), I've worked at [early stage startups](http://brewster.com), and I want to work with you. [Check out my portfolio.](/portfolio/)
+      {: .developer }
+    :markdown
+      I've studied graphic design, printed on a Vandercook letterpress, and designed the site you're currently viewing from scratch in HTML and CSS. [Take a peek at my portfolio?](/portfolio/)
+      {: .designer }
+    :markdown
+      My [ebook](/books/google-internship/) has been purchased by people in eight countries and counting. My [blog posts](/writing/) have been read thousands of times and linked to from publications such as [Business Insider](http://www.businessinsider.com/what-its-really-like-to-be-a-google-intern-2013-5) and [TechCrunch](http://techcrunch.com/2011/05/07/why-the-new-guy-cant-code/).
+      {: .author }
 
