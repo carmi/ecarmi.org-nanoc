@@ -5,11 +5,11 @@
  */
 
 $(window).load(function() {
-  hideall(0);
+  $('.action-descriptions p:not(:first)').hide({duration: 0});
 });
 
 var hideall = function(duration) {
-  $('.action-descriptions p').hide({duration: duration});
+  $('.action-descriptions p').stop( false, true).hide({duration: duration});
 };
 
 $('.action a').click(function() {
