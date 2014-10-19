@@ -4,36 +4,17 @@
  * @author Evan Carmi
  */
 
-// Make main landing links scrollTo respective sections.
-var duration = 850;
-
-$('div.landing li').each(function() {
-  // Get value of href to scroll to
-  var section = $($(this).find('a').first().attr('href'));
-
-  $(this).click(function() {
-    $.scrollTo($(section), duration); 
-    return false;
-  });
-});
-
-// Hide nav links
 $(window).load(function() {
-  $('nav.sidebar div.links').fadeOut({duration: 2500});
+  $('.action-descriptions p:not(:first)').hide({duration: 0});
 });
 
-$('nav.sidebar div.links').mouseover(
-    function () {
-      if($(this).is(':animated')) {
-         $(this).stop().animate({opacity:'100'});
-      }
-    }
-);
+var hideall = function(duration) {
+  $('.action-descriptions p').stop( false, true).hide({duration: duration});
+};
 
-$('nav.sidebar a.toggle').click(function() {
-  $('nav.sidebar div.links').fadeToggle({duration: '50'}, function() {
-    // Animation complete.
-    $('nav.sidebar').toggleClass("visible");
-  });
+$('.action a').click(function() {
+  hideall(0);
+  var section = this.attributes['href'].value.substring(1);
+  $(".action-descriptions ." + section).fadeIn(700);
   return false;
 });

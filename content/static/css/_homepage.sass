@@ -1,0 +1,84 @@
+$name-color: #485e48
+
+@mixin action-coloring($base-color, $number)
+  &:nth-child(#{$number})
+    button
+      background-color: shade($base-color, 15%)
+      a
+        color: white
+      &:hover
+        background-color: $base-color
+
+@mixin action-description-border($base-color, $number)
+  &:nth-child(#{$number})
+    border-color: $base-color
+
+.name
+  font-size: 7rem
+  color: $name-color
+
+.landing
+  @include outer-container
+  padding-top: 3em
+  padding-bottom: 7em
+
+  .hello, .name, .iam
+    text-align: center
+    @include row()
+  .hello
+    font-size: 3rem
+    color: #b6b6b6
+  .name
+    font-size: 7rem
+    color: $name-color
+    line-height: 1
+  .iam
+    font-size: 3rem
+    padding-top: 3rem
+
+  div.action-block
+    @include row()
+    padding-left: 2em
+    padding-right: 2em
+    padding-bottom: 2em
+
+    text-align: center
+
+    font-size: 1.4rem
+
+    div.actions-center
+      display: table
+      margin: auto
+
+      div.action
+        float: left
+        text-transform: uppercase
+        font-family: $header-font-family
+        @include action-coloring(#A8DBA8, 1)
+        @include action-coloring(#79BD9A, 2)
+        @include action-coloring(#CFF09E, 3)
+
+        button
+          border-radius: 0
+          &:focus
+            outline: none
+
+        &:first-child
+          button
+            @include border-left-radius(3px)
+        &:last-child
+          button
+            @include border-right-radius(3px)
+
+.action-descriptions
+  padding: 5px
+  height: 3em
+
+  p
+    border-radius: 3px
+    padding-left: 10px
+    border-left: 1px solid
+
+    @include action-description-border(#A8DBA8, 1)
+    @include action-description-border(#79BD9A, 2)
+    @include action-description-border(#CFF09E, 3)

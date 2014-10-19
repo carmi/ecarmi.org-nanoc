@@ -5,20 +5,25 @@ kind: book
 featured: true
 created_at: "2014-04-05"
 markup: markdown
+container_id: google-internship-book
+
 summary: Learn what it takes to get a software engineering internship with companies such as Google, The New York Times, and startups.
 ---
 
-# A Candid Guide to Getting Top Computer Science Internships, by Evan Carmi ##
+## A Candid Guide to Getting Top Computer Science Internships, by Evan Carmi ##
 
-<div class="buy-link">
-<a style="float: right; padding: 20px;" href="https://gum.co/google-internship-ebook"><img alt="How to get a Google Internship." class="cover" src="/static/img/google-internship-book-cover-short-300.png" />
+<div class="ebook-intro-row">
+<div class="ebook-cover">
+<a href="https://gum.co/google-internship-ebook"><img alt="How to get a Google Internship." class="cover" src="/static/img/google-internship-book-cover-short-300.png" />
 </a></div>
 
-Learn what it takes to get a software engineering internship with companies such as Google, The New York Times, and startups.
+<p>Learn what it takes to get a software engineering internship with companies such as Google, The New York Times, and startups.</p>
 
-<a class="buy-button" href="https://gum.co/google-internship-ebook?wanted=true"><em>Purchase ebook $10.00</em></a>
+<div><p><a class="buy-button" href="https://gum.co/google-internship-ebook?wanted=true"> <button> Purchase ebook $10.00</button> </a></p></div>
 
-<p class="hint">eBook includes PDF, ePub and Kindle versions</p>
+<p class="ebook-versions">includes PDF, ePub and Kindle versions</p>
+
+</div>
 
 ## Testimonials
 
@@ -80,7 +85,9 @@ navigate the internship application process.
 
 If this book doesn't help you get an internship, I'll refund 100% of your money.
 
-<a class="buy-button" href="https://gum.co/google-internship-ebook?wanted=true"><em>Purchase ebook $10.00</em></a>
+<div><a class="buy-button" href="https://gum.co/google-internship-ebook?wanted=true"> <button> Purchase ebook $10.00</button> </a></div>
+
+<br />
 
 <div>
 <script type="text/javascript" src="https://gumroad.com/js/gumroad.js"></script>

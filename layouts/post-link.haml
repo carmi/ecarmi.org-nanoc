@@ -1,7 +1,3 @@
 %div.post-content
-  %h2.title= link_to @item[:title], @item
-  %h4.comments
-    %a{:href => "#{@item.path}#disqus_thread", 'data-disqus-identifier' => @item.path} See comments
-  %span.posted Posted
-  = @item.timeago_time
+  %h4.title= link_to @item[:title], @item
   %p.summary= @item[:summary]

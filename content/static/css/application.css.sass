@@ -1,0 +1,218 @@
+// Leave bower_components in root directory so it doesn't get compiled as CSS
+@import "normalize"
+
+@import "bourbon/bourbon"
+@import "base/grid-settings"
+@import "neat/neat"
+
+@import "tango"
+
+@import "base/variables"
+
+// Bitters Variable Overrides
+$base-font-family: "Adobe Garamond W01", $serif
+$header-font-family: "ITC Kabel W01", $base-font-family
+
+@import "base/base"
+
+$max-width: em(600) !global
+
+$link-hover-color: rgba(11,72,107, 1)
+$header-background-color: rgba(255, 242, 139, 0.64)
+$header-text-color: #383737
+$header-border-color: rgba(56, 55, 55, 0.13)
+
+$inline-code-color: #A60
+
+$code-background-color: #f0f2f4
+
+$box-border: $header-text-color
+
+//Page specific styleing
+@import "homepage"
+@import "about"
+
+
+@mixin link-hover-color
+  &:hover
+    color: $link-hover-color
+
+a
+  @include link-hover-color
+
+article
+  h1,h2,h3,h4,h5,h6
+    padding-top: 1rem
+    margin-bottom: 1rem
+    border-bottom: 1px solid $header-border-color
+
+  ul,ol
+    @extend %default-ul
+
+
+.article-metadata
+  font-family: $header-font-family
+  font-weight: 100
+  font-size: .85em
+
+.author
+  a
+    @include link-hover-color
+    text-decoration: none
+
+article.post
+  padding-top: 2em
+article
+  @include outer-container
+
+header
+  background-color: $header-background-color
+  padding-top: 4em
+  padding-bottom: 2em
+
+.header-contents
+  @include outer-container
+  text-align: center
+  color: $header-text-color
+  padding-bottom: 1em
+
+footer
+  bottom: 0
+  padding-top: 4em
+  padding-bottom: 4em
+  background-color: $code-background-color
+
+.footer-div
+  .social-links
+    text-align: center
+
+  section
+    @include outer-container
+    border-top: 1px solid #fff
+    padding-bottom: 1rem
+    aside
+      padding-top: .5rem
+      @include span-columns(3)
+    article
+      padding-top: .5rem
+      border-left: 1px solid #fff
+      padding-left: 1rem
+      @include span-columns(9)
+
+iframe.twitter-tweet
+  margin-top: 2em !important
+  margin-bottom: 2em !important
+  margin-left: auto !important
+  margin-right: auto !important
+
+.prev
+  float: left
+.next
+  float: right
+.next, .previous
+  text-decoration: none
+
+.line-numbers
+  a
+    text-decoration: none
+  padding-right: 1rem
+  @include user-select(none)
+
+pre, code, tt, kdb, samp
+  font-family: 'Consolas W99', monospace, courier
+  color: $inline-code-color
+  font-size: 80%
+
+  overflow: auto
+
+pre
+  line-height: 1.2rem
+  border-radius: 1em
+  margin: 2em 0
+  padding: 2.5em
+  background: $code-background-color
+
+// Unstyle code inside <pre> tag
+pre
+  code, tt, kdb, samp, pre
+    padding: 0
+    border: none
+    color: $base-font-color
+
+div.ebook-flyer
+  background: rgba(255, 255, 153, 0.7)
+  margin: 2em 2em 2em 0em
+  padding: 1em
+  min-height: 14em
+  p
+    font-size: 1.2em
+
+div.buy-it-today
+  text-align: center
+
+div.disclaimer
+  background: rgba(175, 175, 175, 0.2)
+  margin: 2em 2em 2em 0em
+  padding: 1em
+
+  p:last-child
+    margin: 0
+
+
+i
+  text-decoration: none
+  width: 1em
+  color: $base-font-color
+  &:hover
+    text-decoration: none
+
+
+#books-index
+  section.book
+    padding-top: 2rem
+    padding-bottom: 10rem
+  img.cover
+    width: 240px
+    float: left
+    padding-right: 15px
+
+#portfolio
+  img
+    width: 90%
+  div.contact
+    text-align: center
+    border-bottom: 1px solid $header-text-color
+  div.grid
+    @include outer-container($max-width * 2)
+    @include column-count(2)
+    @include column-gap(1px)
+    @include column-rule(1px solid $header-text-color)
+  div.grid-item
+    border-bottom: 1px solid $header-text-color
+    display:  inline-block
+    padding-right: 8%
+    padding-left: 8%
+    &:hover
+      background-color: #fafafa
+
+
+#google-internship-book
+  .buy-button
+    font-family: $header-font-family
+
+  .ebook-versions
+    font-size: .8rem
+
+  h1,h2,h3
+    font-family: $base-font-family
+  h1
+    font-size: 4.65em
+    line-height: 1
+
+  .ebook-intro-row
+    @include row
+
+  .ebook-cover
+    float: left
+    padding-right: 1em
+

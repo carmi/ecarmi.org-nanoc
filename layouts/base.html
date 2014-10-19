@@ -3,16 +3,28 @@
   %head
     %meta{:charset => "utf-8"}
 
+    %link{:href => hashed_url('/static/css/application.css'), :media => "screen", :rel => "stylesheet", :type => "text/css"}
+
+    :plain
+      <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+      <script type="text/javascript">
+          // first, create the object that contains
+          // configuration variables
+          MTIConfig = {};
+
+          // next, add a variable that will control
+          // whether or not FOUT will be prevented
+          MTIConfig.EnableCustomFOUTHandler = true // true = prevent FOUT
+      </script>
+      <script type="text/javascript" src="//fast.fonts.net/jsapi/49ad7933-e26c-4837-8c0e-cfa066a5c782.js"></script>
+
     %title
       - unless @item[:title].nil?
         #{@item[:title]} | Evan Carmi
       - else
         Evan Carmi
 
-
-    %link{:href => hashed_url('/static/css/style.css'), :media => "screen", :rel => "stylesheet", :type => "text/css"}
-
-    <link href='//fonts.googleapis.com/css?family=Goudy+Bookletter+1911|Habibi|Droid+Sans' rel='stylesheet' type='text/css'>
     <link href="/writing/feed.xml" type="application/atom+xml" rel="alternate" title="Writing ATOM Feed">
     %meta{:name => "generator", :content => "nanoc"}
     %meta{:name => "author", :content => "Evan Carmi"}
@@ -29,19 +41,18 @@
     - elsif @item[:kind] == 'article'
       %meta{:name => "description", :content => "#{@item[:summary]}"}
 
-  %body
-    // Load MediaTemple (Jquery) CDN's Jquery
+  %body{:id => @item[:container_id]}
 
-    = yield
+    %div.container
+      = yield
 
-    %div.clear
-    %div.footer
-      %div.container
-        = render 'footer'
+    = render 'footer'
 
     // Javascript
 
-    <script src="//code.jquery.com/jquery-1.9.1.min.js"></script>
+    :plain
+      <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+
     %script{:src => hashed_url('/static/js/combined.js'), :type => "text/javascript"}
 
     = render 'analytics'
@@ -64,3 +75,4 @@
       \         (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
       \     }());
       \ </script>
+

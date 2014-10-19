@@ -2,10 +2,11 @@
 
 # Load settings
 require './settings.rb' # There should be a settings.rb in root derived from dev or prod settings
-require 'compass'
+require 'bourbon'
 require 'time'
-
-Compass.add_project_configuration 'compass_config.rb'
+require './sass_config.rb'
+require 'tilt/redcarpet'
+require 'benchmark'
 
 # A few helpful tips about the Rules file:
 #
@@ -20,9 +21,19 @@ Compass.add_project_configuration 'compass_config.rb'
 compile '/static/fonts/*/' do
 end
 
-compile '/static/css/*/' do
-  if @item[:extension] == 'sass'
-    filter :sass, Compass.sass_engine_options
+# don't filter SASS partials
+compile %r{/static/css/_.+/$} do
+  nil
+end
+
+# don't route SASS partials
+route %r{/static/css/_.+/$} do
+  nil
+end
+
+compile '/static/css/*' do
+  if @item[:extension] =~ /sass$/
+    filter :sass, $sass_configuration
   end
 
   if $use_minified_css then
@@ -34,6 +45,7 @@ end
 route '/static/fonts/*' do
   item.identifier.gsub(/_/, '.').chomp('/')
 end
+
 route '/static/css/*/' do
   hashed_route(@item)
 end
@@ -41,9 +53,8 @@ end
 compile '/static/js/*/' do
   if item[:combined]
     filter :haml
-    filter :yui_compress unless $development_mode
+    #filter :yui_compress unless $development_mode
   end
-  #TODO, minify js
 end
 
 route '/static/js/*/' do
@@ -123,7 +134,6 @@ compile '/writing/*/' do
 
   filter :rubypants
   layout 'post'
-  layout 'default'
   layout 'base'
 end
 
@@ -137,7 +147,7 @@ compile '/books/*/' do
   end
 
   layout 'book'
-  layout 'default'
+  layout 'header'
   layout 'base'
 end
 
@@ -154,13 +164,13 @@ end
 
 compile '/writing/' do
   layout 'writing_root'
-  layout 'default'
+  layout 'header'
   layout 'base'
 end
 
 compile '/portfolio/' do
   filter :haml
-  layout 'default'
+  layout 'header'
   layout 'base'
 end
 
@@ -171,7 +181,7 @@ end
 
 compile '/404/' do
   filter :haml
-  layout 'default'
+  layout 'header'
   layout 'base'
 end
 
@@ -185,7 +195,8 @@ compile '*' do
   elsif @item[:markup] == "haml"
     filter :haml
   end
-  layout 'default'
+  layout 'generic'
+  layout 'header'
   layout 'base'
 end
 

@@ -11,7 +11,7 @@ featured: true
 comments_enabled: true
 summary: Imagine a world where anyone can make a living doing what they love.
 ---
-This weekend I watched a bunch of [amazing videos](http://www.youtube.com/user/xoxofest) from [XOXO](http://2013.xoxofest.com/). I first heard about XOXO from a tweet from Jacob Kaplan Moss:
+**T**{: .first-letter .tight-kerning } his weekend I watched a bunch of [amazing videos](http://www.youtube.com/user/xoxofest) from [XOXO](http://2013.xoxofest.com/). I first heard about XOXO from a tweet from Jacob Kaplan Moss:
 
 <blockquote class="twitter-tweet"><p><a href="https://twitter.com/search?q=%23xoxofest&amp;src=hash">#xoxofest</a> left me inspired to write again. So I’m starting (naturally) with that lesson and a few others from XOXO: <a href="http://t.co/BNqUH7RA8P">http://t.co/BNqUH7RA8P</a></p>&mdash; jacobian (@jacobian) <a href="https://twitter.com/jacobian/statuses/381957944641736704">September 23, 2013</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>

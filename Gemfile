@@ -1,13 +1,18 @@
 source 'https://rubygems.org'
 
-gem "cri"
 gem "nanoc"
+
+gem "cri"
+
+gem "bourbon"
+gem 'neat', '~> 1.7.0.rc'
+gem "bitters"
+
 gem "haml"
 gem "sass"
 gem "nokogiri"
 gem "rubypants"
 gem "kramdown"
-gem "compass"
 gem "coderay"
 gem "mime-types"
 gem "rack"
@@ -25,4 +30,5 @@ gem 'adsf'
 
 group :development do
   gem 'guard-livereload', require: false
+  gem 'growl'
 end

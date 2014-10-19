@@ -13,17 +13,19 @@ summary: It sounds simple, but I often receive questions related to the "how" of
 ---
 
 <div class="ebook-flyer">
-
-<a href="https://gum.co/google-internship-ebook">
+<a href="/books/google-internship/">
 <img alt="How to get a Google Internship." class="cover" src="/static/img/google-internship-book-cover-240.png" style="float: left; padding-right: 15px;" width="180"/></a>
 
 <p>
-This is an excerpt from my book on getting Computer Science internships Purchase the ebook now to learn what it takes to get a job with companies including Google, The New York Times, and startups.
+This is an excerpt from my book on getting Computer Science internships. Purchase the ebook now to learn how to get a job with companies including Google, The New York Times, and startups.
 </p>
-<div class="buy-it-today"><a href="https://gum.co/google-internship-ebook" class="buy-it-today">Buy it today!</a>
+<div class="buy-it-today"><a href="/books/google-internship/" class="buy-it-today"><button>Get the ebook</button></a>
 </div>
 <script type="text/javascript" src="https://gumroad.com/js/gumroad.js"></script>
 </div>
+
+
+
 
 
 
