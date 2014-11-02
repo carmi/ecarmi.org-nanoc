@@ -8,9 +8,16 @@
           %p This is the digital abode of Evan Carmi. #{link_to('Moreover...', '/about/', title: 'About')}.
       %section
         %aside
-          %h6 Does he use email?
+          %h6 Have thoughts?
         %article
-          %p Email me for work inquiries or just to say hello at <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#101;&#118;&#097;&#110;&#064;&#101;&#099;&#097;&#114;&#109;&#105;&#046;&#111;&#114;&#103;">&#101;&#118;&#097;&#110;&#064;&#101;&#099;&#097;&#114;&#109;&#105;&#046;&#111;&#114;&#103;</a>
+          :plain
+            <form id="contact-form" action="//murmuring-gorge-6133.herokuapp.com/c7fb810ab62eafa93d1683aa5e3d9877" method="POST">
+                <input type="email" name="replyto" placeholder="Place email here...">
+                <textarea name="message" rows="1" placeholder="Place opinion here..."></textarea>
+                <input type="text" name="_gotcha" style="display:none">
+                <input type="hidden" name="subject" value="[submission] Hello from ecarmi.org" />
+                <input type="submit" value="Send">
+            </form>
       %section
         %aside
           %h6 How was the site made?
