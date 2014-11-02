@@ -7,12 +7,6 @@
 
 @import "tango"
 
-@import "base/variables"
-
-// Bitters Variable Overrides
-$base-font-family: "Adobe Garamond W01", $serif
-$header-font-family: "Trade Gothic W01", $sans-serif
-
 @import "base/base"
 
 $max-width: em(600) !global
@@ -119,7 +113,7 @@ iframe.twitter-tweet
   @include user-select(none)
 
 pre, code, tt, kdb, samp
-  font-family: 'Consolas W99', monospace, courier
+  font-family: $code-font-family
   color: $inline-code-color
   font-size: 80%
 
