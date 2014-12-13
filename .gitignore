@@ -5,3 +5,5 @@ crash.log
 .sass-cache/*
 ssl_certs/
 .DS_STORE
+.gems/
+bin/
