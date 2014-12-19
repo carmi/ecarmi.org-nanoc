@@ -21,12 +21,12 @@ compile '/static/fonts/*/' do
 end
 
 # don't filter SASS partials
-compile %r{/static/css/_.+/$} do
+compile %r{/static/css/.*_.+/$} do
   nil
 end
 
 # don't route SASS partials
-route %r{/static/css/_.+/$} do
+route %r{/static/css/.*_.+/$} do
   nil
 end
 
