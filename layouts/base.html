@@ -35,7 +35,7 @@
       %meta{:name => "description", :content => "Evan Carmi's programming and web development blog"}
     - elsif @item.path == '/about/'
       %meta{:name => "description", :content => "Evan Carmi's contact information and biography - a programmer and developer"}
-    - elsif @item[:kind] == 'article'
+    - elsif @item[:summary]
       %meta{:name => "description", :content => "#{@item[:summary]}"}
 
   %body{:id => @item[:container_id]}

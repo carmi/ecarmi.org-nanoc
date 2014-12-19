@@ -1,16 +1,16 @@
 ---
-title: How to get a Google Internship - ebook
+title: How to get a Google Internship - A guide book on computer science internships
 header: How to get a Google Internship
 kind: book
 featured: true
 created_at: "2014-04-05"
+updated_at: "2014-12-18"
 markup: markdown
+summary: A guide book to getting computer science software engineering internship with companies such as Google, The New York Times, and startups.
 container_id: google-internship-book
-
-summary: Learn what it takes to get a software engineering internship with companies such as Google, The New York Times, and startups.
 ---
 
-## A Candid Guide to Getting Top Computer Science Internships, by Evan Carmi ##
+## A Guide to Computer Science and Software Engineering Internships ##
 
 <div class="ebook-intro-row">
 <div class="ebook-cover">
