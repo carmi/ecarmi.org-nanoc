@@ -1,9 +1,7 @@
 settings.rb
-output/*
 tmp/*
 crash.log
-.sass-cache/*
-ssl_certs/
+.sass-cache
 .DS_STORE
 .gems/
 bin/
