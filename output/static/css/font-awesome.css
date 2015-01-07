@@ -1,0 +1,1274 @@
+@charset "UTF-8";
+/*!
+ *  Font Awesome 3.0.2
+ *  the iconic font designed for use with Twitter Bootstrap
+ *  -------------------------------------------------------
+ *  The full suite of pictographic icons, examples, and documentation
+ *  can be found at: http://fortawesome.github.com/Font-Awesome/
+ *
+ *  License
+ *  -------------------------------------------------------
+ *  - The Font Awesome font is licensed under the SIL Open Font License - http://scripts.sil.org/OFL
+ *  - Font Awesome CSS, LESS, and SASS files are licensed under the MIT License -
+ *    http://opensource.org/licenses/mit-license.html
+ *  - The Font Awesome pictograms are licensed under the CC BY 3.0 License - http://creativecommons.org/licenses/by/3.0/
+ *  - Attribution is no longer required in Font Awesome 3.0, but much appreciated:
+ *    "Font Awesome by Dave Gandy - http://fortawesome.github.com/Font-Awesome"
+ *
+ *  Contact
+ *  -------------------------------------------------------
+ *  Email: dave@davegandy.com
+ *  Twitter: http://twitter.com/fortaweso_me
+ *  Work: Lead Product Designer @ http://kyruus.com
+ */
+@font-face {
+  font-family: "FontAwesome";
+  src: url("../fonts/fontawesome-webfont.eot?v=3.0.1");
+  src: url("../fonts/fontawesome-webfont.eot?#iefix&v=3.0.1") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff?v=3.0.1") format("woff"), url("../fonts/fontawesome-webfont.ttf?v=3.0.1") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+/*  Font Awesome styles
+ *  ------------------------------------------------------- */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\0000344}}
+[class^="icon-"],
+[class*=" icon-"] {
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  -webkit-font-smoothing: antialiased;
+  /* sprites.less reset */
+  display: inline;
+  width: auto;
+  height: auto;
+  line-height: normal;
+  vertical-align: baseline;
+  background-image: none;
+  background-position: 0% 0%;
+  background-repeat: repeat;
+  margin-top: 0; }
+
+/* more sprites.less reset */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\0000364}}
+.icon-white,
+.nav-pills > .active > a > [class^="icon-"],
+.nav-pills > .active > a > [class*=" icon-"],
+.nav-list > .active > a > [class^="icon-"],
+.nav-list > .active > a > [class*=" icon-"],
+.navbar-inverse .nav > .active > a > [class^="icon-"],
+.navbar-inverse .nav > .active > a > [class*=" icon-"],
+.dropdown-menu > li > a:hover > [class^="icon-"],
+.dropdown-menu > li > a:hover > [class*=" icon-"],
+.dropdown-menu > .active > a > [class^="icon-"],
+.dropdown-menu > .active > a > [class*=" icon-"],
+.dropdown-submenu:hover > a > [class^="icon-"],
+.dropdown-submenu:hover > a > [class*=" icon-"] {
+  background-image: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\0000379}}
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  text-decoration: inherit;
+  display: inline-block;
+  speak: none; }
+
+/* makes sure icons active on rollover in links */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\0000387}}
+a [class^="icon-"],
+a [class*=" icon-"] {
+  display: inline-block; }
+
+/* makes the font 33% larger relative to the icon container */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\0000392}}
+.icon-large:before {
+  vertical-align: -10%;
+  font-size: 1.33333em; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\0000397}}
+.btn [class^="icon-"],
+.btn [class*=" icon-"], .nav [class^="icon-"],
+.nav [class*=" icon-"] {
+  display: inline;
+  /* keeps button heights with and without icons the same */ }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003101}}
+  .btn [class^="icon-"].icon-large,
+  .btn [class*=" icon-"].icon-large, .nav [class^="icon-"].icon-large,
+  .nav [class*=" icon-"].icon-large {
+    line-height: 0.9em; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003103}}
+  .btn [class^="icon-"].icon-spin,
+  .btn [class*=" icon-"].icon-spin, .nav [class^="icon-"].icon-spin,
+  .nav [class*=" icon-"].icon-spin {
+    display: inline-block; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003107}}
+.nav-tabs [class^="icon-"],
+.nav-tabs [class*=" icon-"], .nav-pills [class^="icon-"],
+.nav-pills [class*=" icon-"] {
+  /* keeps button heights with and without icons the same */
+  line-height: 0.9em; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003111}}
+  .nav-tabs [class^="icon-"].icon-large,
+  .nav-tabs [class*=" icon-"].icon-large, .nav-pills [class^="icon-"].icon-large,
+  .nav-pills [class*=" icon-"].icon-large {
+    line-height: 0.9em; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003115}}
+li [class^="icon-"],
+li [class*=" icon-"], .nav li [class^="icon-"],
+.nav li [class*=" icon-"] {
+  display: inline-block;
+  width: 1.25em;
+  text-align: center; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003120}}
+  li [class^="icon-"].icon-large,
+  li [class*=" icon-"].icon-large, .nav li [class^="icon-"].icon-large,
+  .nav li [class*=" icon-"].icon-large {
+    /* increased font size for icon-large */
+    width: 1.5625em; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003124}}
+ul.icons {
+  list-style-type: none;
+  text-indent: -0.75em; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003128}}
+  ul.icons li [class^="icon-"],
+  ul.icons li [class*=" icon-"] {
+    width: 0.75em; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003132}}
+.icon-muted {
+  color: #eee; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003138}}
+.icon-border {
+  border: solid 1px #eee;
+  padding: 0.2em 0.25em 0.15em;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003146}}
+.icon-2x {
+  font-size: 2em; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003148}}
+  .icon-2x.icon-border {
+    border-width: 2px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003152}}
+.icon-3x {
+  font-size: 3em; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003154}}
+  .icon-3x.icon-border {
+    border-width: 3px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003158}}
+.icon-4x {
+  font-size: 4em; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003160}}
+  .icon-4x.icon-border {
+    border-width: 4px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003168}}
+.pull-right {
+  float: right; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003170}}
+.pull-left {
+  float: left; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003175}}
+[class^="icon-"].pull-left,
+[class*=" icon-"].pull-left {
+  margin-right: 0.3em; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003177}}
+[class^="icon-"].pull-right,
+[class*=" icon-"].pull-right {
+  margin-left: 0.3em; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003184}}
+.btn [class^="icon-"].pull-left.icon-2x, .btn [class^="icon-"].pull-right.icon-2x,
+.btn [class*=" icon-"].pull-left.icon-2x,
+.btn [class*=" icon-"].pull-right.icon-2x {
+  margin-top: 0.18em; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003186}}
+.btn [class^="icon-"].icon-spin.icon-large,
+.btn [class*=" icon-"].icon-spin.icon-large {
+  line-height: 0.8em; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003193}}
+.btn.btn-small [class^="icon-"].pull-left.icon-2x, .btn.btn-small [class^="icon-"].pull-right.icon-2x,
+.btn.btn-small [class*=" icon-"].pull-left.icon-2x,
+.btn.btn-small [class*=" icon-"].pull-right.icon-2x {
+  margin-top: 0.25em; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003197}}
+.btn.btn-large [class^="icon-"],
+.btn.btn-large [class*=" icon-"] {
+  margin-top: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003201}}
+  .btn.btn-large [class^="icon-"].pull-left.icon-2x, .btn.btn-large [class^="icon-"].pull-right.icon-2x,
+  .btn.btn-large [class*=" icon-"].pull-left.icon-2x,
+  .btn.btn-large [class*=" icon-"].pull-right.icon-2x {
+    margin-top: 0.05em; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003203}}
+  .btn.btn-large [class^="icon-"].pull-left.icon-2x,
+  .btn.btn-large [class*=" icon-"].pull-left.icon-2x {
+    margin-right: 0.2em; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003205}}
+  .btn.btn-large [class^="icon-"].pull-right.icon-2x,
+  .btn.btn-large [class*=" icon-"].pull-right.icon-2x {
+    margin-left: 0.2em; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003209}}
+.icon-spin {
+  display: inline-block;
+  -moz-animation: spin 2s infinite linear;
+  -o-animation: spin 2s infinite linear;
+  -webkit-animation: spin 2s infinite linear;
+  animation: spin 2s infinite linear; }
+
+@-moz-keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg); }
+  100% {
+    -moz-transform: rotate(359deg); } }
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(359deg); } }
+@-o-keyframes spin {
+  0% {
+    -o-transform: rotate(0deg); }
+  100% {
+    -o-transform: rotate(359deg); } }
+@-ms-keyframes spin {
+  0% {
+    -ms-transform: rotate(0deg); }
+  100% {
+    -ms-transform: rotate(359deg); } }
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(359deg); } }
+@-moz-document url-prefix() {
+  .icon-spin {
+    height: 0.9em; }
+
+  .btn .icon-spin {
+    height: auto; }
+
+  .icon-spin.icon-large {
+    height: 1.25em; }
+
+  .btn .icon-spin.icon-large {
+    height: 0.75em; } }
+/*  Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
+ *  readers do not read off random characters that represent icons */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003260}}
+.icon-glass:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003262}}
+.icon-music:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003264}}
+.icon-search:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003266}}
+.icon-envelope:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003268}}
+.icon-heart:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003270}}
+.icon-star:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003272}}
+.icon-star-empty:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003274}}
+.icon-user:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003276}}
+.icon-film:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003278}}
+.icon-th-large:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003280}}
+.icon-th:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003282}}
+.icon-th-list:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003284}}
+.icon-ok:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003286}}
+.icon-remove:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003288}}
+.icon-zoom-in:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003290}}
+.icon-zoom-out:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003292}}
+.icon-off:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003294}}
+.icon-signal:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003296}}
+.icon-cog:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003298}}
+.icon-trash:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003300}}
+.icon-home:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003302}}
+.icon-file:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003304}}
+.icon-time:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003306}}
+.icon-road:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003308}}
+.icon-download-alt:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003310}}
+.icon-download:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003312}}
+.icon-upload:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003314}}
+.icon-inbox:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003316}}
+.icon-play-circle:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003318}}
+.icon-repeat:before {
+  content: ""; }
+
+/* \f020 doesn't work in Safari. all shifted one down */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003321}}
+.icon-refresh:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003323}}
+.icon-list-alt:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003325}}
+.icon-lock:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003327}}
+.icon-flag:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003329}}
+.icon-headphones:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003331}}
+.icon-volume-off:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003333}}
+.icon-volume-down:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003335}}
+.icon-volume-up:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003337}}
+.icon-qrcode:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003339}}
+.icon-barcode:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003341}}
+.icon-tag:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003343}}
+.icon-tags:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003345}}
+.icon-book:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003347}}
+.icon-bookmark:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003349}}
+.icon-print:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003351}}
+.icon-camera:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003353}}
+.icon-font:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003355}}
+.icon-bold:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003357}}
+.icon-italic:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003359}}
+.icon-text-height:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003361}}
+.icon-text-width:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003363}}
+.icon-align-left:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003365}}
+.icon-align-center:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003367}}
+.icon-align-right:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003369}}
+.icon-align-justify:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003371}}
+.icon-list:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003373}}
+.icon-indent-left:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003375}}
+.icon-indent-right:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003377}}
+.icon-facetime-video:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003379}}
+.icon-picture:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003381}}
+.icon-pencil:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003383}}
+.icon-map-marker:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003385}}
+.icon-adjust:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003387}}
+.icon-tint:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003389}}
+.icon-edit:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003391}}
+.icon-share:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003393}}
+.icon-check:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003395}}
+.icon-move:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003397}}
+.icon-step-backward:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003399}}
+.icon-fast-backward:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003401}}
+.icon-backward:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003403}}
+.icon-play:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003405}}
+.icon-pause:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003407}}
+.icon-stop:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003409}}
+.icon-forward:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003411}}
+.icon-fast-forward:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003413}}
+.icon-step-forward:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003415}}
+.icon-eject:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003417}}
+.icon-chevron-left:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003419}}
+.icon-chevron-right:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003421}}
+.icon-plus-sign:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003423}}
+.icon-minus-sign:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003425}}
+.icon-remove-sign:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003427}}
+.icon-ok-sign:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003429}}
+.icon-question-sign:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003431}}
+.icon-info-sign:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003433}}
+.icon-screenshot:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003435}}
+.icon-remove-circle:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003437}}
+.icon-ok-circle:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003439}}
+.icon-ban-circle:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003441}}
+.icon-arrow-left:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003443}}
+.icon-arrow-right:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003445}}
+.icon-arrow-up:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003447}}
+.icon-arrow-down:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003449}}
+.icon-share-alt:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003451}}
+.icon-resize-full:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003453}}
+.icon-resize-small:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003455}}
+.icon-plus:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003457}}
+.icon-minus:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003459}}
+.icon-asterisk:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003461}}
+.icon-exclamation-sign:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003463}}
+.icon-gift:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003465}}
+.icon-leaf:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003467}}
+.icon-fire:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003469}}
+.icon-eye-open:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003471}}
+.icon-eye-close:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003473}}
+.icon-warning-sign:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003475}}
+.icon-plane:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003477}}
+.icon-calendar:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003479}}
+.icon-random:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003481}}
+.icon-comment:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003483}}
+.icon-magnet:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003485}}
+.icon-chevron-up:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003487}}
+.icon-chevron-down:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003489}}
+.icon-retweet:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003491}}
+.icon-shopping-cart:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003493}}
+.icon-folder-close:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003495}}
+.icon-folder-open:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003497}}
+.icon-resize-vertical:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003499}}
+.icon-resize-horizontal:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003501}}
+.icon-bar-chart:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003503}}
+.icon-twitter-sign:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003505}}
+.icon-facebook-sign:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003507}}
+.icon-camera-retro:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003509}}
+.icon-key:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003511}}
+.icon-cogs:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003513}}
+.icon-comments:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003515}}
+.icon-thumbs-up:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003517}}
+.icon-thumbs-down:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003519}}
+.icon-star-half:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003521}}
+.icon-heart-empty:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003523}}
+.icon-signout:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003525}}
+.icon-linkedin-sign:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003527}}
+.icon-pushpin:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003529}}
+.icon-external-link:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003531}}
+.icon-signin:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003533}}
+.icon-trophy:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003535}}
+.icon-github-sign:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003537}}
+.icon-upload-alt:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003539}}
+.icon-lemon:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003541}}
+.icon-phone:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003543}}
+.icon-check-empty:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003545}}
+.icon-bookmark-empty:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003547}}
+.icon-phone-sign:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003549}}
+.icon-twitter:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003551}}
+.icon-facebook:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003553}}
+.icon-github:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003555}}
+.icon-unlock:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003557}}
+.icon-credit-card:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003559}}
+.icon-rss:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003561}}
+.icon-hdd:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003563}}
+.icon-bullhorn:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003565}}
+.icon-bell:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003567}}
+.icon-certificate:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003569}}
+.icon-hand-right:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003571}}
+.icon-hand-left:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003573}}
+.icon-hand-up:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003575}}
+.icon-hand-down:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003577}}
+.icon-circle-arrow-left:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003579}}
+.icon-circle-arrow-right:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003581}}
+.icon-circle-arrow-up:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003583}}
+.icon-circle-arrow-down:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003585}}
+.icon-globe:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003587}}
+.icon-wrench:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003589}}
+.icon-tasks:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003591}}
+.icon-filter:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003593}}
+.icon-briefcase:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003595}}
+.icon-fullscreen:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003597}}
+.icon-group:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003599}}
+.icon-link:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003601}}
+.icon-cloud:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003603}}
+.icon-beaker:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003605}}
+.icon-cut:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003607}}
+.icon-copy:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003609}}
+.icon-paper-clip:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003611}}
+.icon-save:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003613}}
+.icon-sign-blank:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003615}}
+.icon-reorder:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003617}}
+.icon-list-ul:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003619}}
+.icon-list-ol:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003621}}
+.icon-strikethrough:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003623}}
+.icon-underline:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003625}}
+.icon-table:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003627}}
+.icon-magic:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003629}}
+.icon-truck:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003631}}
+.icon-pinterest:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003633}}
+.icon-pinterest-sign:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003635}}
+.icon-google-plus-sign:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003637}}
+.icon-google-plus:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003639}}
+.icon-money:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003641}}
+.icon-caret-down:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003643}}
+.icon-caret-up:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003645}}
+.icon-caret-left:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003647}}
+.icon-caret-right:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003649}}
+.icon-columns:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003651}}
+.icon-sort:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003653}}
+.icon-sort-down:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003655}}
+.icon-sort-up:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003657}}
+.icon-envelope-alt:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003659}}
+.icon-linkedin:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003661}}
+.icon-undo:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003663}}
+.icon-legal:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003665}}
+.icon-dashboard:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003667}}
+.icon-comment-alt:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003669}}
+.icon-comments-alt:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003671}}
+.icon-bolt:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003673}}
+.icon-sitemap:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003675}}
+.icon-umbrella:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003677}}
+.icon-paste:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003679}}
+.icon-lightbulb:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003681}}
+.icon-exchange:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003683}}
+.icon-cloud-download:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003685}}
+.icon-cloud-upload:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003687}}
+.icon-user-md:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003689}}
+.icon-stethoscope:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003691}}
+.icon-suitcase:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003693}}
+.icon-bell-alt:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003695}}
+.icon-coffee:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003697}}
+.icon-food:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003699}}
+.icon-file-alt:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003701}}
+.icon-building:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003703}}
+.icon-hospital:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003705}}
+.icon-ambulance:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003707}}
+.icon-medkit:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003709}}
+.icon-fighter-jet:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003711}}
+.icon-beer:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003713}}
+.icon-h-sign:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003715}}
+.icon-plus-sign-alt:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003717}}
+.icon-double-angle-left:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003719}}
+.icon-double-angle-right:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003721}}
+.icon-double-angle-up:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003723}}
+.icon-double-angle-down:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003725}}
+.icon-angle-left:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003727}}
+.icon-angle-right:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003729}}
+.icon-angle-up:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003731}}
+.icon-angle-down:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003733}}
+.icon-desktop:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003735}}
+.icon-laptop:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003737}}
+.icon-tablet:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003739}}
+.icon-mobile-phone:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003741}}
+.icon-circle-blank:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003743}}
+.icon-quote-left:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003745}}
+.icon-quote-right:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003747}}
+.icon-spinner:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003749}}
+.icon-circle:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003751}}
+.icon-reply:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003753}}
+.icon-github-alt:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003755}}
+.icon-folder-close-alt:before {
+  content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ehc\/code\/ecarmi\.org-nanoc\/content\/static\/css\/font-awesome\.sass}line{font-family:\00003757}}
+.icon-folder-open-alt:before {
+  content: ""; }

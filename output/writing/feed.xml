@@ -2,13 +2,94 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://ecarmi.org/</id>
   <title>ecarmi.org</title>
-  <updated>2014-12-13T08:00:00Z</updated>
+  <updated>2015-01-07T08:00:00Z</updated>
   <link rel="alternate" href="https://ecarmi.org/"/>
   <link rel="self" href="https://ecarmi.org/writing/feed.xml"/>
   <author>
     <name>Evan Carmi</name>
     <uri>https://ecarmi.org/about/</uri>
   </author>
+  <entry>
+    <id>tag:ecarmi.org,2015-01-07:/writing/call-with-iphone-from-mac-osx/</id>
+    <title type="html">How to Make Calls with iPhone from Mac OSX</title>
+    <published>2015-01-07T08:00:00Z</published>
+    <updated>2015-01-07T08:00:00Z</updated>
+    <link rel="alternate" href="https://ecarmi.org/writing/call-with-iphone-from-mac-osx/"/>
+    <content type="html">&lt;h1 id="the-short-version"&gt;The Short Version:&lt;/h1&gt;
+
+&lt;p&gt;Here is a &lt;a href="/static/files/call-phone-number.zip"&gt;Mac OS X Services file&lt;/a&gt;, that you can download, unzip, and install (by clicking on) to select a phone number in Chrome, Preview, or any application and right click to call the number with your iPhone. Cool!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/static/img/call-phone-animation.gif" alt="Example using the call phone service"&gt;&lt;/p&gt;
+
+&lt;h1 id="the-technical-version"&gt;The Technical Version&lt;/h1&gt;
+
+&lt;p&gt;Mac OS X Yosemite introduced the ability to make and receive phone calls on your Mac using your iPhone’s cellular number. Once you &lt;a href="http://support.apple.com/kb/PH18756"&gt;get it setup&lt;/a&gt; when you receive a call a notification pops up on your Mac.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/static/img/zuck-calling.png" alt="Phone call from Zuck" title="When Zuck calls me" height="73px"&gt;&lt;/p&gt;
+
+&lt;p&gt;That’s all fine and dandy. But what about making phone calls from you Mac?&lt;/p&gt;
+
+&lt;h2 id="making-phone-calls-from-your-mac"&gt;Making Phone Calls From Your Mac&lt;/h2&gt;
+
+&lt;p&gt;Out of the box, there a few ways to do this.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;You can open up FaceTime and select Audio and type in a phone number. Too many steps! Boo!&lt;/li&gt;
+  &lt;li&gt;In Safari, you can select a phone number as text and a small button appears next to it where you can call with your iPhone.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src="/static/img/calling-from-safari.png" alt="Calling the White House" title="Ringing Barack"&gt;&lt;/p&gt;
+
+&lt;p&gt;But come on, who uses Safari?&lt;/p&gt;
+
+&lt;h2 id="making-phone-calls-from-any-application"&gt;Making Phone Calls from Any Application&lt;/h2&gt;
+
+&lt;p&gt;Ok, so I want the Safari feature but on Chrome, Firefox, and anywhere really. I can do this with Services.&lt;/p&gt;
+
+&lt;p&gt;I’ve created a really simple Mac OS X Service that you can &lt;a href="/static/files/call-phone-number.zip"&gt;download here&lt;/a&gt;, unzip, and install (by double clicking).&lt;/p&gt;
+
+&lt;p&gt;Once you install this Service you can go to Chrome or any application that allows for selecting text. If you can copy and paste the text from the app, then you can select a phone number, right click, and click “Call phone number”. This will pop up the FaceTime dialog box with a confirmation that you want to call the number. And, voilà, we now can make calls using our iPhone from our Mac.&lt;/p&gt;
+
+&lt;h2 id="behind-the-scenes"&gt;Behind the scenes&lt;/h2&gt;
+
+&lt;p&gt;Behind the scenes, and if you open the Call phone number workflow in &lt;a href="http://support.apple.com/en-us/HT2488"&gt;Automator&lt;/a&gt; you’ll see this is pretty much just piping the selected text into a AppleScript snippet.&lt;/p&gt;
+
+&lt;p&gt;At first, I was looking for a way to make FaceTime calls, thinking that since the FaceTime app checks if the phone number is a FaceTime enabled line and if it is not, calls using your cellular the same would happen if instantiated from an Applescript. But this was not the case, and it just failed, frustratingly.&lt;/p&gt;
+
+&lt;p&gt;This did not work:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language-applescript"&gt;&lt;span class="k"&gt;on&lt;/span&gt; &lt;span class="nb"&gt;run&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="nv"&gt;input&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nv"&gt;parameters&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+  &lt;span class="nb"&gt;open location&lt;/span&gt; &lt;span class="s2"&gt;"facetime-audio://"&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt; &lt;span class="nv"&gt;input&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt; &lt;span class="s2"&gt;"?audio=yes"&lt;/span&gt;
+  &lt;span class="no"&gt;return&lt;/span&gt; &lt;span class="nv"&gt;input&lt;/span&gt;
+&lt;span class="k"&gt;end&lt;/span&gt; &lt;span class="nb"&gt;run&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;So I was wondering if there were other location bindings in FaceTime that were similar to facetime-audio. I searched the Facetime.app and found this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language-bash"&gt;» ag -C &lt;span class="m"&gt;5&lt;/span&gt; facetime-audio /Applications/FaceTime.app
+/Applications/FaceTime.app/Contents/Info.plist
+38-     &amp;lt;string&amp;gt;FaceTime URL&amp;lt;/string&amp;gt;
+39-     &amp;lt;key&amp;gt;CFBundleURLSchemes&amp;lt;/key&amp;gt;
+40-     &amp;lt;array&amp;gt;
+41-       &amp;lt;string&amp;gt;tel&amp;lt;/string&amp;gt;
+42-       &amp;lt;string&amp;gt;facetime&amp;lt;/string&amp;gt;
+43:       &amp;lt;string&amp;gt;facetime-audio&amp;lt;/string&amp;gt;
+44-     &amp;lt;/array&amp;gt;
+45-     &amp;lt;key&amp;gt;LSIsAppleDefaultForScheme&amp;lt;/key&amp;gt;
+46-     &amp;lt;&lt;span class="nb"&gt;true&lt;/span&gt;/&amp;gt;
+47-   &amp;lt;/dict&amp;gt;
+48- &amp;lt;/array&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Hmm, sure looks like I should try &lt;code&gt;tel&lt;/code&gt;. And that did the trick. I put this AppleScript in the Service, and it worked!&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language-applescript"&gt;&lt;span class="k"&gt;on&lt;/span&gt; &lt;span class="nb"&gt;run&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="nv"&gt;input&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nv"&gt;parameters&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+  &lt;span class="nb"&gt;open location&lt;/span&gt; &lt;span class="s2"&gt;"tel://"&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt; &lt;span class="nv"&gt;input&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt; &lt;span class="s2"&gt;"?audio=yes"&lt;/span&gt;
+  &lt;span class="no"&gt;return&lt;/span&gt; &lt;span class="nv"&gt;input&lt;/span&gt;
+&lt;span class="k"&gt;end&lt;/span&gt; &lt;span class="nb"&gt;run&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Let me know in the comments if this works for you or if any issues pop up with the workflow.&lt;/p&gt;
+</content>
+    <summary type="html">Browsing the web, and want to call a phone number with you iPhone with just a click? Now you can!</summary>
+  </entry>
   <entry>
     <id>tag:ecarmi.org,2014-12-13:/writing/off-to-south-america/</id>
     <title type="html">South America</title>
