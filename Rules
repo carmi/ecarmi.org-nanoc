@@ -74,13 +74,13 @@ route '/static/img/*/' do
   item.identifier.chop + '.' + item[:extension]
 end
 
-compile '/files/*/' do
+compile '/static/files/*/' do
   # Do nothing
 end
 
-route '/files/*/' do
+route '/static/files/*/' do
   # Make sure that "/files/thing/" becomes "/files/thing.mp4"
-  item.identifier.gsub(/^\/files/, '').chop + '.' + item[:extension]
+  item.identifier.chop + '.' + item[:extension]
 end
 
 
