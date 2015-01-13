@@ -5,3 +5,4 @@ crash.log
 .DS_STORE
 .gems/
 bin/
+ssl/
