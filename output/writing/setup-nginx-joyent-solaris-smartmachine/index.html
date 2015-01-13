@@ -388,12 +388,13 @@ $ curl staging.ecarmi.org
 <h6>Have thoughts?</h6>
 </aside>
 <article>
-<form id="contact-form" action="//murmuring-gorge-6133.herokuapp.com/c7fb810ab62eafa93d1683aa5e3d9877" method="POST">
-    <input type="email" name="replyto" placeholder="Place email here...">
-    <textarea name="message" rows="1" placeholder="Place opinion here..."></textarea>
-    <input type="text" name="_gotcha" style="display:none">
-    <input type="hidden" name="subject" value="[submission] Hello from ecarmi.org" />
-    <input type="submit" value="Send">
+<script async src='//easyform.io/assets/embed.js'></script>
+<form id="contact-form" action="//contact.ecarmi.org/e44d9aea04bbaadceb9cbb8a412116e1" method="POST">
+  <input type="email" name="replyto" placeholder="Put your email here..." required>
+  <textarea name="message" rows="2" placeholder="Put your opinion here..." required></textarea>
+  <input type="text" name="_gotcha" style="display:none">
+  <input type="hidden" name="subject" value="[submission] Hello from ecarmi.org" />
+  <input type="submit" value="Send">
 </form>
 </article>
 </section>
