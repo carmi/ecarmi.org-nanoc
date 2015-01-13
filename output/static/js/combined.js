@@ -207,11 +207,6 @@ $(window).load(function() {
   $('#contact-form *').bind('mouseover focus', function() {
     $(contact_form_submit).show({duration: 0})
   });
-
-  $(contact_form_submit).click(function(e) {
-    sendForm();
-    e.preventDefault();
-  });
 });
 
 var hideall = function(duration) {
@@ -224,16 +219,5 @@ $('.action a').click(function() {
   $(".action-descriptions ." + section).fadeIn(700);
   return false;
 });
-
-var sendForm = function() {
-  $.ajax({
-      url: $('#contact-form').attr('action'),
-      method: "POST",
-      data: $('form#contact-form').jsonify(),
-      dataType: "json",
-      success: function(){ $('#contact-form').replaceWith(success_html); },
-      error: function(xhr){ console.log(xhr); $('#contact-form').replaceWith('error'); }
-  });
-}
 
 var success_html = "<b>I got it! Thanks</b>"
