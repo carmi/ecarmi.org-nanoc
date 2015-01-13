@@ -17,6 +17,10 @@ require 'benchmark'
 #   item, use the pattern “/about/*/”; “/about/*” will also select the parent,
 #   because “*” matches zero or more characters.
 
+preprocess do
+  @items.delete_if { |post| post[:published] == false }
+end
+
 compile '/static/fonts/*/' do
 end
 
