@@ -4,6 +4,6 @@ crash.log
 .sass-cache
 .DS_STORE
 .gems/
-/output/
+output/
 bin/
 ssl/
