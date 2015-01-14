@@ -2,13 +2,29 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://ecarmi.org/</id>
   <title>ecarmi.org</title>
-  <updated>2015-01-07T08:00:00Z</updated>
+  <updated>2015-01-09T08:00:00Z</updated>
   <link rel="alternate" href="https://ecarmi.org/"/>
   <link rel="self" href="https://ecarmi.org/writing/feed.xml"/>
   <author>
     <name>Evan Carmi</name>
     <uri>https://ecarmi.org/about/</uri>
   </author>
+  <entry>
+    <id>tag:ecarmi.org,2015-01-09:/writing/autoload-boot2docker-environment-variables/</id>
+    <title type="html">Autoload boot2docker environment variables on Mac OS X</title>
+    <published>2015-01-09T08:00:00Z</published>
+    <updated>2015-01-09T08:00:00Z</updated>
+    <link rel="alternate" href="https://ecarmi.org/writing/autoload-boot2docker-environment-variables/"/>
+    <content type="html">&lt;p&gt;If you use Docker on Mac OS X then it’s likely you are using &lt;a href="https://docs.docker.com/installation/mac/"&gt;boot2docker&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;To autoload boot2docker’s environment variables (which is necessary to connect to your local docker daemon) you need to run &lt;code&gt;boot2docker shellinit&lt;/code&gt;. If you add the following line to your &lt;code&gt;~/.zshrc&lt;/code&gt; or &lt;code&gt;~/.bashrc&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language-bash"&gt;&lt;span class="nb"&gt;eval&lt;/span&gt; &lt;span class="k"&gt;$(&lt;/span&gt;boot2docker shellinit 2&amp;gt;/dev/null&lt;span class="k"&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This will initialize the boot2docker environment variables and copy the output to null (so it doesn’t display anything when you open up your terminal.&lt;/p&gt;
+</content>
+    <summary type="html">Autoload boot2docker environment variables</summary>
+  </entry>
   <entry>
     <id>tag:ecarmi.org,2015-01-07:/writing/call-with-iphone-from-mac-osx/</id>
     <title type="html">How to Make Calls with iPhone from Mac OSX</title>
