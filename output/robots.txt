@@ -1,3 +1,0 @@
-Sitemap: http://ecarmi.org/sitemap.xml
-User-agent: *
-Disallow: /static/
