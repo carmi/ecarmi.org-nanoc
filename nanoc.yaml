@@ -54,7 +54,7 @@ data_sources:
 deploy:
   prod:
     kind: rsync
-    dst: "ubuntu@docker-host.ecarmi.org::/srv/ecarmi_org/content"
+    dst: "ubuntu@docker-host.ecarmi.org:/srv/ecarmi_org/content"
   stg:
     kind: rsync
     dst: "root@gandi.ecarmi.org:/srv/www/ecarmi.org/stg"

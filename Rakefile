@@ -24,7 +24,7 @@ end
 desc "Setup settings for production"
 task :build_production do
   system('cp', 'settings/prod.rb', 'settings.rb')
-  Rake::Task["rebuild"].invoke
+  Rake::Task["compile"].invoke
 end
 
 desc "Copy settings file back to development defaults"
