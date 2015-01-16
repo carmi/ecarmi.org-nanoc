@@ -154,17 +154,6 @@ compile '/books/*/' do
   layout 'base'
 end
 
-#create markdown text copies of all entries
-route '/writing/*/', :rep => :raw do
-  if @item[:markup] == 'markdown'
-    "/writing/#{@item[:slug]}.markdown"
-  end
-end
-
-compile '/writing/*/', :rep => :raw do
-  #don't compile
-end
-
 compile '/writing/' do
   layout 'writing_root'
   layout 'header'
