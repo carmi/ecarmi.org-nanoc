@@ -1,0 +1,49 @@
+# vim:ft=ansible:
+---
+- hosts: docker-hosts
+  sudo: yes
+  vars:
+    app_name: "ecarmi.org-nanoc"
+    build_dir: /var/apps
+    app_repo: "{{ build_dir }}/{{ app_name }}"
+    image_tag: ecarmi_org_nginx
+    image_name: "{{ image_tag }}"
+  tasks:
+    - name: install apt packages
+      apt: "name='{{ item }}' state=present"
+      with_items:
+        - git
+        - python-pip
+      tags:
+        - server_setup
+
+    - name: install docker-py
+      pip: name=docker-py version=0.7.1
+      tags:
+        - server_setup
+
+    - name: create build directory
+      file: >
+        dest="{{ build_dir }}"
+        state=directory
+    - name: clone git repo into build directory
+      git: >
+        repo="https://github.com/carmi/ecarmi.org-nanoc.git"
+        dest="{{ app_repo }}"
+        accept_hostkey=True
+        version="HEAD"
+    - name: rebuild docker image
+      docker_image: >
+        name="{{ image_name }}"
+        tag="{{ image_tag }}"
+        path="{{ app_repo }}"
+        state=build
+    - name: restart docker image
+      docker: >
+        image="{{ image_tag }}"
+        ports="{{ lookup('env', 'ECARMI_ORG_1_PORT') }}:80"
+        name="{{ image_tag }}"
+        volumes="/srv/ecarmi_org/output:/srv/www/ecarmi.org/prd"
+        restart_policy="on-failure"
+        restart_policy_retry="5"
+        state=restarted
