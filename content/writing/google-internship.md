@@ -16,7 +16,7 @@ summary: I had a (well, three) interviews with Google for a summer internship po
 <div class="ebook-flyer">
 <h3>Book: How to get a Google Internship</h3>
 <a href="/books/google-internship/">
-<img alt="How to get a Google Internship." class="cover" src="/static/img/google-internship-book-cover-240.png" style="float: left; padding-right: 15px;" width="180"/></a>
+<img alt="How to get a Google Internship." class="cover" src="/static/img/google-internship-book-cover-240.png" style="float: left; padding-right: 15px;" width="140"/></a>
 
 <p>Are you wondering how to get a great internship with a top company? Grab a copy of my ebook to learn what the what it takes to get a job with companies including Google, The New York Times, and startups.</p>
 <div class="buy-it-today"><a href="/books/google-internship/" class="buy-it-today"><button>Get the ebook</button></a>
@@ -157,7 +157,7 @@ I got an internship with The New York Times the following week.
 
 <div class="ebook-flyer">
 <a href="/books/google-internship/">
-<img alt="How to get a Google Internship." class="cover" src="/static/img/google-internship-book-cover-240.png" style="float: left; padding-right: 15px;" width="180"/></a>
+<img alt="How to get a Google Internship." class="cover" src="/static/img/google-internship-book-cover-240.png" style="float: left; padding-right: 15px;" width="140"/></a>
 
 <p>If you got all the way down here, why not keep reading. Checkout my <a href="/books/google-internship">ebook</a> and learn how you too can get a top notch internship!</p>
 
