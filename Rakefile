@@ -30,6 +30,7 @@ end
 desc "Copy settings file back to development defaults"
 task :post_build_production do
   system('cp', 'settings/dev.rb', 'settings.rb')
+  Rake::Task["rebuild"].invoke
 end
 
 desc "Deploy to staging"
