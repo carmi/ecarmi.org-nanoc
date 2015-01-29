@@ -6,5 +6,5 @@ server {
   # Make site accessible from http://localhost/
   server_name evancarmi.com evancarmi.org evancarmi.net ecarmi.net binarymanipulations.com binarymanipulation.com www.ecarmi.org *.ecarmi.org *.evancarmi.com *.evancarmi.org *.evancarmi.net *.ecarmi.net *.binarymanipulations.com *.binarymanipulation.com;
 
-  return 301 https://ecarmi.org/;
+  return 301 https://ecarmi.org$request_uri;
 }
