@@ -3,11 +3,11 @@
 - hosts: docker-hosts
   sudo: yes
   vars:
-    app_name: "ecarmi.org-nanoc"
+    app_name: "ecarmi.org_nanoc"
     build_dir: /var/apps
     app_repo: "{{ build_dir }}/{{ app_name }}"
-    image_tag: ecarmi_org_nginx
-    image_name: "{{ image_tag }}"
+    image_tag: latest
+    image_name: "ecarmi_org_nginx"
   tasks:
     - name: install apt packages
       apt: "name='{{ item }}' state=present"
@@ -32,18 +32,30 @@
         dest="{{ app_repo }}"
         accept_hostkey=True
         version="HEAD"
-    - name: rebuild docker image
+      register: git_clone_result
+
+    - name: build new docker image
       docker_image: >
         name="{{ image_name }}"
         tag="{{ image_tag }}"
         path="{{ app_repo }}"
         state=build
-    - name: restart docker image
-      docker: >
-        image="{{ image_tag }}"
-        ports="{{ lookup('env', 'ECARMI_ORG_1_PORT') }}:80"
-        name="{{ image_tag }}"
-        volumes="/srv/ecarmi_org/output:/srv/www/ecarmi.org/prd"
-        restart_policy="on-failure"
-        restart_policy_retry="5"
-        state=restarted
+      when: git_clone_result|changed
+
+    - name: Stop old image
+      shell: "docker stop {{ image_name }}"
+      ignore_errors: yes
+
+    - name: Remove old image
+      shell: "docker rm {{ image_name }}"
+      ignore_errors: yes
+
+    - name: Run new image
+      shell: >
+               . /root/.bashrc &&
+               docker run -d
+               --restart=on-failure:5
+               -p $ECARMI_ORG_1_PORT:80
+               -v /srv/ecarmi_org/output:/srv/www/ecarmi.org/prd
+               --name {{ image_name }}
+               {{ image_name }}:latest
