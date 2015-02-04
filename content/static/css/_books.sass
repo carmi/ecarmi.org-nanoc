@@ -1,0 +1,58 @@
+#google-internship-book
+  .divider
+    width: 100%
+    margin-top: 2rem
+    border-top: 40px solid rgb(231, 231, 233)
+
+  section
+    @include outer-container()
+
+    h4
+      font-weight: bold
+      font-variant: small-caps
+      text-align: center
+      padding-bottom: 1em
+
+  section#more-info
+    padding-top: 5rem
+    max-width: 37.5rem
+    font-size: 23px
+
+  section.books-fold
+    padding-top: 4rem
+    max-width: 65rem
+
+    .ebook-cover
+      @include span-columns(6)
+    .ebook-header-description
+      padding-top: 6rem
+      @include span-columns(6)
+      h1.title
+        font-size: 35px
+        font-weight: bold
+      h2.subtitle
+        font-size: 20px
+        font-style: italic
+        padding-bottom: 2rem
+      span.quote
+        font-size: 27px
+        font-style: italic
+        padding-left: 15px
+        padding-right: 15px
+        padding-top: 10px
+        padding-bottom: 10px
+        display: block
+      .call-to-action
+        padding-top: 2rem
+        font-size: 23px
+        font-variant: small-caps
+        text-align: center
+
+    p
+      font-size: 19px
+
+  .buy-button
+    font-family: $header-font-family
+
+  .ebook-versions
+    font-size: .8rem
