@@ -3,6 +3,7 @@
 # Load settings
 require './settings.rb' # There should be a settings.rb in root derived from dev or prod settings
 require 'bourbon'
+require 'tilt/kramdown'
 require 'time'
 require './sass_config.rb'
 require 'benchmark'
