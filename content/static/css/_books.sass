@@ -49,8 +49,41 @@
 
   section#packages
     div.package
+      @include span-columns(6)
+
+      .title
+        padding-bottom: 1em
+
+      padding-bottom: 1rem
+      border-radius: 10px
+
       text-align: center
-      padding-bottom: 5rem
+
+      ul
+        list-style-type: disc
+        li
+          font-size: .7em
+          text-align: left
+          margin-left: 2em
+
+
+      .mailchimp-signup
+        padding: 2em
+        font-size: 16px
+        .mce_inline_error
+          display: inline-block
+        .mc-field-group
+          label
+            @include span-columns(3 of 8)
+            vertical-align: middle
+            padding-top: 0.5em
+          input
+            @include span-columns(5 of 8)
+            width: 57%
+
+
+      .action-button
+        font-size: 23px
 
 
   section.books-fold
