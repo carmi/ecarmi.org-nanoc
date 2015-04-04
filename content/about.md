@@ -29,6 +29,16 @@ Check out my [portfolio] and [résume].
 
 <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#101;&#118;&#097;&#110;&#064;&#101;&#099;&#097;&#114;&#109;&#105;&#046;&#111;&#114;&#103;">Send me an email</a> if you are interested in working with me, or just to say "hello".
 
+**Mailing Address:**
+
+Carmi Media LLC
+
+
+P.O. Box 10784
+
+
+Portland, OR 97296
+
 [Python]: http://www.python.org/ "An easy-to-read, fun-to-code, programming language."
 [Django]: http://www.djangoproject.com/ "A kick-ass Python Web framework"
 [Rails]: http://rubyonrails.org/ "A hip Ruby framework for rockstar programmers"
