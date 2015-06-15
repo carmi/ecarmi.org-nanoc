@@ -11,7 +11,7 @@ Evan Carmi
 
 ### Hey, I'm a software engineer and designer.
 
-I'm passionate about meaningful projects, thoughtful code and modal editors. I've programmed on the web (mostly) since 2008. I've developed [Django] applications and I've developed [Rails] application. I've configured and launched multi-zone multi-region infrastructure serving thousands of requests a second on [AWS]. And I've hired programmers.
+I'm passionate about meaningful projects, thoughtful code and modal editors. I've programmed on the web (mostly) since 2008. I've developed [Django] applications and I've developed [Rails] applications. I've configured and launched multi-zone multi-region infrastructure serving thousands of requests a second on [AWS]. And I've hired programmers.
 
 <img alt="Evan Carmi" id="headstand-about" src="/static/img/evan-head-circle-500.png">
 
